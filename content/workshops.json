@@ -1,0 +1,357 @@
+{
+  "featured": "esp32-synth-ai",
+  "courses": [
+    {
+      "id": "fuzz-pedal",
+      "category": "pedals",
+      "image": "images/workshops/fuzz-pedal.jpg",
+      "title": {
+        "en": "DIY Guitar Pedal Building (Fuzz)",
+        "he": "בניית פדאל גיטרה עצמאית (פאז)"
+      },
+      "tagline": {
+        "en": "From zero to your own working pedal",
+        "he": "מאפס לפדאל עובד משלך"
+      },
+      "description": {
+        "en": "Complete hands-on course taking you from basic electronics to a finished, boxed guitar pedal. Build a Fuzz or Bitcrusher - your choice.",
+        "he": "קורס מעשי מלא שלוקח אתכם מאלקטרוניקה בסיסית לפדאל גיטרה מוגמר בקופסה. בנו פאז או ביטקראשר - הבחירה שלכם."
+      },
+      "duration": "6-7 meetings",
+      "meetingLength": "2.5-3 hours each",
+      "participants": "10-15",
+      "level": "beginner",
+      "price": {
+        "amount": 800,
+        "currency": "ILS",
+        "display": { "en": "800 NIS", "he": "800 ₪" },
+        "includes": {
+          "en": "All components included (excluding enclosure and lab tools)",
+          "he": "כל הרכיבים כלולים (לא כולל מארז וכלי מעבדה)"
+        }
+      },
+      "prerequisites": { "en": "None required", "he": "לא נדרש ידע קודם" },
+      "targetAudience": {
+        "en": "Musicians, guitar enthusiasts, electronics beginners (ages 15-90)",
+        "he": "מוזיקאים, חובבי גיטרה, מתחילים באלקטרוניקה (גילאי 15-90)"
+      },
+      "meetings": [
+        {
+          "number": 1,
+          "title": { "en": "Basic Electronics & Sound Concepts", "he": "אלקטרוניקה בסיסית ומושגי צליל" },
+          "topics": {
+            "en": ["Circuit symbols and fundamentals", "Sound concepts: waves, frequency, amplitude", "Speaker function and behavior", "Sound wave visualization"],
+            "he": ["סמלי מעגלים ויסודות", "מושגי צליל: גלים, תדר, עוצמה", "תפקוד רמקולים והתנהגותם", "הדמיית גלי קול"]
+          }
+        },
+        {
+          "number": 2,
+          "title": { "en": "Phase Pedals on Breadboard (Type 1)", "he": "פדאלי פאזה על ברדבורד (סוג 1)" },
+          "topics": {
+            "en": ["Building two types of phase pedals", "Hands-on breadboard construction", "Listening to parameter changes in real-time"],
+            "he": ["בניית שני סוגי פדאלי פאזה", "בנייה מעשית על ברדבורד", "האזנה לשינויי פרמטרים בזמן אמת"]
+          }
+        },
+        {
+          "number": 3,
+          "title": { "en": "Review & Project Selection", "he": "סיכום ובחירת פרויקט" },
+          "topics": {
+            "en": ["Review concepts from sessions 1-2", "Participants choose their final project (Fuzz or Bitcrusher)", "Design and schematic walkthrough"],
+            "he": ["סיכום מושגים ממפגשים 1-2", "המשתתפים בוחרים את הפרויקט הסופי (פאז או ביטקראשר)", "הסבר על עיצוב וסכמות"]
+          }
+        },
+        {
+          "number": 4,
+          "title": { "en": "Additional Phase Pedal Variations", "he": "וריאציות נוספות של פדאלי פאזה" },
+          "topics": {
+            "en": ["Exploring more advanced phase circuits", "Understanding circuit modifications", "Breadboard experimentation continued"],
+            "he": ["חקירת מעגלי פאזה מתקדמים יותר", "הבנת שינויים במעגלים", "המשך ניסויים על ברדבורד"]
+          }
+        },
+        {
+          "number": 5,
+          "title": { "en": "Soldering Fundamentals & PCB Prep", "he": "יסודות הלחמה והכנת PCB" },
+          "topics": {
+            "en": ["Soldering safety and techniques", "Practice soldering on spare components", "Preparing circuit board for final assembly"],
+            "he": ["בטיחות וטכניקות הלחמה", "תרגול הלחמה על רכיבים רזרביים", "הכנת לוח מעגלים להרכבה סופית"]
+          }
+        },
+        {
+          "number": 6,
+          "title": { "en": "External Components & Enclosure Integration", "he": "רכיבים חיצוניים ושילוב במארז" },
+          "topics": {
+            "en": ["Connecting jacks (input/output)", "DC power jack installation", "Potentiometer wiring", "Switch and footswitch connection", "Boxing and mechanical assembly"],
+            "he": ["חיבור ג'קים (כניסה/יציאה)", "התקנת ג'ק חשמל DC", "חיווט פוטנציומטרים", "חיבור מתגים ופוטסוויץ'", "הכנסה לקופסה והרכבה מכנית"]
+          }
+        },
+        {
+          "number": 7,
+          "title": { "en": "Finalization (Extended)", "he": "סיום (מורחב)" },
+          "topics": {
+            "en": ["Complete pedal assembly", "Enclosure finishing (painting, labeling)", "Testing and troubleshooting", "Performance and tweaking"],
+            "he": ["השלמת הרכבת הפדאל", "גימור המארז (צביעה, תיוג)", "בדיקות ופתרון בעיות", "ביצועים וכיוון"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "1bit-synth-drones",
+      "category": "synth",
+      "image": "images/workshops/1bit-drones.jpg",
+      "title": {
+        "en": "1-Bit Square Wave Synths & Drone Machines",
+        "he": "סינתים 1-ביט ומכונות דרון"
+      },
+      "tagline": {
+        "en": "Lo-fi synthesis and circuit bending",
+        "he": "סינתזה לו-פי וכיפוף מעגלים"
+      },
+      "description": {
+        "en": "Explore the world of lo-fi synthesis with CMOS logic chips. Build standalone drone machines and square wave synthesizers from scratch.",
+        "he": "חקרו את עולם הסינתזה הלו-פי עם שבבי לוגיקה CMOS. בנו מכונות דרון עצמאיות וסינתיסייזרים של גל מרובע מאפס."
+      },
+      "duration": "5 meetings",
+      "meetingLength": "3 hours each",
+      "participants": "8-10",
+      "level": "beginner",
+      "prerequisites": { "en": "None required", "he": "לא נדרש ידע קודם" },
+      "targetAudience": {
+        "en": "Electronic musicians, experimental artists, circuit bending enthusiasts",
+        "he": "מוזיקאים אלקטרוניים, אמנים ניסיוניים, חובבי כיפוף מעגלים"
+      },
+      "focus": {
+        "en": "Lo-fi synthesis, microcontroller programming, circuit bending",
+        "he": "סינתזה לו-פי, תכנות מיקרו-בקרים, כיפוף מעגלים"
+      },
+      "tech": ["CD40106", "CD4069", "CMOS Logic", "Veroboard"],
+      "meetings": [
+        {
+          "number": 1,
+          "title": { "en": "Introduction to 1-Bit Synthesis & Analog Fundamentals", "he": "מבוא לסינתזה 1-ביט ויסודות אנלוגיים" },
+          "topics": {
+            "en": ["1-bit oscillator theory", "CD40106/CD4069 CMOS logic chips", "Building a simple square wave oscillator on breadboard", "Understanding frequency control with capacitors/resistors"],
+            "he": ["תיאוריית אוסילטור 1-ביט", "שבבי לוגיקה CD40106/CD4069 CMOS", "בניית אוסילטור גל מרובע פשוט על ברדבורד", "הבנת שליטה בתדר עם קבלים/נגדים"]
+          }
+        },
+        {
+          "number": 2,
+          "title": { "en": "Advanced 1-Bit Circuit Variations", "he": "וריאציות מעגלים מתקדמות 1-ביט" },
+          "topics": {
+            "en": ["Multiple oscillator configurations", "Feedback loops and drone creation", "Resonance and tone shaping", "Experimental modifications"],
+            "he": ["תצורות אוסילטורים מרובים", "לולאות פידבק ויצירת דרון", "רזוננס ועיצוב טון", "שינויים ניסיוניים"]
+          }
+        },
+        {
+          "number": 3,
+          "title": { "en": "From Breadboard to Veroboard", "he": "מברדבורד לווירובורד" },
+          "topics": {
+            "en": ["Veroboard/stripboard fundamentals", "Component layout and planning", "Basic soldering for drone machines", "Testing on veroboard"],
+            "he": ["יסודות ווירובורד/סטריפבורד", "פריסת רכיבים ותכנון", "הלחמה בסיסית למכונות דרון", "בדיקות על ווירובורד"]
+          }
+        },
+        {
+          "number": 4,
+          "title": { "en": "Enclosure Design & Mechanical Assembly", "he": "עיצוב מארז והרכבה מכנית" },
+          "topics": {
+            "en": ["Designing custom enclosures for standalone machines", "Mounting components", "Battery/power considerations", "Durability and performance optimization"],
+            "he": ["עיצוב מארזים מותאמים למכונות עצמאיות", "הרכבת רכיבים", "שיקולי סוללה/חשמל", "עמידות ואופטימיזציית ביצועים"]
+          }
+        },
+        {
+          "number": 5,
+          "title": { "en": "Advanced Techniques & Project Variations", "he": "טכניקות מתקדמות ווריאציות פרויקט" },
+          "topics": {
+            "en": ["Circuit bending existing components", "Adding controls and modulation", "Creating multiple output variations", "Jam session and creative exploration"],
+            "he": ["כיפוף מעגלים של רכיבים קיימים", "הוספת בקרים ומודולציה", "יצירת וריאציות יציאה מרובות", "ג'אם סשן וחקירה יצירתית"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "esp32-synth-ai",
+      "category": "digital",
+      "featured": true,
+      "new": true,
+      "image": "images/workshops/esp32-synth.jpg",
+      "title": {
+        "en": "ESP32/Arduino Digital Synth with AI",
+        "he": "סינת' דיגיטלי ESP32/ארדואינו עם AI"
+      },
+      "tagline": {
+        "en": "Code meets music - AI-assisted synth building",
+        "he": "קוד פוגש מוזיקה - בניית סינת' בסיוע AI"
+      },
+      "description": {
+        "en": "Learn to build a complete digital synthesizer using ESP32, with AI tools (ChatGPT, Claude) helping you write the code. From analog fundamentals to a boxed digital instrument.",
+        "he": "למדו לבנות סינתיסייזר דיגיטלי מלא באמצעות ESP32, עם כלי AI (ChatGPT, Claude) שעוזרים לכם לכתוב את הקוד. מיסודות אנלוגיים ועד כלי נגינה דיגיטלי בקופסה."
+      },
+      "duration": "7 meetings",
+      "meetingLength": "2.5 hours each",
+      "participants": "8",
+      "level": "beginner",
+      "language": "Hebrew",
+      "prerequisites": { "en": "None required", "he": "לא נדרש ידע קודם" },
+      "targetAudience": {
+        "en": "Anyone interested in digital audio, coding, and synth building",
+        "he": "כל מי שמתעניין באודיו דיגיטלי, קידוד ובניית סינתים"
+      },
+      "tech": ["ESP32", "Arduino IDE", "I2S Audio", "OLED Display", "ChatGPT", "Claude AI"],
+      "kit": {
+        "title": { "en": "Kit Components", "he": "רכיבי הערכה" },
+        "items": {
+          "en": ["ESP32 WROOM", "OLED 0.96\" screen", "2 potentiometers", "2 buttons", "1 encoder", "Breadboard", "Wires"],
+          "he": ["ESP32 WROOM", "מסך OLED 0.96\"", "2 פוטנציומטרים", "2 כפתורים", "אנקודר אחד", "ברדבורד", "חוטים"]
+        }
+      },
+      "meetings": [
+        {
+          "number": 1,
+          "title": { "en": "Introduction & Analog Electronics", "he": "היכרות ואלקטרוניקה אנלוגית" },
+          "topics": {
+            "en": ["Introduction to AI tools (ChatGPT, Claude)", "Practical analog electronics fundamentals", "Building a simple 1-bit square wave synth with CD4046/CD40106", "Understanding oscillators", "First working analog synth"],
+            "he": ["היכרות עם כלי AI (ChatGPT, Claude)", "יסודות אלקטרוניקה אנלוגית מעשית", "בניית סינת' גל מרובע 1-ביט פשוט עם CD4046/CD40106", "הבנת אוסילטורים", "סינת' אנלוגי עובד ראשון"]
+          },
+          "takeaway": {
+            "en": "Knowledge, experience, and your first synth producing sound",
+            "he": "ידע, ניסיון, והסינת' הראשון שלכם שמפיק צליל"
+          }
+        },
+        {
+          "number": 2,
+          "title": { "en": "Microcontrollers, AI & Setup", "he": "מיקרו-בקרים, AI וההתקנות" },
+          "topics": {
+            "en": ["In-depth ESP32 exploration (DAC, timers, memory, pins)", "Arduino IDE installation and configuration", "Installing ESP32 board package and libraries", "AI prompt engineering techniques", "Writing effective instructions for Claude/ChatGPT"],
+            "he": ["חקירה מעמיקה של ESP32 (DAC, טיימרים, זיכרון, פינים)", "התקנה והגדרת Arduino IDE", "התקנת חבילת לוח ESP32 וספריות", "טכניקות הנדסת פרומפטים ל-AI", "כתיבת הוראות יעילות ל-Claude/ChatGPT"]
+          },
+          "takeaway": {
+            "en": "Development environment ready, knowledge of how to make AI write working code",
+            "he": "סביבת פיתוח מוכנה, ידע איך לגרום ל-AI לכתוב קוד עובד"
+          }
+        },
+        {
+          "number": 3,
+          "title": { "en": "Audio Preparation & Custom Instructions", "he": "הכנה לאודיו והכנת הוראות מותאמות אישית" },
+          "topics": {
+            "en": ["How audio works in microcontrollers (sampling, bit depth)", "DAC basics and ESP32 WROOM DAC on GPIO25", "ESP32 audio limitations (RAM, buffer sizes)", "Resource optimization techniques", "Creating custom AI instructions for your project"],
+            "he": ["איך אודיו עובד במיקרו-בקרים (דגימה, עומק ביט)", "יסודות DAC ו-DAC של ESP32 WROOM על GPIO25", "מגבלות אודיו של ESP32 (RAM, גדלי באפר)", "טכניקות אופטימיזציית משאבים", "יצירת הוראות AI מותאמות אישית לפרויקט שלכם"]
+          },
+          "takeaway": {
+            "en": "Deep audio knowledge, custom AI instruction set for your project",
+            "he": "ידע אודיו עמוק, ערכת הוראות AI מותאמת לפרויקט שלכם"
+          }
+        },
+        {
+          "number": 4,
+          "title": { "en": "Peripherals & First Synth", "he": "פריפריאלים והסינתיסייזר הראשון" },
+          "topics": {
+            "en": ["Hardware connections (potentiometers, buttons, encoder, OLED)", "Programming with AI - writing prompts for peripheral code", "Integrating analog reads with audio", "Building first working synth with live parameter control"],
+            "he": ["חיבורי חומרה (פוטנציומטרים, כפתורים, אנקודר, OLED)", "תכנות עם AI - כתיבת פרומפטים לקוד פריפריאלים", "שילוב קריאות אנלוגיות עם אודיו", "בניית סינת' עובד ראשון עם שליטת פרמטרים בזמן אמת"]
+          },
+          "takeaway": {
+            "en": "First working real-time synth with live parameter control",
+            "he": "סינת' עובד ראשון בזמן אמת עם שליטת פרמטרים חיה"
+          }
+        },
+        {
+          "number": 5,
+          "title": { "en": "Play, Platform Planning & Final Product Vision", "he": "משחק, חשיבה על פלטפורמות ומוצר סופי" },
+          "topics": {
+            "en": ["Creative exploration and jam session", "Design planning for final product (form factor, enclosure)", "PCB design thinking (DipTrace or KiCad intro)", "Advanced features brainstorming (MIDI, WiFi, SD card)"],
+            "he": ["חקירה יצירתית וג'אם סשן", "תכנון עיצוב למוצר סופי (פורם פקטור, מארז)", "חשיבה על עיצוב PCB (היכרות עם DipTrace או KiCad)", "סיעור מוחות לפיצ'רים מתקדמים (MIDI, WiFi, כרטיס SD)"]
+          },
+          "takeaway": {
+            "en": "Clear vision for final product, PCB planning sketches, advanced feature ideas",
+            "he": "חזון ברור למוצר סופי, סקיצות תכנון PCB, רעיונות לפיצ'רים מתקדמים"
+          }
+        },
+        {
+          "number": 6,
+          "title": { "en": "Soldering, Soldering, Soldering", "he": "הלחמה, הלחמה, הלחמה" },
+          "topics": {
+            "en": ["Soldering fundamentals intensive", "Transferring from breadboard to perfboard", "Hands-on soldering practice", "Peripheral soldering (pots, buttons, encoder, display)", "Testing and troubleshooting"],
+            "he": ["יסודות הלחמה אינטנסיביים", "העברה מברדבורד לפרפבורד", "תרגול הלחמה מעשי", "הלחמת פריפריאלים (פוטים, כפתורים, אנקודר, מסך)", "בדיקות ופתרון בעיות"]
+          },
+          "takeaway": {
+            "en": "Soldered perfboard with all components connected and tested",
+            "he": "פרפבורד מולחם עם כל הרכיבים מחוברים ונבדקים"
+          }
+        },
+        {
+          "number": 7,
+          "title": { "en": "Boxing, Jamming & Moving Forward", "he": "הקופסה, ג'ם וקדימה" },
+          "topics": {
+            "en": ["3D enclosure design basics (FreeCAD/Fusion 360)", "Final assembly and testing", "Group jam session with all synthesizers", "Future possibilities discussion"],
+            "he": ["יסודות עיצוב מארז תלת מימדי (FreeCAD/Fusion 360)", "הרכבה סופית ובדיקות", "ג'אם סשן קבוצתי עם כל הסינתיסייזרים", "דיון על אפשרויות עתידיות"]
+          },
+          "takeaway": {
+            "en": "Complete working synthesizer in an enclosure, knowledge to expand and create more",
+            "he": "סינתיסייזר עובד מלא במארז, ידע להרחיב וליצור עוד"
+          }
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "title": { "en": "Quick Comparison", "he": "השוואה מהירה" },
+    "headers": {
+      "en": ["Workshop", "Duration", "Meetings", "Format", "Tools", "Output"],
+      "he": ["סדנה", "משך", "מפגשים", "פורמט", "כלים", "תוצר"]
+    },
+    "rows": [
+      {
+        "id": "fuzz-pedal",
+        "en": ["Fuzz/Guitar Pedal", "2.5-3h each", "6-7", "Analog → Veroboard → Enclosure", "Soldering iron, breadboard", "Working pedal"],
+        "he": ["פאז/פדאל גיטרה", "2.5-3 שעות כל אחד", "6-7", "אנלוגי → ווירובורד → מארז", "מלחם, ברדבורד", "פדאל עובד"]
+      },
+      {
+        "id": "1bit-synth-drones",
+        "en": ["1-Bit Synth Drones", "3h each", "5", "Analog CMOS → Veroboard → Standalone", "Soldering iron, breadboard", "Standalone drone machines"],
+        "he": ["סינתים 1-ביט דרון", "3 שעות כל אחד", "5", "CMOS אנלוגי → ווירובורד → עצמאי", "מלחם, ברדבורד", "מכונות דרון עצמאיות"]
+      },
+      {
+        "id": "esp32-synth-ai",
+        "en": ["ESP32 Synth + AI", "2.5h each", "7", "Analog → Digital → Code → Enclosure", "Soldering, Arduino IDE, AI tools", "Complete digital synth"],
+        "he": ["סינת' ESP32 + AI", "2.5 שעות כל אחד", "7", "אנלוגי → דיגיטלי → קוד → מארז", "הלחמה, Arduino IDE, כלי AI", "סינת' דיגיטלי מלא"]
+      }
+    ]
+  },
+  "keyDifferences": {
+    "title": { "en": "Key Differences", "he": "הבדלים מרכזיים" },
+    "items": [
+      {
+        "id": "fuzz-pedal",
+        "en": "Most structured, clear progression, proven pedagogy",
+        "he": "הכי מובנה, התקדמות ברורה, פדגוגיה מוכחת"
+      },
+      {
+        "id": "1bit-synth-drones",
+        "en": "More experimental, focus on circuit bending and individual creativity",
+        "he": "יותר ניסיוני, מתמקד בכיפוף מעגלים ויצירתיות אישית"
+      },
+      {
+        "id": "esp32-synth-ai",
+        "en": "Most tech-intensive, AI-centered learning approach, combines analog understanding with digital implementation",
+        "he": "הכי אינטנסיבי טכנולוגית, גישת למידה ממוקדת AI, משלב הבנה אנלוגית עם יישום דיגיטלי"
+      }
+    ]
+  },
+  "notes": {
+    "title": { "en": "Notes", "he": "הערות" },
+    "items": {
+      "en": [
+        "All workshops are hands-on and assume zero prior knowledge",
+        "Progression principle: Each workshop builds understanding from sound fundamentals outward",
+        "Component provision: Generally included in price, except where specified (enclosures, lab tools)",
+        "Group size: 8-10 participants optimal for instructor guidance and component management",
+        "Jam sessions: Included in workshops 2 and 3 to build community and celebrate learning"
+      ],
+      "he": [
+        "כל הסדנאות הן מעשיות ומניחות אפס ידע קודם",
+        "עקרון ההתקדמות: כל סדנה בונה הבנה מיסודות הצליל והלאה",
+        "אספקת רכיבים: כלולה בדרך כלל במחיר, למעט היכן שצוין (מארזים, כלי מעבדה)",
+        "גודל קבוצה: 8-10 משתתפים אופטימלי להדרכה וניהול רכיבים",
+        "ג'אם סשנים: נכללים בסדנאות 2 ו-3 לבניית קהילה וחגיגת הלמידה"
+      ]
+    }
+  }
+}

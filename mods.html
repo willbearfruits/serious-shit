@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mods | Serious S.H.I.T.</title>
+  <meta name="description" content="Circuit-bending and gear modifications. System offline.">
+  <script>
+    (function(){
+      var lang = localStorage.getItem('sshit-lang') || 'he';
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .maintenance-screen {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: var(--font-mono);
+    }
+    .error-code {
+      font-size: 5rem;
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .blink { animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//MODS</span></a>
+      <nav class="nav-links uppercase mono">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+        <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="mods.html"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+        <a href="#" class="theme-toggle">LIGHT/DARK</a>
+        <a href="#" class="lang-toggle">EN/HE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container maintenance-screen">
+    
+    <!-- English -->
+    <div class="lang-en">
+      <div class="error-code">404<span style="color: var(--accent)">_MODS</span></div>
+      <p style="margin-bottom: 2rem;">> SYSTEM STATUS: UNDER_CONSTRUCTION<br>> We are busy breaking things.</p>
+      
+      <div style="border: 1px dashed var(--border); padding: 1rem; display: inline-block;">
+        <p style="font-size: 0.8rem; color: var(--text-dim);">The Mod Shop is offline. Check back later for circuit bending services.</p>
+      </div>
+
+      <div style="margin-top: 3rem;">
+        <a href="index.html" class="pane-cta">&lt; RETURN_ROOT</a>
+      </div>
+    </div>
+
+    <!-- Hebrew -->
+    <div class="lang-he">
+      <div class="error-code">404<span style="color: var(--accent)">_מודים</span></div>
+      <p style="margin-bottom: 2rem;">> סטטוס מערכת: בבנייה<br>> אנחנו עסוקים בלשבור דברים.</p>
+      
+      <div style="border: 1px dashed var(--border); padding: 1rem; display: inline-block;">
+        <p style="font-size: 0.8rem; color: var(--text-dim);">חנות המודים לא זמינה כרגע. חזרו מאוחר יותר לשירותי כיפוף מעגלים.</p>
+      </div>
+
+      <div style="margin-top: 3rem;">
+        <a href="index.html" class="pane-cta">&lt; חזרה_לבית</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
+          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+          <a href="mods.html"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

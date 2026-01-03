@@ -1,0 +1,105 @@
+{
+  "categories": [
+    {
+      "id": "analog",
+      "title": { "en": "Analog Pedals", "he": "פדאלים אנלוגיים" },
+      "description": { "en": "Classic circuits, handmade character.", "he": "מעגלים קלאסיים, אופי בעבודת יד." }
+    },
+    {
+      "id": "digital",
+      "title": { "en": "Digital Devices", "he": "מכשירים דיגיטליים" },
+      "description": { "en": "Programmable, updateable, infinite possibilities.", "he": "מתוכנתים, ניתנים לעדכון, אפשרויות אינסופיות." }
+    },
+    {
+      "id": "noise",
+      "title": { "en": "Noise Machines", "he": "מכונות רעש" },
+      "description": { "en": "Pure chaos in a box.", "he": "כאוס טהור בקופסה." }
+    }
+  ],
+  "products": [
+    {
+      "id": "fuzilator-pukemachine",
+      "category": "analog",
+      "featured": true,
+      "name": {
+        "en": "Fuzilator PukeMachine",
+        "he": "פוזילטור פיוקמשין"
+      },
+      "tagline": {
+        "en": "The flagship. Sounds wrong in all the right ways.",
+        "he": "הדגל. נשמע לא נכון בכל הדרכים הנכונות."
+      },
+      "image": "images/products/fuzilator-main.jpg",
+      "gallery": [
+        "images/products/fuzilator-main.jpg",
+        "images/products/fuzilator-angle.jpg",
+        "images/products/fuzilator-guts.jpg"
+      ],
+      "price": {
+        "amount": null,
+        "display": {
+          "en": "Contact for pricing",
+          "he": "צרו קשר למחיר"
+        }
+      },
+      "description": {
+        "en": "The flagship pedal. A fuzz/distortion that doesn't play by the rules. Designed to sound wrong in all the right ways. The 'Puke' control does exactly what you think it does.",
+        "he": "הפדאל הראשי. פאז/דיסטורשן שלא משחק לפי הכללים. מתוכנן להישמע לא נכון בכל הדרכים הנכונות. בקר ה'Puke' עושה בדיוק מה שאתם חושבים."
+      },
+      "specs": {
+        "en": [
+          "Handmade in Haifa",
+          "True bypass",
+          "9V power (standard center-negative)",
+          "Controls: Gain, Tone, Level, Puke"
+        ],
+        "he": [
+          "עבודת יד מחיפה",
+          "True bypass",
+          "הספקת 9V (סטנדרטי center-negative)",
+          "בקרים: Gain, Tone, Level, Puke"
+        ]
+      },
+      "available": true
+    }
+  ],
+  "comingSoon": [
+    {
+      "id": "daisy-delay",
+      "name": { "en": "Programmable Delay", "he": "דיליי מתוכנת" },
+      "category": "digital",
+      "description": {
+        "en": "Daisy Seed-based delay with endless possibilities. Update the firmware, change the effect.",
+        "he": "דיליי מבוסס Daisy Seed עם אפשרויות אינסופיות. עדכנו את הפירמוור, שנו את האפקט."
+      },
+      "tech": ["Daisy Seed"]
+    },
+    {
+      "id": "noise-box",
+      "name": { "en": "Noise Box", "he": "קופסת רעש" },
+      "category": "noise",
+      "description": {
+        "en": "Pure analog chaos. Touch-sensitive, unstable, unpredictable.",
+        "he": "כאוס אנלוגי טהור. רגיש למגע, לא יציב, בלתי צפוי."
+      }
+    }
+  ],
+  "customBuilds": {
+    "title": {
+      "en": "Custom Builds",
+      "he": "בניות מותאמות אישית"
+    },
+    "description": {
+      "en": "Want something specific? I do custom builds too. Tell me what sound you're chasing. Digital, analog, or somewhere in between.",
+      "he": "רוצים משהו ספציפי? אני גם בונה לפי הזמנה. ספרו לי איזה צליל אתם מחפשים. דיגיטלי, אנלוגי, או משהו באמצע."
+    },
+    "tech": {
+      "en": "I work with ESP32, Daisy Seed, and classic analog circuits.",
+      "he": "אני עובד עם ESP32, Daisy Seed, ומעגלים אנלוגיים קלאסיים."
+    }
+  },
+  "notifySignup": {
+    "en": "Sign up to get notified when new products are available.",
+    "he": "הירשמו כדי לקבל עדכון כשמוצרים חדשים זמינים."
+  }
+}

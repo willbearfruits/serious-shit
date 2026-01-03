@@ -1,0 +1,36 @@
+{
+  "categories": [
+    {
+      "id": "builds",
+      "name": { "en": "Builds & Instruments", "he": "בניות וכלים" },
+      "description": { "en": "Custom instruments and builds", "he": "כלים ובניות מותאמות אישית" }
+    },
+    {
+      "id": "mods",
+      "name": { "en": "Gear Mods", "he": "שינויי ציוד" },
+      "description": { "en": "Modified pedals and synths", "he": "פדאלים וסינתים שעברו שינוי" }
+    },
+    {
+      "id": "workshops",
+      "name": { "en": "Workshops", "he": "סדנאות" },
+      "description": { "en": "Photos from workshops", "he": "תמונות מסדנאות" }
+    },
+    {
+      "id": "performances",
+      "name": { "en": "Performances", "he": "הופעות" },
+      "description": { "en": "Live performances", "he": "הופעות חיות" }
+    }
+  ],
+  "items": [
+    {
+      "id": "example-1",
+      "src": "images/gallery/example-1.jpg",
+      "thumb": "images/gallery/thumbs/example-1.jpg",
+      "category": "builds",
+      "caption": {
+        "en": "Example caption - replace with your image",
+        "he": "כיתוב לדוגמה - החליפו בתמונה שלכם"
+      }
+    }
+  ]
+}

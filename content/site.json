@@ -1,0 +1,54 @@
+{
+  "brand": {
+    "name": "Serious S.H.I.T.",
+    "fullName": "Super Hyper Incredible Things",
+    "tagline": {
+      "en": "Circuit-bending. Gear mods. Noise devices. Workshops.",
+      "he": "כיפוף מעגלים. שינויי ציוד. מכשירי רעש. סדנאות."
+    }
+  },
+  "contact": {
+    "whatsapp": "972XXXXXXXXX",
+    "email": "contact@example.com",
+    "location": {
+      "en": "Haifa, Israel",
+      "he": "חיפה, ישראל"
+    }
+  },
+  "social": {
+    "youtube": "https://youtube.com/@willbear",
+    "instagram": "https://instagram.com/willbear",
+    "twitch": "https://twitch.tv/willbear"
+  },
+  "formspree": {
+    "contactForm": "YOUR_FORM_ID",
+    "workshopForm": "YOUR_FORM_ID",
+    "modForm": "YOUR_FORM_ID",
+    "orderForm": "YOUR_FORM_ID"
+  },
+  "about": {
+    "name": "Yaniv Schonfeld",
+    "aliases": ["Willbear", "Parve", "KillAllUnicorns", "WillBear_Fruits"],
+    "bio": {
+      "en": "Interdisciplinary artist, musician, educator. Based in Haifa, Israel.",
+      "he": "אמן בין-תחומי, מוזיקאי, מחנך. מבוסס בחיפה, ישראל."
+    },
+    "locations": [
+      {
+        "name": { "en": "Musrara Art School", "he": "מוסררה בית ספר לאמנות" },
+        "city": { "en": "Jerusalem", "he": "ירושלים" },
+        "description": { "en": "Academic courses on sound art and electronics", "he": "קורסים אקדמיים על אמנות צליל ואלקטרוניקה" }
+      },
+      {
+        "name": { "en": "Matmon Space", "he": "מתמון ספייס" },
+        "city": { "en": "Tel Aviv", "he": "תל אביב" },
+        "description": { "en": "Public workshops and community events", "he": "סדנאות פתוחות ואירועי קהילה" }
+      },
+      {
+        "name": { "en": "Haifa", "he": "חיפה" },
+        "city": { "en": "", "he": "" },
+        "description": { "en": "Home base — Private sessions and gear work", "he": "בסיס הבית — מפגשים פרטיים ועבודה על ציוד" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "services": [
+    {
+      "id": "guitar-pedals",
+      "image": "images/mods/pedals.jpg",
+      "title": {
+        "en": "Guitar Pedals",
+        "he": "פדאלים לגיטרה"
+      },
+      "description": {
+        "en": "Add features, expand range, make them weirder. Turn predictable into unpredictable.",
+        "he": "הוספת פיצ'רים, הרחבת טווח, להפוך אותם למוזרים יותר. להפוך צפוי לבלתי צפוי."
+      }
+    },
+    {
+      "id": "synthesizers",
+      "image": "images/mods/synths.jpg",
+      "title": {
+        "en": "Synthesizers",
+        "he": "סינתיסייזרים"
+      },
+      "description": {
+        "en": "Circuit bending, new controls, unexpected behaviors. Find the hidden sounds.",
+        "he": "כיפוף מעגלים, בקרים חדשים, התנהגויות לא צפויות. למצוא את הצלילים החבויים."
+      }
+    },
+    {
+      "id": "toys-keyboards",
+      "image": "images/mods/toys.jpg",
+      "title": {
+        "en": "Toys & Keyboards",
+        "he": "צעצועים וקלידים"
+      },
+      "description": {
+        "en": "The best raw material for noise. Cheap electronics hiding interesting sounds.",
+        "he": "חומר הגלם הטוב ביותר לרעש. אלקטרוניקה זולה שמסתירה צלילים מעניינים."
+      }
+    },
+    {
+      "id": "anything-electronic",
+      "image": "images/mods/misc.jpg",
+      "title": {
+        "en": "Anything Electronic",
+        "he": "כל דבר אלקטרוני"
+      },
+      "description": {
+        "en": "Drum machines, samplers, whatever you want transformed.",
+        "he": "מכונות תופים, סמפלרים, כל מה שאתם רוצים לשנות."
+      }
+    }
+  ],
+  "process": {
+    "en": [
+      { "title": "Contact me", "description": "Tell me what you have and what you want it to do (or not do)" },
+      { "title": "Send your gear", "description": "Ship it to me or drop it off in Haifa" },
+      { "title": "I explore", "description": "Open it up, find the interesting points, figure out the possibilities" },
+      { "title": "Quote", "description": "I tell you what I can do and how much it costs" },
+      { "title": "You approve", "description": "Or we adjust the plan" },
+      { "title": "I mod", "description": "The actual transformation happens" },
+      { "title": "You receive", "description": "Pick up or ship back" }
+    ],
+    "he": [
+      { "title": "צרו קשר", "description": "ספרו לי מה יש לכם ומה אתם רוצים שזה יעשה (או לא יעשה)" },
+      { "title": "שלחו את הציוד", "description": "משלוח או הורדה בחיפה" },
+      { "title": "אני חוקר", "description": "פותח, מוצא נקודות מעניינות, מבין את האפשרויות" },
+      { "title": "הצעת מחיר", "description": "אני מספר מה אני יכול לעשות וכמה זה עולה" },
+      { "title": "אתם מאשרים", "description": "או שאנחנו מתאימים את התוכנית" },
+      { "title": "אני משנה", "description": "הטרנספורמציה בפועל" },
+      { "title": "אתם מקבלים", "description": "איסוף או משלוח חזרה" }
+    ]
+  },
+  "pricing": {
+    "en": "Depends on complexity. Simple mods start around 200 ILS. I always quote before starting. No charge for exploration if you decide not to proceed.",
+    "he": "תלוי במורכבות. שינויים פשוטים מתחילים בסביבות 200 ש\"ח. תמיד אתן הצעת מחיר לפני. אין חיוב על חקירה אם תחליטו לא להמשיך."
+  },
+  "warning": {
+    "en": "Mods void warranties. Circuit bending is inherently risky — some gear doesn't survive. We'll discuss risks before I start. Don't send irreplaceable items.",
+    "he": "שינויים מבטלים אחריות. כיפוף מעגלים הוא מטבעו מסוכן — חלק מהציוד לא שורד. נדבר על סיכונים לפני. אל תשלחו פריטים בלתי ניתנים להחלפה."
+  },
+  "portfolio": []
+}

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32 Digital Synth + AI | Serious S.H.I.T.</title>
+  <meta name="description" content="Build a digital synthesizer using ESP32 with AI-assisted coding. 7-session hands-on course in Haifa.">
+  <script>
+    (function(){
+      var lang = localStorage.getItem('sshit-lang') || 'he';
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//ESP32</span></a>
+      <nav class="nav-links uppercase mono">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+        <a href="workshops.html" class="active"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="mods.html"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+        <a href="#" class="theme-toggle">LIGHT/DARK</a>
+        <a href="#" class="lang-toggle">EN/HE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- English -->
+      <section class="lang-en">
+        <div class="course-section">
+          <div class="course-header">
+            <div class="course-header-content">
+              <span class="badge badge-new">NEW - STARTING FEB 3</span>
+              <h1>ESP32/Arduino Digital Synth with AI</h1>
+              <p class="course-tagline">Code meets music - AI-assisted synth building</p>
+              <p>Learn to build a complete digital synthesizer using ESP32, with AI tools (ChatGPT, Claude) helping you write the code. From analog fundamentals to a boxed digital instrument.</p>
+              <div class="course-meta">
+                <span><strong>Duration:</strong> 7 meetings x 2.5 hours</span>
+                <span><strong>Participants:</strong> Up to 8</span>
+                <span><strong>Location:</strong> Haifa</span>
+                <span><strong>Prerequisites:</strong> None</span>
+              </div>
+              <p class="course-audience"><strong>Target:</strong> Anyone interested in digital audio, coding, and synth building</p>
+              <div class="tech-stack">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">Arduino IDE</span>
+                <span class="tech-tag">I2S Audio</span>
+                <span class="tech-tag">OLED Display</span>
+                <span class="tech-tag">ChatGPT</span>
+                <span class="tech-tag">Claude AI</span>
+              </div>
+              <div class="kit-box">
+                <strong>Kit Components:</strong> ESP32 WROOM, OLED 0.96" screen, 2 potentiometers, 2 buttons, 1 encoder, Breadboard, Wires
+              </div>
+            </div>
+          </div>
+
+          <h2>Meeting Breakdown</h2>
+          <div class="meetings-list">
+            <div class="meeting-item">
+              <div class="meeting-number">1</div>
+              <div class="meeting-content">
+                <h4>Introduction & Analog Electronics</h4>
+                <ul>
+                  <li>Introduction to AI tools (ChatGPT, Claude)</li>
+                  <li>Practical analog electronics fundamentals</li>
+                  <li>Building a simple 1-bit square wave synth with CD4046/CD40106</li>
+                  <li>Understanding oscillators</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> Knowledge, experience, and your first synth producing sound</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">2</div>
+              <div class="meeting-content">
+                <h4>Microcontrollers, AI & Setup</h4>
+                <ul>
+                  <li>In-depth ESP32 exploration (DAC, timers, memory, pins)</li>
+                  <li>Arduino IDE installation and configuration</li>
+                  <li>Installing ESP32 board package and libraries</li>
+                  <li>AI prompt engineering techniques</li>
+                  <li>Writing effective instructions for Claude/ChatGPT</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> Development environment ready, knowledge of how to make AI write working code</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">3</div>
+              <div class="meeting-content">
+                <h4>Audio Preparation & Custom Instructions</h4>
+                <ul>
+                  <li>How audio works in microcontrollers (sampling, bit depth)</li>
+                  <li>DAC basics and ESP32 WROOM DAC on GPIO25</li>
+                  <li>ESP32 audio limitations (RAM, buffer sizes)</li>
+                  <li>Resource optimization techniques</li>
+                  <li>Creating custom AI instructions for your project</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> Deep audio knowledge, custom AI instruction set for your project</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">4</div>
+              <div class="meeting-content">
+                <h4>Peripherals & First Synth</h4>
+                <ul>
+                  <li>Hardware connections (potentiometers, buttons, encoder, OLED)</li>
+                  <li>Programming with AI - writing prompts for peripheral code</li>
+                  <li>Integrating analog reads with audio</li>
+                  <li>Building first working synth with live parameter control</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> First working real-time synth with live parameter control</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">5</div>
+              <div class="meeting-content">
+                <h4>Play, Platform Planning & Final Product Vision</h4>
+                <ul>
+                  <li>Creative exploration and jam session</li>
+                  <li>Design planning for final product (form factor, enclosure)</li>
+                  <li>PCB design thinking (DipTrace or KiCad intro)</li>
+                  <li>Advanced features brainstorming (MIDI, WiFi, SD card)</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> Clear vision for final product, PCB planning sketches, advanced feature ideas</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">6</div>
+              <div class="meeting-content">
+                <h4>Soldering, Soldering, Soldering</h4>
+                <ul>
+                  <li>Soldering fundamentals intensive</li>
+                  <li>Transferring from breadboard to perfboard</li>
+                  <li>Hands-on soldering practice</li>
+                  <li>Peripheral soldering (pots, buttons, encoder, display)</li>
+                  <li>Testing and troubleshooting</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> Soldered perfboard with all components connected and tested</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">7</div>
+              <div class="meeting-content">
+                <h4>Boxing, Jamming & Moving Forward</h4>
+                <ul>
+                  <li>3D enclosure design basics (FreeCAD/Fusion 360)</li>
+                  <li>Final assembly and testing</li>
+                  <li>Group jam session with all synthesizers</li>
+                  <li>Future possibilities discussion</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> Complete working synthesizer in an enclosure, knowledge to expand and create more</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" id="register">
+            <h2>Register Now</h2>
+            <p>Secure your spot for the February 3rd batch.</p>
+
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background: #e8faf3; border: 1px solid #25d366; border-radius: var(--radius-sm); text-align: center;">
+              <a href="https://wa.me/972539263808?text=Hi%2C%20I'd%20like%20to%20join%20the%20ESP32%20Synth%20workshop" class="btn" style="background: #25d366; color: white; border: none;">
+                Register via WhatsApp
+              </a>
+            </div>
+
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSeXK0PPF8B9_xSPqBF5nfzZ-H9TAXQbMGGe5FLYCmjsn54Hsg/viewform?embedded=true"
+              width="100%"
+              height="1800"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              style="border: none;">
+              Loading form...
+            </iframe>
+          </div>
+
+          <div class="btn-group" style="margin-top: 2rem;">
+            <a href="workshops.html" class="btn btn-secondary">&lt; Back to All Workshops</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hebrew -->
+      <section class="lang-he">
+        <div class="course-section">
+          <div class="course-header">
+            <div class="course-header-content">
+              <span class="badge badge-new">חדש - מתחילים 3 בפברואר</span>
+              <h1>בניית סינתיסייזר דיגיטלי (ESP32 + AI)</h1>
+              <p class="course-tagline">סדנה מעשית ללמידת יסודות האלקטרוניקה ועיבוד אותות דיגיטלי</p>
+              <p>בניית סינתיסייזר פונקציונלי תוך שימוש בבינה מלאכותית ככלי עזר לכתיבת קוד. מתאים למשתתפים ללא רקע טכני קודם.</p>
+              <div class="course-meta">
+                <span><strong>משך:</strong> 7 מפגשים של 2.5 שעות</span>
+                <span><strong>משתתפים:</strong> עד 8</span>
+                <span><strong>מיקום:</strong> חיפה</span>
+                <span><strong>דרישות קדם:</strong> אין</span>
+              </div>
+              <p class="course-audience"><strong>קהל יעד:</strong> מוזיקאים, סקרנים טכנולוגית. דרישות: מחשב נייד ומנוי AI (כ-20$)</p>
+              <div class="kit-box">
+                <strong>תוצרי הסדנה:</strong> סינתיסייזר דיגיטלי פונקציונלי, ידע באלקטרוניקה, וכלים לעבודה עם AI.
+              </div>
+            </div>
+          </div>
+
+          <h2>פירוט המפגשים</h2>
+          <div class="meetings-list">
+            <div class="meeting-item">
+              <div class="meeting-number">1</div>
+              <div class="meeting-content">
+                <h4>יסודות אלקטרוניקה</h4>
+                <ul>
+                  <li>בניית אוסילטור אנלוגי עם שבב 40106</li>
+                  <li>מתח, זרם, התנגדות</li>
+                  <li>מבוא ל-AI בקוד</li>
+                </ul>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">2</div>
+              <div class="meeting-content">
+                <h4>היכרות עם מיקרו-בקרים ו-AI</h4>
+                <ul>
+                  <li>הכרת ה-ESP32 והתקנת Arduino IDE</li>
+                  <li>עקרונות עבודה עם בינה מלאכותית ליצירת קוד</li>
+                  <li>העלאת תוכנית ראשונה</li>
+                </ul>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">3</div>
+              <div class="meeting-content">
+                <h4>עיבוד אותות והוראות ל-AI</h4>
+                <ul>
+                  <li>עקרונות אודיו דיגיטלי (דגימה, רזולוציה)</li>
+                  <li>כתיבת פרומפטים יעילים ל-AI</li>
+                  <li>בדיקה ותיקון קוד שנוצר ע"י AI</li>
+                </ul>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">4</div>
+              <div class="meeting-content">
+                <h4>אינטגרציה של ציוד היקפי</h4>
+                <ul>
+                  <li>חיבור פוטנציומטרים, כפתורים, אנקודר, מסך OLED</li>
+                  <li>מיפוי פרמטרים לבקרה מוזיקלית</li>
+                  <li>אינטגרציה למערכת אחת</li>
+                </ul>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">5</div>
+              <div class="meeting-content">
+                <h4>פיתוח ותכנון המוצר הסופי</h4>
+                <ul>
+                  <li>בדיקת יכולות, זיהוי בעיות ושיפורים</li>
+                  <li>תכנון לוח PCB</li>
+                  <li>עיצוב מכני ורכיבי מארז</li>
+                </ul>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">6</div>
+              <div class="meeting-content">
+                <h4>הלחמה וייצור</h4>
+                <ul>
+                  <li>טכניקות הלחמה והלחמת רכיבים על PCB</li>
+                  <li>בדיקות ופתרון בעיות</li>
+                </ul>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">7</div>
+              <div class="meeting-content">
+                <h4>השלמה ומסקנות</h4>
+                <ul>
+                  <li>הכנסת המעגל למארז, בדיקות סופיות</li>
+                  <li>דיון על פיתוח נוסף ומשאבים להמשך</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" id="register-he">
+            <h2>הרשמה עכשיו</h2>
+            <p>שריינו מקום במחזור של 3 בפברואר.</p>
+
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background: #e8faf3; border: 1px solid #25d366; border-radius: var(--radius-sm); text-align: center;">
+              <a href="https://wa.me/972539263808?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%94%D7%99%D7%A8%D7%A9%D7%9D%20%D7%9C%D7%A1%D7%93%D7%A0%D7%AA%20ESP32" class="btn" style="background: #25d366; color: white; border: none;">
+                הרשמה בוואטסאפ
+              </a>
+            </div>
+
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSeXK0PPF8B9_xSPqBF5nfzZ-H9TAXQbMGGe5FLYCmjsn54Hsg/viewform?embedded=true"
+              width="100%"
+              height="1800"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              style="border: none;">
+              טוען טופס...
+            </iframe>
+          </div>
+
+          <div class="btn-group" style="margin-top: 2rem;">
+            <a href="workshops.html" class="btn btn-secondary">&gt; חזרה לכל הסדנאות</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
+          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+          <a href="mods.html"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

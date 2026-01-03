@@ -1,0 +1,71 @@
+/* Serious S.H.I.T. - Fix Pack (Clean + Contrast) */
+
+/* 1. BUTTON VISIBILITY (High Contrast) */
+.btn-primary {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important; /* Always visible border */
+  box-shadow: 4px 4px 0px #000000 !important; /* Hard shadow */
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform 0.1s !important;
+}
+
+[data-theme="dark"] .btn-primary {
+  border-color: #ffffff !important;
+  box-shadow: 4px 4px 0px #ffffff !important;
+}
+
+.btn-primary:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  box-shadow: 2px 2px 0px #ffffff !important;
+}
+
+/* Secondary Buttons */
+.btn-secondary {
+  border: 2px solid var(--text) !important;
+  color: var(--text) !important;
+  font-weight: 700;
+}
+
+/* 2. IMAGE SIZING FIX */
+/* Prevent product images from being huge */
+.product-image {
+  flex: 0 0 35%; /* Fixed width relative to container */
+  max-width: 400px; /* Absolute max width */
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+}
+
+/* 3. CENTERED LAYOUT (Where it makes sense) */
+.hero, .hero .container {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 4. YOUTUBE LINK CARD (High Visibility) */
+.video-container {
+  border: 2px solid var(--text);
+  box-shadow: 6px 6px 0px rgba(0,0,0,0.1);
+}
+
+/* 5. FONTS */
+/* Use monospace for prices to keep the "maker" feel without being messy */
+.price, .tech-tag, .featured-badge {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+}

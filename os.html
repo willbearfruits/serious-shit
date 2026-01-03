@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.H.I.T. OS v0.1</title>
+  <meta name="description" content="Experimental OS Interface - Serious S.H.I.T.">
+  <link rel="stylesheet" href="css/os.css">
+</head>
+<body>
+  <!-- BOOT SCREEN -->
+  <div id="boot-screen">
+    <div class="boot-content">
+      <pre class="boot-text">
+S.H.I.T. OS v0.1.0
+Copyright (c) 2026 Serious Super Hyper Incredible Things
+
+Checking system integrity... <span class="blink">_</span>
+      </pre>
+      <div class="boot-progress">
+        <div class="boot-progress-bar"></div>
+      </div>
+      <p class="boot-status">Loading experimental interface...</p>
+    </div>
+  </div>
+
+  <!-- DESKTOP -->
+  <div id="desktop">
+    <!-- Desktop Icons -->
+    <div class="desktop-icons">
+      <div class="icon" data-window="workshops">
+        <div class="icon-img">
+          <svg viewBox="0 0 32 32" fill="currentColor">
+            <rect x="4" y="8" width="24" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="4" y1="14" x2="28" y2="14" stroke="currentColor" stroke-width="2"/>
+            <circle cx="8" cy="11" r="1.5"/>
+            <circle cx="12" cy="11" r="1.5"/>
+          </svg>
+        </div>
+        <span class="icon-label">Workshops.exe</span>
+      </div>
+
+      <div class="icon" data-window="gear">
+        <div class="icon-img">
+          <svg viewBox="0 0 32 32" fill="currentColor">
+            <path d="M16 6 L18 12 L24 12 L19 16 L21 22 L16 18 L11 22 L13 16 L8 12 L14 12 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <span class="icon-label">Fuzilator.exe</span>
+      </div>
+
+      <div class="icon" data-window="contact">
+        <div class="icon-img">
+          <svg viewBox="0 0 32 32" fill="currentColor">
+            <rect x="4" y="8" width="24" height="16" fill="none" stroke="currentColor" stroke-width="2"/>
+            <polyline points="4,8 16,18 28,8" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <span class="icon-label">Contact.exe</span>
+      </div>
+
+      <div class="icon" data-window="about">
+        <div class="icon-img">
+          <svg viewBox="0 0 32 32" fill="currentColor">
+            <circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+            <text x="16" y="21" text-anchor="middle" font-size="12" font-weight="bold">?</text>
+          </svg>
+        </div>
+        <span class="icon-label">About.txt</span>
+      </div>
+
+      <div class="icon" data-window="terminal">
+        <div class="icon-img">
+          <svg viewBox="0 0 32 32" fill="currentColor">
+            <rect x="4" y="6" width="24" height="20" fill="none" stroke="currentColor" stroke-width="2"/>
+            <text x="8" y="20" font-size="10" font-family="monospace">&gt;_</text>
+          </svg>
+        </div>
+        <span class="icon-label">Terminal</span>
+      </div>
+
+      <div class="icon" data-action="exit">
+        <div class="icon-img">
+          <svg viewBox="0 0 32 32" fill="currentColor">
+            <rect x="6" y="6" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="10" x2="22" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="22" y1="10" x2="10" y2="22" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <span class="icon-label">Exit to Site</span>
+      </div>
+    </div>
+
+    <!-- Windows Container -->
+    <div id="windows-container"></div>
+
+    <!-- Taskbar -->
+    <div id="taskbar">
+      <button id="start-button">
+        <span class="start-icon">S</span>
+        <span>Start</span>
+      </button>
+      <div id="taskbar-windows"></div>
+      <div id="system-tray">
+        <span id="lang-indicator" title="Toggle Language">EN</span>
+        <span id="clock">00:00</span>
+      </div>
+    </div>
+
+    <!-- Start Menu -->
+    <div id="start-menu" class="hidden">
+      <div class="start-menu-header">
+        <div class="start-menu-logo">S.H.I.T.</div>
+        <div class="start-menu-version">OS v0.1</div>
+      </div>
+      <div class="start-menu-items">
+        <div class="start-menu-item" data-window="workshops">
+          <span class="menu-icon">W</span> Workshops
+        </div>
+        <div class="start-menu-item" data-window="gear">
+          <span class="menu-icon">F</span> Fuzilator
+        </div>
+        <div class="start-menu-item" data-window="contact">
+          <span class="menu-icon">C</span> Contact
+        </div>
+        <div class="start-menu-item" data-window="about">
+          <span class="menu-icon">?</span> About
+        </div>
+        <div class="start-menu-item" data-window="terminal">
+          <span class="menu-icon">&gt;</span> Terminal
+        </div>
+        <div class="start-menu-divider"></div>
+        <div class="start-menu-item" data-action="exit">
+          <span class="menu-icon">X</span> Exit to Normal Site
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Window Templates (hidden) -->
+  <template id="window-template">
+    <div class="window">
+      <div class="window-titlebar">
+        <span class="window-title"></span>
+        <div class="window-controls">
+          <button class="window-btn minimize">_</button>
+          <button class="window-btn maximize">[]</button>
+          <button class="window-btn close">X</button>
+        </div>
+      </div>
+      <div class="window-content"></div>
+      <div class="window-statusbar">Ready</div>
+    </div>
+  </template>
+
+  <!-- Window Contents -->
+  <div id="window-contents" style="display: none;">
+
+    <!-- Workshops Window -->
+    <div data-window="workshops" data-title="Workshops.exe">
+      <div class="win-content-inner">
+        <h2>// EDUCATION MODULES</h2>
+        <div class="file-list">
+          <div class="file-item" onclick="window.open('workshops.html', '_self')">
+            <span class="file-icon">[DIR]</span>
+            <span class="file-name">ESP32_Synth_AI/</span>
+            <span class="file-meta">7 sessions | 2,200 NIS</span>
+          </div>
+          <div class="file-item" onclick="window.open('workshops.html', '_self')">
+            <span class="file-icon">[DIR]</span>
+            <span class="file-name">DIY_Guitar_Pedal/</span>
+            <span class="file-meta">8 sessions | 2,200 NIS</span>
+          </div>
+          <div class="file-item" onclick="window.open('workshops.html', '_self')">
+            <span class="file-icon">[DIR]</span>
+            <span class="file-name">1Bit_Synth_Drones/</span>
+            <span class="file-meta">5 sessions | TBD</span>
+          </div>
+        </div>
+        <div class="win-info-box">
+          <strong>NEXT BATCH:</strong> February 3rd, 2026<br>
+          <strong>LOCATION:</strong> Haifa Makerspace<br>
+          <strong>INCLUDES:</strong> Components + 4h/week lab access
+        </div>
+        <button class="win-btn" onclick="window.open('workshops.html', '_self')">Open Full Catalog</button>
+      </div>
+    </div>
+
+    <!-- Gear Window -->
+    <div data-window="gear" data-title="Fuzilator.exe - Product Viewer">
+      <div class="win-content-inner">
+        <h2>// THE FUZILATOR PUKEMACHINE</h2>
+        <div class="product-ascii">
+<pre>
+    _______________
+   |  [O]  [O]  [O] |
+   |  GAIN  TONE VOL|
+   |_______________|
+   |   FUZILATOR   |
+   |   PUKEMACHINE |
+   |_______________|
+   |  [FOOTSWITCH] |
+   |_______________|
+</pre>
+        </div>
+        <div class="specs-grid">
+          <div class="spec-row"><span>TYPE:</span> Dual-Stage Fuzz</div>
+          <div class="spec-row"><span>CIRCUIT:</span> 2x LPB2 + Tone Stack</div>
+          <div class="spec-row"><span>FEATURES:</span> Feedback Loop, Internal Piezo</div>
+          <div class="spec-row"><span>POWER:</span> 9V Negative Center</div>
+          <div class="spec-row"><span>BYPASS:</span> True Bypass</div>
+          <div class="spec-row"><span>PRICE:</span> $333 / 1,100 NIS</div>
+          <div class="spec-row"><span>STOCK:</span> 13 units (limited)</div>
+        </div>
+        <button class="win-btn" onclick="window.open('sales.html', '_self')">View Full Details</button>
+      </div>
+    </div>
+
+    <!-- Contact Window -->
+    <div data-window="contact" data-title="Contact.exe - Communication">
+      <div class="win-content-inner">
+        <h2>// DIRECT CHANNELS</h2>
+        <div class="contact-list">
+          <a href="https://wa.me/972539263808" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-icon">[WA]</span>
+            <span class="contact-label">WhatsApp</span>
+            <span class="contact-value">+972-53-926-3808</span>
+          </a>
+          <a href="mailto:Dogme84@gmail.com" class="contact-item">
+            <span class="contact-icon">[@]</span>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">Dogme84@gmail.com</span>
+          </a>
+          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-icon">[IG]</span>
+            <span class="contact-label">Instagram</span>
+            <span class="contact-value">@shitisizers</span>
+          </a>
+        </div>
+        <button class="win-btn" onclick="window.open('contact.html', '_self')">Open Contact Form</button>
+      </div>
+    </div>
+
+    <!-- About Window -->
+    <div data-window="about" data-title="About.txt - Notepad">
+      <div class="win-content-inner notepad">
+        <pre>
+============================================
+  S.H.I.T. OS v0.1.0
+  Super Hyper Incredible Things
+============================================
+
+OPERATOR: Yaniv Schonfeld
+LOCATION: Haifa, Israel
+MISSION:  Circuit-bending, gear modification,
+          and creative electronics education.
+
+PHILOSOPHY:
+"Nothing Is Holy. Everything is raw material
+for transformation."
+
+TECHNOLOGIES:
+- ESP32 / Arduino / Raspberry Pi
+- Daisy Seed DSP
+- Analog Circuit Design
+- KiCad / PCB Design
+- CNC Machining
+- 3D Printing
+
+============================================
+This interface is an experiment.
+Press [ESC] or click "Exit" to return
+to the normal website.
+============================================
+        </pre>
+      </div>
+    </div>
+
+    <!-- Terminal Window -->
+    <div data-window="terminal" data-title="Terminal - S.H.I.T. Shell">
+      <div class="win-content-inner terminal">
+        <div id="terminal-output">
+          <div class="term-line">S.H.I.T. Shell v0.1.0</div>
+          <div class="term-line">Type 'help' for available commands.</div>
+          <div class="term-line">&nbsp;</div>
+        </div>
+        <div class="term-input-line">
+          <span class="term-prompt">guest@shit-os:~$</span>
+          <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/os.js"></script>
+</body>
+</html>

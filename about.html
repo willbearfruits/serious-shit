@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Serious S.H.I.T.</title>
+  <meta name="description" content="Yaniv Schonfeld (Willbear) - interdisciplinary artist, musician, educator. Circuit-bending and experimental music from Haifa, Israel.">
+  <script>
+    (function(){
+      var lang = localStorage.getItem('sshit-lang') || 'he';
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .bio-section p {
+      max-width: 65ch;
+      margin-bottom: 1.5rem;
+      color: var(--text-dim);
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .tech-item {
+      border: 1px solid var(--border-light);
+      padding: 0.5rem 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+    .philosophy-box {
+      border-left: 4px solid var(--accent);
+      padding-left: 2rem;
+      margin: 3rem 0;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//ABOUT</span></a>
+      <nav class="nav-links uppercase mono">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+        <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="mods.html"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+        <a href="#" class="theme-toggle">LIGHT/DARK</a>
+        <a href="#" class="lang-toggle">EN/HE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="tech-header">
+      <h1 class="tech-title"><span class="lang-en">Profile</span><span class="lang-he">פרופיל</span></h1>
+      <span class="tech-meta mono">OPERATOR: YANIV SCHONFELD</span>
+    </div>
+
+    <!-- English -->
+    <div class="lang-en bio-section">
+      <h2 class="ws-title">> IDENTITY</h2>
+      <p>Yaniv Schonfeld. Also known as Willbear, Parve, KillAllUnicorns.</p>
+      <p>Interdisciplinary artist, musician, educator based in Haifa, Israel.</p>
+
+      <h2 class="ws-title" style="margin-top: 3rem;">> PRACTICE</h2>
+      <p>I build instruments from salvaged electronics. I bend circuits — finding and exploiting the points where machines break in interesting ways. I modify gear to do things it wasn't designed to do. I perform experimental music with these broken tools. I teach others to do the same.</p>
+
+      <div class="philosophy-box">
+        "Nothing is holy. Everything is raw material for transformation."
+      </div>
+
+      <h2 class="ws-title">> TECHNICAL_STACK</h2>
+      <div class="tech-grid">
+        <div class="tech-item">ESP32 / Arduino</div>
+        <div class="tech-item">Daisy Seed DSP</div>
+        <div class="tech-item">Analog Circuits</div>
+        <div class="tech-item">KiCad / PCB Design</div>
+        <div class="tech-item">CNC Machining</div>
+        <div class="tech-item">3D Printing</div>
+      </div>
+
+      <h2 class="ws-title">> LOCATIONS</h2>
+      <ul class="mono" style="list-style: none; color: var(--text-dim); line-height: 2;">
+        <li>[JERUSALEM] Musrara Art School (Lecturer)</li>
+        <li>[TEL AVIV] Matmon Space (Workshops)</li>
+        <li>[HAIFA] Home Base / Private Studio</li>
+      </ul>
+      
+      <div style="margin-top: 4rem;">
+        <a href="contact.html" class="pane-cta">Init Communication</a>
+      </div>
+    </div>
+
+    <!-- Hebrew -->
+    <div class="lang-he bio-section">
+      <h2 class="ws-title">> זהות</h2>
+      <p>יניב שונפלד. ידוע גם כ-Willbear, Parve, KillAllUnicorns.</p>
+      <p>אמן בין-תחומי, מוזיקאי, מחנך. מבוסס בחיפה.</p>
+
+      <h2 class="ws-title" style="margin-top: 3rem;">> פרקטיקה</h2>
+      <p>אני בונה כלי נגינה מאלקטרוניקה מוצלת. אני מכופף מעגלים (Circuit Bending) — מוצא ומנצל את הנקודות שבהן מכונות נשברות בדרכים מעניינות. אני משנה ציוד כדי שיעשה דברים שהוא לא תוכנן לעשות. אני מופיע עם הכלים השבורים האלה, ומלמד אחרים לעשות את אותו הדבר.</p>
+
+      <div class="philosophy-box">
+        "שום דבר לא קדוש. הכל הוא חומר גלם לשינוי."
+      </div>
+
+      <h2 class="ws-title">> טכנולוגיות</h2>
+      <div class="tech-grid">
+        <div class="tech-item">ESP32 / ארדואינו</div>
+        <div class="tech-item">Daisy Seed DSP</div>
+        <div class="tech-item">מעגלים אנלוגיים</div>
+        <div class="tech-item">עיצוב מעגלים (KiCad)</div>
+        <div class="tech-item">עיבוד שבבי (CNC)</div>
+        <div class="tech-item">הדפסה תלת מימדית</div>
+      </div>
+
+      <h2 class="ws-title">> מיקומים</h2>
+      <ul class="mono" style="list-style: none; color: var(--text-dim); line-height: 2;">
+        <li>[ירושלים] מוסררה - בית ספר לאמנות (מרצה)</li>
+        <li>[תל אביב] מתמון ספייס (סדנאות)</li>
+        <li>[חיפה] בסיס הבית / סטודיו פרטי</li>
+      </ul>
+
+      <div style="margin-top: 4rem;">
+        <a href="contact.html" class="pane-cta">יצירת קשר</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
+          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+          <a href="mods.html"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
