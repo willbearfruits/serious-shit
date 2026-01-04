@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mods | Serious S.H.I.T.</title>
-  <meta name="description" content="Circuit-bending and gear modifications. System offline.">
+  <title>Thank You | Serious S.H.I.T.</title>
+  <meta name="description" content="Thanks for getting in touch.">
   <script>
     (function(){
       var lang = localStorage.getItem('sshit-lang') || 'he';
@@ -13,74 +13,51 @@
     })();
   </script>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .maintenance-screen {
-      min-height: 60vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-family: var(--font-mono);
-    }
-    .error-code {
-      font-size: 5rem;
-      font-weight: 900;
-      color: var(--text);
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-    .blink { animation: blink 1s step-end infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
-  </style>
 </head>
 <body>
   <header>
     <div class="container header-inner">
-      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//MODS</span></a>
+      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//THANK YOU</span></a>
       <nav class="nav-links uppercase mono">
         <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
         <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
-        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">גיר</span></a>
         <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
         <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
-        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+        <a href="contact.html" class="active"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
         <a href="#" class="theme-toggle">LIGHT/DARK</a>
         <a href="#" class="lang-toggle">EN/HE</a>
       </nav>
     </div>
   </header>
 
-  <main class="container maintenance-screen">
-    
-    <!-- English -->
+  <main class="container">
+    <div class="tech-header">
+      <h1 class="tech-title"><span class="lang-en">Message Received</span><span class="lang-he">ההודעה התקבלה</span></h1>
+      <span class="tech-meta mono">STATUS: OK</span>
+    </div>
+
     <div class="lang-en">
-      <div class="error-code">404<span style="color: var(--accent)">_MODS</span></div>
-      <p style="margin-bottom: 2rem;">> SYSTEM STATUS: UNDER_CONSTRUCTION<br>> We are busy breaking things.</p>
-      
-      <div style="border: 1px dashed var(--border); padding: 1rem; display: inline-block;">
-        <p style="font-size: 0.8rem; color: var(--text-dim);">The Mod Shop is offline. Check back later for circuit bending services.</p>
+      <p class="pane-desc">Thank you for reaching out. Your message was sent successfully and we will get back to you soon.</p>
+      <div class="btn-group">
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+        <a href="contact.html" class="btn btn-secondary">Contact Page</a>
       </div>
-
-      <div style="margin-top: 3rem;">
-        <a href="index.html" class="pane-cta">&lt; RETURN_ROOT</a>
+      <div style="margin-top: 0.75rem;">
+        <a href="#" class="back-link" data-back data-back-fallback="contact.html">Back to previous page</a>
       </div>
     </div>
 
-    <!-- Hebrew -->
     <div class="lang-he">
-      <div class="error-code">404<span style="color: var(--accent)">_מודים</span></div>
-      <p style="margin-bottom: 2rem;">> סטטוס מערכת: בבנייה<br>> אנחנו עסוקים בלשבור דברים.</p>
-      
-      <div style="border: 1px dashed var(--border); padding: 1rem; display: inline-block;">
-        <p style="font-size: 0.8rem; color: var(--text-dim);">חנות המודים לא זמינה כרגע. חזרו מאוחר יותר לשירותי כיפוף מעגלים.</p>
+      <p class="pane-desc">תודה על הפנייה! ההודעה נשלחה בהצלחה ונחזור אליך בקרוב.</p>
+      <div class="btn-group">
+        <a href="index.html" class="btn btn-primary">חזרה לדף הבית</a>
+        <a href="contact.html" class="btn btn-secondary">דף יצירת קשר</a>
       </div>
-
-      <div style="margin-top: 3rem;">
-        <a href="index.html" class="pane-cta">&lt; חזרה_לבית</a>
+      <div style="margin-top: 0.75rem;">
+        <a href="#" class="back-link" data-back data-back-fallback="contact.html">חזרה לעמוד הקודם</a>
       </div>
     </div>
-
   </main>
 
   <footer>
@@ -89,7 +66,7 @@
         <div class="footer-links">
           <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
           <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
-          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">גיר</span></a>
           <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
           <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
           <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>

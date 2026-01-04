@@ -9,10 +9,10 @@ Search for and replace these placeholders in `index.html`, `contact.html`, and `
 *   **Email:** `contact@example.com` -> Your real email (e.g., `yaniv@serious-shit.com`).
 
 ## 2. Contact Forms
-The site uses **Formspree** for handling emails without a backend.
-1.  Go to [formspree.io](https://formspree.io) and register (free tier is usually enough).
-2.  Create a new form and get your **Form ID** (e.g., `f/xyoyqvqz`).
-3.  Replace `YOUR_FORM_ID` in `contact.html` (and `index.html` / `site.json` if present) with your new ID.
+The site uses **FormSubmit** for handling emails without a backend.
+1.  Confirm the form `action` uses your real email address (e.g., `https://formsubmit.co/you@example.com`).
+2.  Submit a test form and complete the FormSubmit activation email.
+3.  Update the `_next` value if you need a full URL (the default is `thank-you.html`).
 
 ## 3. Images
 *   **Fuzilator:** Ensure `images/products/fuzilator.jpg` is the high-res photo you want.
@@ -36,4 +36,4 @@ If you have a domain (e.g., `serious-shit.com`):
 *   ✅ Design: Practitioner / Technical
 *   ✅ Content: Workshops & Fuzilator specs
 *   ✅ Mobile: Responsive
-*   ⚠️ **Action Required:** Update Phone, Email, and Form ID.
+*   ⚠️ **Action Required:** Update Phone, Email, and FormSubmit activation.

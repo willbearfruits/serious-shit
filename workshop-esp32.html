@@ -23,7 +23,7 @@
         <a href="workshops.html" class="active"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
         <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
         <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-        <a href="mods.html"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
         <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
         <a href="#" class="theme-toggle">LIGHT/DARK</a>
         <a href="#" class="lang-toggle">EN/HE</a>
@@ -37,7 +37,7 @@
       <!-- English -->
       <section class="lang-en">
         <div class="course-section">
-          <div class="course-header">
+          <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
             <div class="course-header-content">
               <span class="badge badge-new">NEW - STARTING FEB 3</span>
               <h1>ESP32/Arduino Digital Synth with AI</h1>
@@ -49,7 +49,7 @@
                 <span><strong>Location:</strong> Haifa</span>
                 <span><strong>Prerequisites:</strong> None</span>
               </div>
-              <p class="course-audience"><strong>Target:</strong> Anyone interested in digital audio, coding, and synth building</p>
+              <p class="course-audience"><strong>Target:</strong> Anyone interested in digital audio, coding, and synth building. <strong>Requirements:</strong> Laptop and AI subscription (~$20/month)</p>
               <div class="tech-stack">
                 <span class="tech-tag">ESP32</span>
                 <span class="tech-tag">Arduino IDE</span>
@@ -61,6 +61,9 @@
               <div class="kit-box">
                 <strong>Kit Components:</strong> ESP32 WROOM, OLED 0.96" screen, 2 potentiometers, 2 buttons, 1 encoder, Breadboard, Wires
               </div>
+            </div>
+            <div class="course-header-image" style="border: 1px solid var(--border);">
+              <img src="images/gallery/esp32-synth-oled.png" alt="ESP32 Synth Module" style="width: 100%; display: block;">
             </div>
           </div>
 
@@ -172,16 +175,46 @@
               </a>
             </div>
 
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSeXK0PPF8B9_xSPqBF5nfzZ-H9TAXQbMGGe5FLYCmjsn54Hsg/viewform?embedded=true"
-              width="100%"
-              height="1800"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              style="border: none;">
-              Loading form...
-            </iframe>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-dim);">Or fill out the form below:</p>
+            <form action="https://formsubmit.co/Dogme84@gmail.com" method="POST" class="registration-form" data-form-name="workshop-esp32-en">
+          <input type="hidden" name="_next" value="https://willbearfruits.github.io/serious-shit/thank-you.html">
+          <input type="hidden" name="_replyto" value="">
+              <input type="hidden" name="_subject" value="Workshop Registration">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_autoresponse" value="Thank you for registering! We received your workshop registration and will contact you soon to confirm your spot. - Serious S.H.I.T.">
+
+              <div class="form-group">
+                <label for="name-en">Full Name *</label>
+                <input type="text" id="name-en" name="name" required placeholder="Your name">
+              </div>
+
+              <div class="form-group">
+                <label for="email-en">Email *</label>
+                <input type="email" id="email-en" name="email" required placeholder="your@email.com">
+              </div>
+
+              <div class="form-group">
+                <label for="phone-en">Phone (optional)</label>
+                <input type="tel" id="phone-en" name="phone" placeholder="+972-...">
+              </div>
+
+              <div class="form-group">
+                <label for="workshop-en">Workshop *</label>
+                <select id="workshop-en" name="workshop" required>
+                  <option value="ESP32 Synth (Feb 3, 2026)" selected>ESP32 Digital Synth & AI - Feb 3, 2026</option>
+                  <option value="DIY Pedal (Feb 3, 2026)">DIY Guitar Pedal - Feb 3, 2026</option>
+                  <option value="Private Course">Private Course (1-on-1)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message-en">Questions/Comments (optional)</label>
+                <textarea id="message-en" name="message" rows="3" placeholder="Any questions about the workshop?"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Registration</button>
+            </form>
           </div>
 
           <div class="btn-group" style="margin-top: 2rem;">
@@ -193,7 +226,7 @@
       <!-- Hebrew -->
       <section class="lang-he">
         <div class="course-section">
-          <div class="course-header">
+          <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
             <div class="course-header-content">
               <span class="badge badge-new">חדש - מתחילים 3 בפברואר</span>
               <h1>בניית סינתיסייזר דיגיטלי (ESP32 + AI)</h1>
@@ -209,6 +242,9 @@
               <div class="kit-box">
                 <strong>תוצרי הסדנה:</strong> סינתיסייזר דיגיטלי פונקציונלי, ידע באלקטרוניקה, וכלים לעבודה עם AI.
               </div>
+            </div>
+            <div class="course-header-image" style="border: 1px solid var(--border);">
+              <img src="images/gallery/esp32-synth-oled.png" alt="מודול סינת' ESP32" style="width: 100%; display: block;">
             </div>
           </div>
 
@@ -301,16 +337,46 @@
               </a>
             </div>
 
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSeXK0PPF8B9_xSPqBF5nfzZ-H9TAXQbMGGe5FLYCmjsn54Hsg/viewform?embedded=true"
-              width="100%"
-              height="1800"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              style="border: none;">
-              טוען טופס...
-            </iframe>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-dim);">או מלאו את הטופס למטה:</p>
+            <form action="https://formsubmit.co/Dogme84@gmail.com" method="POST" class="registration-form" data-form-name="workshop-esp32-he">
+          <input type="hidden" name="_next" value="https://willbearfruits.github.io/serious-shit/thank-you.html">
+          <input type="hidden" name="_replyto" value="">
+              <input type="hidden" name="_subject" value="הרשמה לסדנה">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_autoresponse" value="תודה על ההרשמה! קיבלנו את הפרטים שלך וניצור קשר בקרוב לאישור המקום. - סיריוס ש.י.ט.">
+
+              <div class="form-group">
+                <label for="name-he">שם מלא *</label>
+                <input type="text" id="name-he" name="name" required placeholder="השם שלך">
+              </div>
+
+              <div class="form-group">
+                <label for="email-he">אימייל *</label>
+                <input type="email" id="email-he" name="email" required placeholder="your@email.com">
+              </div>
+
+              <div class="form-group">
+                <label for="phone-he">טלפון (אופציונלי)</label>
+                <input type="tel" id="phone-he" name="phone" placeholder="05X-XXX-XXXX">
+              </div>
+
+              <div class="form-group">
+                <label for="workshop-he">סדנה *</label>
+                <select id="workshop-he" name="workshop" required>
+                  <option value="ESP32 Synth (Feb 3, 2026)" selected>סינת' דיגיטלי ESP32 + AI - 3 בפברואר 2026</option>
+                  <option value="DIY Pedal (Feb 3, 2026)">בניית פדאל גיטרה - 3 בפברואר 2026</option>
+                  <option value="Private Course">קורס פרטי (1 על 1)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message-he">שאלות/הערות (אופציונלי)</label>
+                <textarea id="message-he" name="message" rows="3" placeholder="יש לכם שאלות על הסדנה?"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">שליחת הרשמה</button>
+            </form>
           </div>
 
           <div class="btn-group" style="margin-top: 2rem;">
@@ -330,7 +396,7 @@
           <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
           <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
           <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-          <a href="mods.html"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
           <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
           <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>

@@ -23,7 +23,7 @@
         <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
         <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
         <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-        <a href="mods.html"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
         <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
         <a href="#" class="theme-toggle">LIGHT/DARK</a>
         <a href="#" class="lang-toggle">EN/HE</a>
@@ -44,13 +44,175 @@
       <p class="pane-desc">תיעוד של בניות, ניסויי כיפוף מעגלים, ותוצרי סדנאות.</p>
     </div>
 
-    <div class="gallery-status">
-      <p class="lang-en">Gallery TBA. New builds and workshop photos are being processed.</p>
-      <p class="lang-he">הגלריה בדרך. תמונות חדשות בעיבוד.</p>
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox(0)">
+        <img src="images/gallery/fuzilator-duo.png" alt="Fuzilator PukeMachine Duo" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">Fuzilator PukeMachine - Red & Black Editions</span>
+          <span class="lang-he">פוזילטור פיוק-משין - מהדורות אדום ושחור</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(1)">
+        <img src="images/gallery/esp32-synth-oled.png" alt="ESP32 Synth with OLED" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">ESP32 Synth Module with OLED Display</span>
+          <span class="lang-he">מודול סינת' ESP32 עם מסך OLED</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(2)">
+        <img src="images/gallery/fuzilator-glow-knobs.png" alt="Fuzilator Glow Knobs" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">Fuzilator with Glow-in-Dark Knobs</span>
+          <span class="lang-he">פוזילטור עם כפתורים זוהרים בחושך</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(3)">
+        <img src="images/gallery/shit-pedal-red.png" alt="S.H.I.T. Pedal Red" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">S.H.I.T. Pedal - "Don't Be Jealous"</span>
+          <span class="lang-he">פדאל S.H.I.T. - "אל תהיו מקנאים"</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(4)">
+        <img src="images/gallery/blasting-caps-pedal.png" alt="Blasting Caps Pedal" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">Blasting Caps - Vintage Aesthetic</span>
+          <span class="lang-he">בלאסטינג קאפס - אסתטיקה וינטאג'</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(5)">
+        <img src="images/gallery/pedal-live-stage.png" alt="Pedal on Stage" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">Live on Stage</span>
+          <span class="lang-he">על הבמה</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(6)">
+        <img src="images/gallery/fuzilator-pcb-design.png" alt="Fuzilator PCB Design" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">Fuzilator PCB Design</span>
+          <span class="lang-he">עיצוב PCB פוזילטור</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(7)">
+        <img src="images/gallery/pcb-batch-production.png" alt="PCB Batch Production" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">PCB Batch Production</span>
+          <span class="lang-he">ייצור אצווה של מעגלים</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(8)">
+        <img src="images/gallery/hand-pcb-cad.png" alt="HAND PCB CAD Design" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">"HAND" - PCB Art Design</span>
+          <span class="lang-he">"HAND" - עיצוב אמנות PCB</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(9)">
+        <img src="images/gallery/cnc-milled-pcb.png" alt="CNC Milled PCB" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">CNC Milled Copper PCB</span>
+          <span class="lang-he">מעגל נחושת מכורסם ב-CNC</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(10)">
+        <img src="images/gallery/cnc-machine-milling.png" alt="CNC Machine at Work" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">CNC Machine in Action</span>
+          <span class="lang-he">מכונת CNC בפעולה</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(11)">
+        <img src="images/gallery/micro-pcb-coin-scale.png" alt="Micro PCB Scale" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">Micro PCB - Coin for Scale</span>
+          <span class="lang-he">PCB מיקרו - מטבע להשוואה</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(12)">
+        <img src="images/gallery/breadboard-prototype.png" alt="Breadboard Prototype" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">Breadboard Prototyping</span>
+          <span class="lang-he">אב-טיפוס על ברדבורד</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(13)">
+        <img src="images/gallery/enclosure-assembly.png" alt="Enclosure Assembly" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">Workshop - Enclosure Assembly</span>
+          <span class="lang-he">סדנה - הרכבת מארז</span>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(14)">
+        <img src="images/gallery/pedal-build-workshop.png" alt="Pedal Building Workshop" loading="lazy">
+        <div class="gallery-item-caption">
+          <span class="lang-en">Workshop - Pedal Building</span>
+          <span class="lang-he">סדנה - בניית פדאל</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Gallery Container (Populated by JS) -->
-    <div id="gallery-container" class="gallery-grid"></div>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); navigateLightbox(-1)">&lt;</button>
+      <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); navigateLightbox(1)">&gt;</button>
+      <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightbox-img" src="" alt="">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <script>
+      const galleryImages = [
+        { src: 'images/gallery/fuzilator-duo.png', en: 'Fuzilator PukeMachine - Red & Black Editions', he: 'פוזילטור פיוק-משין - מהדורות אדום ושחור' },
+        { src: 'images/gallery/esp32-synth-oled.png', en: 'ESP32 Synth Module with OLED Display', he: 'מודול סינת\' ESP32 עם מסך OLED' },
+        { src: 'images/gallery/fuzilator-glow-knobs.png', en: 'Fuzilator with Glow-in-Dark Knobs', he: 'פוזילטור עם כפתורים זוהרים בחושך' },
+        { src: 'images/gallery/shit-pedal-red.png', en: 'S.H.I.T. Pedal - "Don\'t Be Jealous"', he: 'פדאל S.H.I.T. - "אל תהיו מקנאים"' },
+        { src: 'images/gallery/blasting-caps-pedal.png', en: 'Blasting Caps - Vintage Aesthetic', he: 'בלאסטינג קאפס - אסתטיקה וינטאג\'' },
+        { src: 'images/gallery/pedal-live-stage.png', en: 'Live on Stage', he: 'על הבמה' },
+        { src: 'images/gallery/fuzilator-pcb-design.png', en: 'Fuzilator PCB Design', he: 'עיצוב PCB פוזילטור' },
+        { src: 'images/gallery/pcb-batch-production.png', en: 'PCB Batch Production', he: 'ייצור אצווה של מעגלים' },
+        { src: 'images/gallery/hand-pcb-cad.png', en: '"HAND" - PCB Art Design', he: '"HAND" - עיצוב אמנות PCB' },
+        { src: 'images/gallery/cnc-milled-pcb.png', en: 'CNC Milled Copper PCB', he: 'מעגל נחושת מכורסם ב-CNC' },
+        { src: 'images/gallery/cnc-machine-milling.png', en: 'CNC Machine in Action', he: 'מכונת CNC בפעולה' },
+        { src: 'images/gallery/micro-pcb-coin-scale.png', en: 'Micro PCB - Coin for Scale', he: 'PCB מיקרו - מטבע להשוואה' },
+        { src: 'images/gallery/breadboard-prototype.png', en: 'Breadboard Prototyping', he: 'אב-טיפוס על ברדבורד' },
+        { src: 'images/gallery/enclosure-assembly.png', en: 'Workshop - Enclosure Assembly', he: 'סדנה - הרכבת מארז' },
+        { src: 'images/gallery/pedal-build-workshop.png', en: 'Workshop - Pedal Building', he: 'סדנה - בניית פדאל' }
+      ];
+      let currentIndex = 0;
+      const lang = document.documentElement.dataset.lang || 'he';
+
+      function openLightbox(index) {
+        currentIndex = index;
+        const img = galleryImages[index];
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox-caption').textContent = lang === 'he' ? img.he : img.en;
+        document.getElementById('lightbox').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      function navigateLightbox(direction) {
+        currentIndex = (currentIndex + direction + galleryImages.length) % galleryImages.length;
+        const img = galleryImages[currentIndex];
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox-caption').textContent = lang === 'he' ? img.he : img.en;
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (!document.getElementById('lightbox').classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+      });
+    </script>
     
   </main>
 
@@ -62,7 +224,7 @@
           <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
           <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
           <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-          <a href="mods.html"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
           <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
           <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>

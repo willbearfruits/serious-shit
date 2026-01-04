@@ -306,6 +306,64 @@
   }
 
   // ==========================================
+  // FORMSUBMIT REPLY-TO & ANALYTICS
+  // ==========================================
+  function trackFormSubmit(form) {
+    const formName = form.getAttribute('data-form-name') || form.getAttribute('name') || 'form';
+    const page = window.location.pathname.split('/').pop() || 'index.html';
+    const payload = { form: formName, page };
+
+    if (window.gtag) {
+      window.gtag('event', 'form_submit', payload);
+    }
+
+    if (window.plausible) {
+      window.plausible('form_submit', { props: payload });
+    }
+
+    if (window.umami && typeof window.umami.track === 'function') {
+      window.umami.track('form_submit', payload);
+    }
+
+    if (window.dataLayer && Array.isArray(window.dataLayer)) {
+      window.dataLayer.push(Object.assign({ event: 'form_submit' }, payload));
+    }
+  }
+
+  function initFormSubmitReplyTo() {
+    const forms = document.querySelectorAll('form[action*="formsubmit.co"]');
+    forms.forEach((form) => {
+      form.addEventListener('submit', () => {
+        const emailInput = form.querySelector('input[name="email"]');
+        const replyToInput = form.querySelector('input[name="_replyto"]');
+        if (emailInput && replyToInput) {
+          replyToInput.value = emailInput.value;
+        }
+        trackFormSubmit(form);
+      });
+    });
+  }
+
+  // ==========================================
+  // BACK LINKS
+  // ==========================================
+  function initBackLinks() {
+    document.querySelectorAll('[data-back]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (window.history.length > 1) {
+          window.history.back();
+          return;
+        }
+        const fallback = link.getAttribute('data-back-fallback');
+        if (fallback) {
+          window.location.href = fallback;
+        }
+      });
+    });
+  }
+
+  // ==========================================
   // INITIALIZATION
   // ==========================================
   function init() {
@@ -343,6 +401,8 @@
     
     // Handle smart booking links
     handleBookingParams();
+    initBackLinks();
+    initFormSubmitReplyTo();
 
     // Render dynamic content if containers exist
     renderWorkshops();

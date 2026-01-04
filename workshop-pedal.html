@@ -23,7 +23,7 @@
         <a href="workshops.html" class="active"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
         <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
         <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-        <a href="mods.html"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
         <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
         <a href="#" class="theme-toggle">LIGHT/DARK</a>
         <a href="#" class="lang-toggle">EN/HE</a>
@@ -37,7 +37,7 @@
       <!-- English -->
       <section class="lang-en">
         <div class="course-section">
-          <div class="course-header">
+          <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
             <div class="course-header-content">
               <span class="badge badge-new">2,200 NIS - STARTING FEB 3</span>
               <h1>DIY Guitar Pedal Building (Fuzz)</h1>
@@ -53,6 +53,9 @@
               <div class="kit-box">
                 <strong>Bonuses:</strong> 4 hours/week open lab time + Guest session with Anton Nota (DEAFTONE AUDIO) on enclosure design.
               </div>
+            </div>
+            <div class="course-header-image" style="border: 1px solid var(--border);">
+              <img src="images/gallery/pedal-build-workshop.png" alt="Pedal Building Workshop" style="width: 100%; display: block;">
             </div>
           </div>
 
@@ -157,16 +160,46 @@
               </a>
             </div>
 
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSeXK0PPF8B9_xSPqBF5nfzZ-H9TAXQbMGGe5FLYCmjsn54Hsg/viewform?embedded=true"
-              width="100%"
-              height="1800"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              style="border: none;">
-              Loading form...
-            </iframe>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-dim);">Or fill out the form below:</p>
+            <form action="https://formsubmit.co/Dogme84@gmail.com" method="POST" class="registration-form" data-form-name="workshop-pedal-en">
+          <input type="hidden" name="_next" value="https://willbearfruits.github.io/serious-shit/thank-you.html">
+          <input type="hidden" name="_replyto" value="">
+              <input type="hidden" name="_subject" value="Workshop Registration">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_autoresponse" value="Thank you for registering! We received your workshop registration and will contact you soon to confirm your spot. - Serious S.H.I.T.">
+
+              <div class="form-group">
+                <label for="name-pedal-en">Full Name *</label>
+                <input type="text" id="name-pedal-en" name="name" required placeholder="Your name">
+              </div>
+
+              <div class="form-group">
+                <label for="email-pedal-en">Email *</label>
+                <input type="email" id="email-pedal-en" name="email" required placeholder="your@email.com">
+              </div>
+
+              <div class="form-group">
+                <label for="phone-pedal-en">Phone (optional)</label>
+                <input type="tel" id="phone-pedal-en" name="phone" placeholder="+972-...">
+              </div>
+
+              <div class="form-group">
+                <label for="workshop-pedal-en">Workshop *</label>
+                <select id="workshop-pedal-en" name="workshop" required>
+                  <option value="DIY Pedal (Feb 3, 2026)" selected>DIY Guitar Pedal - Feb 3, 2026</option>
+                  <option value="ESP32 Synth (Feb 3, 2026)">ESP32 Digital Synth & AI - Feb 3, 2026</option>
+                  <option value="Private Course">Private Course (1-on-1)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message-pedal-en">Questions/Comments (optional)</label>
+                <textarea id="message-pedal-en" name="message" rows="3" placeholder="Any questions about the workshop?"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Registration</button>
+            </form>
           </div>
 
           <div class="btn-group" style="margin-top: 2rem;">
@@ -178,7 +211,7 @@
       <!-- Hebrew -->
       <section class="lang-he">
         <div class="course-section">
-          <div class="course-header">
+          <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
             <div class="course-header-content">
               <span class="badge badge-new">2,200 ש"ח - מתחילים 3 בפברואר</span>
               <h1>בניית פדל גיטרה או בס (מחזור 5)</h1>
@@ -194,6 +227,9 @@
               <div class="kit-box">
                 <strong>בונוסים:</strong> 4 שעות מעבדה פתוחה בשבוע + מפגש אורח עם אנטון נוטה (DEAFTONE AUDIO) על עיצוב קופסאות.
               </div>
+            </div>
+            <div class="course-header-image" style="border: 1px solid var(--border);">
+              <img src="images/gallery/pedal-build-workshop.png" alt="סדנת בניית פדאלים" style="width: 100%; display: block;">
             </div>
           </div>
 
@@ -290,16 +326,46 @@
               </a>
             </div>
 
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSeXK0PPF8B9_xSPqBF5nfzZ-H9TAXQbMGGe5FLYCmjsn54Hsg/viewform?embedded=true"
-              width="100%"
-              height="1800"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              style="border: none;">
-              טוען טופס...
-            </iframe>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-dim);">או מלאו את הטופס למטה:</p>
+            <form action="https://formsubmit.co/Dogme84@gmail.com" method="POST" class="registration-form" data-form-name="workshop-pedal-he">
+          <input type="hidden" name="_next" value="https://willbearfruits.github.io/serious-shit/thank-you.html">
+          <input type="hidden" name="_replyto" value="">
+              <input type="hidden" name="_subject" value="הרשמה לסדנה">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_autoresponse" value="תודה על ההרשמה! קיבלנו את הפרטים שלך וניצור קשר בקרוב לאישור המקום. - סיריוס ש.י.ט.">
+
+              <div class="form-group">
+                <label for="name-pedal-he">שם מלא *</label>
+                <input type="text" id="name-pedal-he" name="name" required placeholder="השם שלך">
+              </div>
+
+              <div class="form-group">
+                <label for="email-pedal-he">אימייל *</label>
+                <input type="email" id="email-pedal-he" name="email" required placeholder="your@email.com">
+              </div>
+
+              <div class="form-group">
+                <label for="phone-pedal-he">טלפון (אופציונלי)</label>
+                <input type="tel" id="phone-pedal-he" name="phone" placeholder="05X-XXX-XXXX">
+              </div>
+
+              <div class="form-group">
+                <label for="workshop-pedal-he">סדנה *</label>
+                <select id="workshop-pedal-he" name="workshop" required>
+                  <option value="DIY Pedal (Feb 3, 2026)" selected>בניית פדאל גיטרה - 3 בפברואר 2026</option>
+                  <option value="ESP32 Synth (Feb 3, 2026)">סינת' דיגיטלי ESP32 + AI - 3 בפברואר 2026</option>
+                  <option value="Private Course">קורס פרטי (1 על 1)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message-pedal-he">שאלות/הערות (אופציונלי)</label>
+                <textarea id="message-pedal-he" name="message" rows="3" placeholder="יש לכם שאלות על הסדנה?"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">שליחת הרשמה</button>
+            </form>
           </div>
 
           <div class="btn-group" style="margin-top: 2rem;">
@@ -319,7 +385,7 @@
           <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">סדנאות</span></a>
           <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
           <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-          <a href="mods.html"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
           <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
           <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
