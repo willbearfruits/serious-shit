@@ -39,7 +39,7 @@
         <div class="course-section">
           <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
             <div class="course-header-content">
-              <span class="badge badge-new">NEW - STARTING FEB 3</span>
+              <span class="badge badge-new">2,200 NIS - STARTING FEB 3</span>
               <h1>ESP32/Arduino Digital Synth with AI</h1>
               <p class="course-tagline">Code meets music - AI-assisted synth building</p>
               <p>Learn to build a complete digital synthesizer using ESP32, with AI tools (ChatGPT, Claude) helping you write the code. From analog fundamentals to a boxed digital instrument.</p>
@@ -60,7 +60,7 @@
               </div>
               <div class="kit-box">
                 <strong>Bonuses:</strong> Makerspace open 4 hours a week for homework included.<br>
-                <strong>Kit Components:</strong> ESP32 WROOM, OLED 0.96" screen, 2 potentiometers, 2 buttons, 1 encoder, Breadboard, Wires
+                <strong>Kit Components:</strong> ESP32 WROOM, I2S DAC Module, OLED 0.96" screen, 2 potentiometers, 2 buttons, 1 encoder, Breadboard, Wires
               </div>
             </div>
             <div class="course-header-image" style="border: 1px solid var(--border);">
@@ -88,7 +88,7 @@
               <div class="meeting-content">
                 <h4>Microcontrollers, AI & Setup</h4>
                 <ul>
-                  <li>In-depth ESP32 exploration (DAC, timers, memory, pins)</li>
+                  <li>In-depth ESP32 exploration (I2S, timers, memory, pins)</li>
                   <li>Arduino IDE installation and configuration</li>
                   <li>Installing ESP32 board package and libraries</li>
                   <li>AI prompt engineering techniques</li>
@@ -103,7 +103,7 @@
                 <h4>Audio Preparation & Custom Instructions</h4>
                 <ul>
                   <li>How audio works in microcontrollers (sampling, bit depth)</li>
-                  <li>DAC basics and ESP32 WROOM DAC on GPIO25</li>
+                  <li>I2S Audio protocol and external DACs (UDA1334 / PCM5102)</li>
                   <li>ESP32 audio limitations (RAM, buffer sizes)</li>
                   <li>Resource optimization techniques</li>
                   <li>Creating custom AI instructions for your project</li>
@@ -229,7 +229,7 @@
         <div class="course-section">
           <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
             <div class="course-header-content">
-              <span class="badge badge-new">חדש - מתחילים 3 בפברואר</span>
+              <span class="badge badge-new">2,200 ש"ח - מתחילים 3 בפברואר</span>
               <h1>בניית סינתיסייזר דיגיטלי (ESP32 + AI)</h1>
               <p class="course-tagline">סדנה מעשית ללמידת יסודות האלקטרוניקה ועיבוד אותות דיגיטלי</p>
               <p>בניית סינתיסייזר פונקציונלי תוך שימוש בבינה מלאכותית ככלי עזר לכתיבת קוד. מתאים למשתתפים ללא רקע טכני קודם.</p>
@@ -242,7 +242,7 @@
               <p class="course-audience"><strong>קהל יעד:</strong> מוזיקאים, סקרנים טכנולוגית. דרישות: מחשב נייד ומנוי AI (כ-20$)</p>
               <div class="kit-box">
                 <strong>בונוסים:</strong> מעבדה פתוחה 4 שעות בשבוע לשיעורי בית (כלול).<br>
-                <strong>תוצרי הסדנה:</strong> סינתיסייזר דיגיטלי פונקציונלי, ידע באלקטרוניקה, וכלים לעבודה עם AI.
+                <strong>רכיבי הערכה:</strong> ESP32 WROOM, מודול I2S DAC, מסך OLED 0.96, פוטנציומטרים, כפתורים, אנקודר, מטריצה וחיווט.
               </div>
             </div>
             <div class="course-header-image" style="border: 1px solid var(--border);">
@@ -268,7 +268,7 @@
               <div class="meeting-content">
                 <h4>היכרות עם מיקרו-בקרים ו-AI</h4>
                 <ul>
-                  <li>הכרת ה-ESP32 והתקנת Arduino IDE</li>
+                  <li>הכרת ה-ESP32 (I2S, טיימרים, זיכרון) והתקנת Arduino IDE</li>
                   <li>עקרונות עבודה עם בינה מלאכותית ליצירת קוד</li>
                   <li>העלאת תוכנית ראשונה</li>
                 </ul>
@@ -280,6 +280,7 @@
                 <h4>עיבוד אותות והוראות ל-AI</h4>
                 <ul>
                   <li>עקרונות אודיו דיגיטלי (דגימה, רזולוציה)</li>
+                  <li>פרוטוקול I2S Audio וממירי DAC חיצוניים</li>
                   <li>כתיבת פרומפטים יעילים ל-AI</li>
                   <li>בדיקה ותיקון קוד שנוצר ע"י AI</li>
                 </ul>
