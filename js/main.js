@@ -283,12 +283,12 @@
     if (bookTarget) {
       // Find the form and select element
       const formSection = document.querySelector('.form-section');
-      const selectEn = document.getElementById('ws-type-en');
-      const selectHe = document.getElementById('ws-type-he');
+      const selectEn = document.getElementById('ws-type-en') || document.getElementById('workshop-en') || document.getElementById('workshop-pedal-en');
+      const selectHe = document.getElementById('ws-type-he') || document.getElementById('workshop-he') || document.getElementById('workshop-pedal-he');
       
       // Auto-select the option
-      if (selectEn) selectEn.value = bookTarget;
-      if (selectHe) selectHe.value = bookTarget;
+      if (selectEn && bookTarget) selectEn.value = bookTarget;
+      if (selectHe && bookTarget) selectHe.value = bookTarget;
       
       // Scroll to form immediately
       if (formSection) {
