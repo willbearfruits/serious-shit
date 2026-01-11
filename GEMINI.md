@@ -24,6 +24,8 @@ This is the static website for **Serious S.H.I.T.** (Super Hyper Incredible Thin
     *   Dark/Light mode via `data-theme` attribute on `<html>`.
     *   CSS Custom Properties handle colors.
     *   Persisted in `localStorage` (`sshit-theme`).
+    *   **Default:** Light mode (forced default, ignores system preference initially).
+    *   **Dark Mode:** Uses dark grey (`#121212`) background instead of pure black.
 3.  **Booking Logic:**
     *   URL parameters (e.g., `?book=fuzz-pedal`) auto-select workshop options and scroll to the contact form.
 
@@ -58,7 +60,7 @@ npx serve
 
 ## Important Context
 *   **Yaniv Schonfeld:** The artist behind the project.
-*   **Locations:** Haifa (main), Tel Aviv, Jerusalem.
+*   **Locations:** MEZO Haifa (Sirkin 3) - Main Workshop. Previous/CV: Matmon (TLV), Musrara (JLM).
 *   **Core Offerings:**
     *   Workshops (ESP32 Synth, Pedal Building).
     *   Custom Mods (Circuit bending).

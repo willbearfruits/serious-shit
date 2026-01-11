@@ -49,10 +49,7 @@
     const saved = localStorage.getItem(THEME_KEY);
     if (saved) return saved;
 
-    // Fall back to system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
+    // Default to light regardless of system preference
     return DEFAULT_THEME;
   }
 

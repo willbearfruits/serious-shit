@@ -35,9 +35,9 @@
 
 /* Dark Mode - Lab Night Mode */
 [data-theme="dark"] {
-  --bg: #050505;
-  --surface: #111111;
-  --surface-alt: #1a1a1a;
+  --bg: #121212;
+  --surface: #1e1e1e;
+  --surface-alt: #252525;
   --text: #e0e0e0;
   --text-dim: #888888;
   --text-soft: #aaaaaa;
