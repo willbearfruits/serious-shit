@@ -6,7 +6,7 @@ Static HTML/CSS/JS site for workshops, gear, and contact.
 
 Most of my work stays free and open-source.  
 Support early access, live sessions, and workshop-time:  
-https://www.patreon.com/cw/Seriousshit?vanity=Seriousshit
+https://www.patreon.com/Seriousshit
 
 ## Structure
 
