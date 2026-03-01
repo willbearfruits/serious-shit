@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Serious S.H.I.T.</title>
   <meta name="description" content="Yaniv Schonfeld is a musician and electronics artist based in Haifa.">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://willbearfruits.github.io/serious-shit/about.html">
@@ -28,72 +28,52 @@
     })();
   </script>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .bio-section p {
-      max-width: 65ch;
-      margin-bottom: 1.5rem;
-      color: var(--text-dim);
-    }
-    .tech-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-    .tech-item {
-      border: 1px solid var(--border-light);
-      padding: 0.5rem 1rem;
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      text-align: center;
-    }
-    .philosophy-box {
-      border-left: 4px solid var(--accent);
-      padding-left: 2rem;
-      margin: 3rem 0;
-      font-style: italic;
-      font-size: 1.2rem;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <div class="container header-inner">
-      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//ABOUT</span></a>
-      <nav class="nav-links uppercase mono">
-        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+    <div class="container header-bar">
+      <a class="logo" href="index.html">SERIOUS S.H.I.T.</a>
+      <span class="logo-sub">Haifa, IL</span>
+      <button class="menu-toggle" aria-label="Menu">///</button>
+      <nav class="nav" id="main-nav">
         <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
         <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
         <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="about.html" class="active"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
         <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-        <a href="#" class="theme-toggle">LIGHT/DARK</a>
-        <a href="#" class="lang-toggle">EN/HE</a>
+        <button class="theme-toggle" aria-label="Toggle theme"></button>
+        <button class="lang-toggle" aria-label="Toggle language">EN/HE</button>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <div class="tech-header">
-      <h1 class="tech-title"><span class="lang-en">Profile</span><span class="lang-he">פרופיל</span></h1>
-      <span class="tech-meta mono">OPERATOR: YANIV SCHONFELD</span>
+
+    <div class="page-header">
+      <div class="lang-en">
+        <p class="section-label">// OPERATOR: YANIV SCHONFELD</p>
+        <h1 class="page-title">About</h1>
+      </div>
+      <div class="lang-he">
+        <p class="section-label">// מפעיל: יניב שונפלד</p>
+        <h1 class="page-title">אודות</h1>
+      </div>
     </div>
 
     <!-- English -->
     <div class="lang-en bio-section">
-      <h2 class="ws-title">> IDENTITY</h2>
+      <h2>Identity</h2>
       <p>Yaniv Schonfeld. Also known as Willbear, Parve, KillAllUnicorns.</p>
       <p>Interdisciplinary artist, musician, educator based in Haifa, Israel.</p>
 
-      <h2 class="ws-title" style="margin-top: 3rem;">> PRACTICE</h2>
-      <p>I build instruments from salvaged electronics. I bend circuits — finding and exploiting the points where machines break in interesting ways. I modify gear to do things it wasn't designed to do. I perform experimental music with these broken tools. I teach others to do the same.</p>
+      <h2 style="margin-top: var(--space-xl);">Practice</h2>
+      <p>I build instruments from salvaged electronics. I bend circuits&mdash;finding and exploiting the points where machines break in interesting ways. I modify gear to do things it wasn't designed to do. I perform experimental music with these broken tools. I teach others to do the same.</p>
 
       <div class="philosophy-box">
         "Nothing is holy. Everything is raw material for transformation."
       </div>
 
-      <h2 class="ws-title">> TECHNICAL_STACK</h2>
+      <h2>Technical Stack</h2>
       <div class="tech-grid">
         <div class="tech-item">ESP32 / Arduino</div>
         <div class="tech-item">Daisy Seed DSP</div>
@@ -103,32 +83,32 @@
         <div class="tech-item">3D Printing</div>
       </div>
 
-      <h2 class="ws-title">> LOCATIONS</h2>
-      <ul class="mono" style="list-style: none; color: var(--text-dim); line-height: 2;">
+      <h2>Locations</h2>
+      <ul class="location-list">
         <li>[JERUSALEM] Musrara Art School (Lecturer)</li>
         <li>[TEL AVIV] Matmon Space (Workshops)</li>
         <li>[HAIFA] Home Base / Private Studio</li>
       </ul>
-      
-      <div style="margin-top: 4rem;">
-        <a href="contact.html" class="pane-cta">Init Communication</a>
+
+      <div style="margin-top: var(--space-xl);">
+        <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
       </div>
     </div>
 
     <!-- Hebrew -->
     <div class="lang-he bio-section">
-      <h2 class="ws-title">> זהות</h2>
+      <h2>זהות</h2>
       <p>יניב שונפלד. ידוע גם כ-Willbear, Parve, KillAllUnicorns.</p>
       <p>אמן בין-תחומי, מוזיקאי, מחנך. מבוסס בחיפה.</p>
 
-      <h2 class="ws-title" style="margin-top: 3rem;">> פרקטיקה</h2>
-      <p>אני בונה כלי נגינה מאלקטרוניקה מוצלת. אני מכופף מעגלים (Circuit Bending) — מוצא ומנצל את הנקודות שבהן מכונות נשברות בדרכים מעניינות. אני משנה ציוד כדי שיעשה דברים שהוא לא תוכנן לעשות. אני מופיע עם הכלים השבורים האלה, ומלמד אחרים לעשות את אותו הדבר.</p>
+      <h2 style="margin-top: var(--space-xl);">פרקטיקה</h2>
+      <p>אני בונה כלי נגינה מאלקטרוניקה מוצלת. אני מכופף מעגלים (Circuit Bending) &mdash; מוצא ומנצל את הנקודות שבהן מכונות נשברות בדרכים מעניינות. אני משנה ציוד כדי שיעשה דברים שהוא לא תוכנן לעשות. אני מופיע עם הכלים השבורים האלה, ומלמד אחרים לעשות את אותו הדבר.</p>
 
       <div class="philosophy-box">
         "שום דבר לא קדוש. הכל הוא חומר גלם לשינוי."
       </div>
 
-      <h2 class="ws-title">> טכנולוגיות</h2>
+      <h2>טכנולוגיות</h2>
       <div class="tech-grid">
         <div class="tech-item">ESP32 / ארדואינו</div>
         <div class="tech-item">Daisy Seed DSP</div>
@@ -138,35 +118,40 @@
         <div class="tech-item">הדפסה תלת מימדית</div>
       </div>
 
-      <h2 class="ws-title">> מיקומים</h2>
-      <ul class="mono" style="list-style: none; color: var(--text-dim); line-height: 2;">
+      <h2>מיקומים</h2>
+      <ul class="location-list">
         <li>[ירושלים] מוסררה - בית ספר לאמנות (מרצה)</li>
         <li>[תל אביב] מתמון ספייס (קורסים)</li>
         <li>[חיפה] בסיס הבית / סטודיו פרטי</li>
       </ul>
 
-      <div style="margin-top: 4rem;">
-        <a href="contact.html" class="pane-cta">יצירת קשר</a>
+      <div style="margin-top: var(--space-xl);">
+        <a href="contact.html" class="btn btn-ghost">יצירת קשר</a>
       </div>
     </div>
   </main>
 
   <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-links">
-          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
-          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
-          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
-          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
-          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-          <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
-        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">SERIOUS S.H.I.T.</p>
+        <p class="footer-geo">Haifa, Israel</p>
+        <p class="footer-motto">Nothing Is Holy.</p>
       </div>
+      <nav class="footer-nav">
+        <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="https://wa.me/972539263808" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+      <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+      <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
     </div>
   </footer>
 

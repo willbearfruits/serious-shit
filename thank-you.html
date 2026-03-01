@@ -16,67 +16,73 @@
 </head>
 <body>
   <header>
-    <div class="container header-inner">
-      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//THANK YOU</span></a>
-      <nav class="nav-links uppercase mono">
-        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+    <div class="container header-bar">
+      <a class="logo" href="index.html">SERIOUS S.H.I.T.</a>
+      <span class="logo-sub">Haifa, IL</span>
+      <button class="menu-toggle" aria-label="Menu">///</button>
+      <nav class="nav" id="main-nav">
         <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
-        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">גיר</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
         <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
-        <a href="contact.html" class="active"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-        <a href="#" class="theme-toggle">LIGHT/DARK</a>
-        <a href="#" class="lang-toggle">EN/HE</a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+        <button class="theme-toggle" aria-label="Toggle theme"></button>
+        <button class="lang-toggle" aria-label="Toggle language">EN/HE</button>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <div class="tech-header">
-      <h1 class="tech-title"><span class="lang-en">Message Received</span><span class="lang-he">ההודעה התקבלה</span></h1>
-      <span class="tech-meta mono">STATUS: OK</span>
-    </div>
+    <div class="thankyou-content">
+      <div class="lang-en">
+        <p class="section-label">// STATUS: OK</p>
+        <h1>Message Received</h1>
+        <p>Thank you for reaching out. Your message was sent successfully and we will get back to you soon.</p>
+        <div class="btn-group" style="justify-content: center;">
+          <a href="index.html" class="btn btn-primary">Back to Home</a>
+          <a href="contact.html" class="btn btn-ghost">Contact Page</a>
+        </div>
+        <div style="margin-top: var(--space-md);">
+          <a href="#" class="back-link" data-back data-back-fallback="contact.html">Back to previous page</a>
+        </div>
+      </div>
 
-    <div class="lang-en">
-      <p class="pane-desc">Thank you for reaching out. Your message was sent successfully and we will get back to you soon.</p>
-      <div class="btn-group">
-        <a href="index.html" class="btn btn-primary">Back to Home</a>
-        <a href="contact.html" class="btn btn-secondary">Contact Page</a>
-      </div>
-      <div style="margin-top: 0.75rem;">
-        <a href="#" class="back-link" data-back data-back-fallback="contact.html">Back to previous page</a>
-      </div>
-    </div>
-
-    <div class="lang-he">
-      <p class="pane-desc">תודה על הפנייה! ההודעה נשלחה בהצלחה ונחזור אליך בקרוב.</p>
-      <div class="btn-group">
-        <a href="index.html" class="btn btn-primary">חזרה לדף הבית</a>
-        <a href="contact.html" class="btn btn-secondary">דף יצירת קשר</a>
-      </div>
-      <div style="margin-top: 0.75rem;">
-        <a href="#" class="back-link" data-back data-back-fallback="contact.html">חזרה לעמוד הקודם</a>
+      <div class="lang-he">
+        <p class="section-label">// סטטוס: OK</p>
+        <h1>ההודעה התקבלה</h1>
+        <p>תודה על הפנייה! ההודעה נשלחה בהצלחה ונחזור אליך בקרוב.</p>
+        <div class="btn-group" style="justify-content: center;">
+          <a href="index.html" class="btn btn-primary">חזרה לדף הבית</a>
+          <a href="contact.html" class="btn btn-ghost">דף יצירת קשר</a>
+        </div>
+        <div style="margin-top: var(--space-md);">
+          <a href="#" class="back-link" data-back data-back-fallback="contact.html">חזרה לעמוד הקודם</a>
+        </div>
       </div>
     </div>
   </main>
 
   <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-links">
-          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
-          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
-          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">גיר</span></a>
-          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
-          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-          <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
-        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">SERIOUS S.H.I.T.</p>
+        <p class="footer-geo">Haifa, Israel</p>
+        <p class="footer-motto">Nothing Is Holy.</p>
       </div>
+      <nav class="footer-nav">
+        <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="https://wa.me/972539263808" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+      <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+      <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
     </div>
   </footer>
 

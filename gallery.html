@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | Serious S.H.I.T.</title>
   <meta name="description" content="A visual archive of circuit-bent toys, custom pedals, and workshop creations.">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://willbearfruits.github.io/serious-shit/gallery.html">
@@ -31,33 +31,35 @@
 </head>
 <body>
   <header>
-    <div class="container header-inner">
-      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//GALLERY</span></a>
-      <nav class="nav-links uppercase mono">
-        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+    <div class="container header-bar">
+      <a class="logo" href="index.html">SERIOUS S.H.I.T.</a>
+      <span class="logo-sub">Haifa, IL</span>
+      <button class="menu-toggle" aria-label="Menu">///</button>
+      <nav class="nav" id="main-nav">
         <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
         <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
-        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="gallery.html" class="active"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
         <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-        <a href="#" class="theme-toggle">LIGHT/DARK</a>
-        <a href="#" class="lang-toggle">EN/HE</a>
+        <button class="theme-toggle" aria-label="Toggle theme"></button>
+        <button class="lang-toggle" aria-label="Toggle language">EN/HE</button>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <div class="tech-header">
-      <h1 class="tech-title"><span class="lang-en">Visual Archive</span><span class="lang-he">ארכיון ויזואלי</span></h1>
-      <span class="tech-meta mono">LOGS: 2024-2026</span>
-    </div>
 
-    <div class="lang-en">
-      <p class="pane-desc">Documentation of builds, circuit bending experiments, and workshop outcomes.</p>
-    </div>
-    <div class="lang-he">
-      <p class="pane-desc">תיעוד של בניות, ניסויי כיפוף מעגלים, ותוצרי קורסים.</p>
+    <div class="page-header">
+      <div class="lang-en">
+        <p class="section-label">// LOGS: 2024-2026</p>
+        <h1 class="page-title">Visual Archive</h1>
+        <p class="page-desc">Documentation of builds, circuit bending experiments, and workshop outcomes.</p>
+      </div>
+      <div class="lang-he">
+        <p class="section-label">// תיעוד: 2024-2026</p>
+        <h1 class="page-title">ארכיון ויזואלי</h1>
+        <p class="page-desc">תיעוד של בניות, ניסויי כיפוף מעגלים, ותוצרי קורסים.</p>
+      </div>
     </div>
 
     <!-- Gallery Grid -->
@@ -181,7 +183,7 @@
     </div>
 
     <script>
-      const galleryImages = [
+      var galleryImages = [
         { src: 'images/gallery/fuzilator-duo.png', en: 'Fuzilator PukeMachine - Red & Black Editions', he: 'פוזילטור פיוק-משין - מהדורות אדום ושחור' },
         { src: 'images/gallery/esp32-synth-oled.png', en: 'ESP32 Synth Module with OLED Display', he: 'מודול סינת\' ESP32 עם מסך OLED' },
         { src: 'images/gallery/fuzilator-glow-knobs.png', en: 'Fuzilator with Glow-in-Dark Knobs', he: 'פוזילטור עם כפתורים זוהרים בחושך' },
@@ -198,12 +200,16 @@
         { src: 'images/gallery/enclosure-assembly.png', en: 'Workshop - Enclosure Assembly', he: 'סדנה - הרכבת מארז' },
         { src: 'images/gallery/pedal-build-workshop.png', en: 'Workshop - Pedal Building', he: 'סדנה - בניית פדאל' }
       ];
-      let currentIndex = 0;
-      const lang = document.documentElement.dataset.lang || 'he';
+      var currentIndex = 0;
+
+      function getLang() {
+        return document.documentElement.dataset.lang || 'he';
+      }
 
       function openLightbox(index) {
         currentIndex = index;
-        const img = galleryImages[index];
+        var img = galleryImages[index];
+        var lang = getLang();
         document.getElementById('lightbox-img').src = img.src;
         document.getElementById('lightbox-caption').textContent = lang === 'he' ? img.he : img.en;
         document.getElementById('lightbox').classList.add('active');
@@ -217,37 +223,43 @@
 
       function navigateLightbox(direction) {
         currentIndex = (currentIndex + direction + galleryImages.length) % galleryImages.length;
-        const img = galleryImages[currentIndex];
+        var img = galleryImages[currentIndex];
+        var lang = getLang();
         document.getElementById('lightbox-img').src = img.src;
         document.getElementById('lightbox-caption').textContent = lang === 'he' ? img.he : img.en;
       }
 
-      document.addEventListener('keydown', (e) => {
+      document.addEventListener('keydown', function(e) {
         if (!document.getElementById('lightbox').classList.contains('active')) return;
         if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowLeft') navigateLightbox(-1);
         if (e.key === 'ArrowRight') navigateLightbox(1);
       });
     </script>
-    
+
   </main>
 
   <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-links">
-          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
-          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
-          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
-          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
-          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-          <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
-        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">SERIOUS S.H.I.T.</p>
+        <p class="footer-geo">Haifa, Israel</p>
+        <p class="footer-motto">Nothing Is Holy.</p>
       </div>
+      <nav class="footer-nav">
+        <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="https://wa.me/972539263808" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+      <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+      <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
     </div>
   </footer>
 

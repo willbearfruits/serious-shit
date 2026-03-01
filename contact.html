@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Serious S.H.I.T.</title>
   <meta name="description" content="Get in touch for gear mods, pedals, or workshop bookings.">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://willbearfruits.github.io/serious-shit/contact.html">
@@ -30,61 +30,64 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
   <header>
-    <div class="container header-inner">
-      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//CONTACT</span></a>
-      <nav class="nav-links uppercase mono">
-        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+    <div class="container header-bar">
+      <a class="logo" href="index.html">SERIOUS S.H.I.T.</a>
+      <span class="logo-sub">Haifa, IL</span>
+      <button class="menu-toggle" aria-label="Menu">///</button>
+      <nav class="nav" id="main-nav">
         <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
         <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
         <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
         <a href="contact.html" class="active"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-        <a href="#" class="theme-toggle">LIGHT/DARK</a>
-        <a href="#" class="lang-toggle">EN/HE</a>
+        <button class="theme-toggle" aria-label="Toggle theme"></button>
+        <button class="lang-toggle" aria-label="Toggle language">EN/HE</button>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    
-    <div class="tech-header">
-      <h1 class="tech-title"><span class="lang-en">Communication</span><span class="lang-he">תקשורת</span></h1>
-      <span class="tech-meta mono">STATUS: OPEN</span>
+
+    <div class="page-header">
+      <div class="lang-en">
+        <h1 class="page-title">Contact</h1>
+        <p class="page-desc">Have a question about a workshop, a custom build, or a repair? Direct lines open.</p>
+      </div>
+      <div class="lang-he">
+        <h1 class="page-title">צור קשר</h1>
+        <p class="page-desc">יש לכם שאלה על סדנה, בנייה מותאמת אישית או תיקון? הקווים פתוחים.</p>
+      </div>
     </div>
 
     <!-- English Content -->
     <div class="lang-en">
-      <p class="pane-desc">Have a question about a workshop, a custom build, or a repair? Direct lines open.</p>
-      
       <div class="contact-grid">
-        <a href="https://wa.me/972539263808?text=Hello%2C%20I%20have%20a%20question%20regarding%20Serious%20S.H.I.T." class="contact-card">
+        <a href="https://wa.me/972539263808?text=Hello%2C%20I%20have%20a%20question%20regarding%20Serious%20S.H.I.T." class="contact-card" target="_blank" rel="noopener noreferrer">
           <div class="contact-icon">WA</div>
           <div>
-            <div style="font-weight: 800;">WhatsApp</div>
-            <div class="mono" style="font-size: 0.8rem; color: var(--text-dim);">+972-53-926-3808</div>
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-detail">+972-53-926-3808</div>
           </div>
         </a>
         <a href="mailto:Dogme84@gmail.com" class="contact-card">
           <div class="contact-icon">@</div>
           <div>
-            <div style="font-weight: 800;">Email</div>
-            <div class="mono" style="font-size: 0.8rem; color: var(--text-dim);">Dogme84@gmail.com</div>
+            <div class="contact-label">Email</div>
+            <div class="contact-detail">Dogme84@gmail.com</div>
           </div>
         </a>
         <a href="https://www.instagram.com/shitisizers/" class="contact-card" target="_blank" rel="noopener noreferrer">
           <div class="contact-icon">IG</div>
           <div>
-            <div style="font-weight: 800;">Instagram</div>
-            <div class="mono" style="font-size: 0.8rem; color: var(--text-dim);">@shitisizers</div>
+            <div class="contact-label">Instagram</div>
+            <div class="contact-detail">@shitisizers</div>
           </div>
         </a>
       </div>
 
-      <div style="margin-top: 3rem;">
-        <h3 class="mono" style="font-size: 0.9rem; margin-bottom: 1.5rem;">// CONTACT_FORM</h3>
+      <div class="form-section">
+        <h3 style="margin-bottom: var(--space-md);">Send a Message</h3>
         <form action="https://formsubmit.co/Dogme84@gmail.com" method="POST" class="registration-form" data-form-name="contact-en">
           <input type="hidden" name="_next" value="https://willbearfruits.github.io/serious-shit/thank-you.html">
           <input type="hidden" name="_replyto" value="">
@@ -97,12 +100,10 @@
             <label for="contact-name-en">Name *</label>
             <input type="text" id="contact-name-en" name="name" required placeholder="Your name">
           </div>
-
           <div class="form-group">
             <label for="contact-email-en">Email *</label>
             <input type="email" id="contact-email-en" name="email" required placeholder="your@email.com">
           </div>
-
           <div class="form-group">
             <label for="contact-subject-en">Subject *</label>
             <select id="contact-subject-en" name="subject" required>
@@ -114,54 +115,43 @@
               <option value="Private Course">Private Course (1-on-1)</option>
             </select>
           </div>
-
           <div class="form-group">
             <label for="contact-message-en">Message *</label>
             <textarea id="contact-message-en" name="message" rows="5" required placeholder="How can we help?"></textarea>
           </div>
-
           <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
         </form>
-      </div>
-
-      <div style="margin-top: 4rem; border-top: 1px solid var(--border); padding-top: 2rem;">
-        <h3 class="mono" style="font-size: 0.9rem; margin-bottom: 1rem;">// SOCIAL_NETWORKS</h3>
-        <div class="nav-links">
-            <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
-        </div>
       </div>
     </div>
 
     <!-- Hebrew Content -->
     <div class="lang-he">
-      <p class="pane-desc">יש לכם שאלה על סדנה, בנייה מותאמת אישית או תיקון? הקווים פתוחים.</p>
-      
       <div class="contact-grid">
-        <a href="https://wa.me/972539263808?text=%D7%94%D7%99%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%9C%D7%92%D7%91%D7%99..." class="contact-card">
+        <a href="https://wa.me/972539263808?text=%D7%94%D7%99%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%9C%D7%92%D7%91%D7%99..." class="contact-card" target="_blank" rel="noopener noreferrer">
           <div class="contact-icon">WA</div>
           <div>
-            <div style="font-weight: 800;">וואטסאפ</div>
-            <div class="mono" style="font-size: 0.8rem; color: var(--text-dim);">053-926-3808</div>
+            <div class="contact-label">וואטסאפ</div>
+            <div class="contact-detail">053-926-3808</div>
           </div>
         </a>
         <a href="mailto:Dogme84@gmail.com" class="contact-card">
           <div class="contact-icon">@</div>
           <div>
-            <div style="font-weight: 800;">אימייל</div>
-            <div class="mono" style="font-size: 0.8rem; color: var(--text-dim);">Dogme84@gmail.com</div>
+            <div class="contact-label">אימייל</div>
+            <div class="contact-detail">Dogme84@gmail.com</div>
           </div>
         </a>
         <a href="https://www.instagram.com/shitisizers/" class="contact-card" target="_blank" rel="noopener noreferrer">
           <div class="contact-icon">IG</div>
           <div>
-            <div style="font-weight: 800;">אינסטגרם</div>
-            <div class="mono" style="font-size: 0.8rem; color: var(--text-dim);">@shitisizers</div>
+            <div class="contact-label">אינסטגרם</div>
+            <div class="contact-detail">@shitisizers</div>
           </div>
         </a>
       </div>
 
-      <div style="margin-top: 3rem;">
-        <h3 class="mono" style="font-size: 0.9rem; margin-bottom: 1.5rem;">// טופס_יצירת_קשר</h3>
+      <div class="form-section">
+        <h3 style="margin-bottom: var(--space-md);">שליחת הודעה</h3>
         <form action="https://formsubmit.co/Dogme84@gmail.com" method="POST" class="registration-form" data-form-name="contact-he">
           <input type="hidden" name="_next" value="https://willbearfruits.github.io/serious-shit/thank-you.html">
           <input type="hidden" name="_replyto" value="">
@@ -174,12 +164,10 @@
             <label for="contact-name-he">שם *</label>
             <input type="text" id="contact-name-he" name="name" required placeholder="השם שלך">
           </div>
-
           <div class="form-group">
             <label for="contact-email-he">אימייל *</label>
             <input type="email" id="contact-email-he" name="email" required placeholder="your@email.com">
           </div>
-
           <div class="form-group">
             <label for="contact-subject-he">נושא *</label>
             <select id="contact-subject-he" name="subject" required>
@@ -191,42 +179,38 @@
               <option value="Private Course">קורס פרטי (1 על 1)</option>
             </select>
           </div>
-
           <div class="form-group">
             <label for="contact-message-he">הודעה *</label>
             <textarea id="contact-message-he" name="message" rows="5" required placeholder="במה נוכל לעזור?"></textarea>
           </div>
-
           <button type="submit" class="btn btn-primary" style="width: 100%;">שליחת הודעה</button>
         </form>
-      </div>
-
-      <div style="margin-top: 4rem; border-top: 1px solid var(--border); padding-top: 2rem;">
-        <h3 class="mono" style="font-size: 0.9rem; margin-bottom: 1rem;">// רשתות_חברתיות</h3>
-        <div class="nav-links">
-            <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">אינסטגרם</a>
-        </div>
       </div>
     </div>
 
   </main>
 
   <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-links">
-          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
-          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
-          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
-          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
-          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-          <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
-        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">SERIOUS S.H.I.T.</p>
+        <p class="footer-geo">Haifa, Israel</p>
+        <p class="footer-motto">Nothing Is Holy.</p>
       </div>
+      <nav class="footer-nav">
+        <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="https://wa.me/972539263808" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+      <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+      <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
     </div>
   </footer>
 

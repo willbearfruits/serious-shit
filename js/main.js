@@ -1,5 +1,5 @@
 // Serious S.H.I.T. - Main JavaScript
-// Language toggle, theme toggle, gallery, and content loading
+// Language toggle, theme toggle, gallery, mobile menu, scroll reveal
 
 (function() {
   'use strict';
@@ -20,13 +20,11 @@
   }
 
   function applyLang(lang) {
-    // Set on documentElement (<html>) to match the inline script in <head>
     const html = document.documentElement;
     html.setAttribute('data-lang', lang);
     html.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
     html.setAttribute('lang', lang);
 
-    // Update toggle button text
     document.querySelectorAll('.lang-toggle').forEach(btn => {
       btn.textContent = lang === 'he' ? 'EN' : 'עב';
     });
@@ -39,17 +37,14 @@
   }
 
   // ==========================================
-  // THEME MANAGEMENT (Light/Dark)
+  // THEME MANAGEMENT (Dark default)
   // ==========================================
   const THEME_KEY = 'sshit-theme';
-  const DEFAULT_THEME = 'light';
+  const DEFAULT_THEME = 'dark';
 
   function getTheme() {
-    // Check localStorage first
     const saved = localStorage.getItem(THEME_KEY);
     if (saved) return saved;
-
-    // Default to light regardless of system preference
     return DEFAULT_THEME;
   }
 
@@ -61,9 +56,8 @@
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
 
-    // Update toggle button
     document.querySelectorAll('.theme-toggle').forEach(btn => {
-      btn.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+      btn.textContent = theme === 'dark' ? 'LIGHT' : 'DARK';
       btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
     });
   }
@@ -74,7 +68,6 @@
     setTheme(next);
   }
 
-  // Listen for system theme changes
   if (window.matchMedia) {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
       if (!localStorage.getItem(THEME_KEY)) {
@@ -84,20 +77,68 @@
   }
 
   // ==========================================
+  // MOBILE MENU
+  // ==========================================
+  function initMobileMenu() {
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('main-nav');
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', nav.classList.contains('is-open'));
+    });
+
+    // Close menu when a nav link is clicked
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // ==========================================
+  // SCROLL REVEAL
+  // ==========================================
+  function initScrollReveal() {
+    const elements = document.querySelectorAll('.reveal');
+    if (!elements.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      elements.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    elements.forEach(el => observer.observe(el));
+  }
+
+  // ==========================================
   // CONTENT LOADING
   // ==========================================
   async function loadContent(file) {
     try {
-      const response = await fetch(`content/${file}`);
-      if (!response.ok) throw new Error(`Failed to load ${file}`);
+      const response = await fetch('content/' + file);
+      if (!response.ok) throw new Error('Failed to load ' + file);
       return await response.json();
     } catch (error) {
-      console.warn(`Could not load content/${file}:`, error);
+      console.warn('Could not load content/' + file + ':', error);
       return null;
     }
   }
 
-  // Get translated text from content object
   function t(obj, lang) {
     if (!obj) return '';
     if (typeof obj === 'string') return obj;
@@ -128,7 +169,6 @@
 
     if (!galleryImages.length) return;
 
-    // Create lightbox if it doesn't exist
     if (!document.querySelector('.lightbox')) {
       createLightbox();
     }
@@ -137,18 +177,12 @@
   function createLightbox() {
     const lightbox = document.createElement('div');
     lightbox.className = 'lightbox';
-    lightbox.innerHTML = `
-      <button class="lightbox-close" aria-label="Close">&times;</button>
-      <button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8249;</button>
-      <button class="lightbox-nav lightbox-next" aria-label="Next">&#8250;</button>
-      <div class="lightbox-content">
-        <img src="" alt="">
-        <div class="lightbox-caption"></div>
-      </div>
-    `;
+    lightbox.innerHTML = '<button class="lightbox-close" aria-label="Close">&times;</button>' +
+      '<button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8249;</button>' +
+      '<button class="lightbox-nav lightbox-next" aria-label="Next">&#8250;</button>' +
+      '<div class="lightbox-content"><img src="" alt=""><div class="lightbox-caption"></div></div>';
     document.body.appendChild(lightbox);
 
-    // Event listeners
     lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
     lightbox.querySelector('.lightbox-prev').addEventListener('click', () => navigateLightbox(-1));
     lightbox.querySelector('.lightbox-next').addEventListener('click', () => navigateLightbox(1));
@@ -156,7 +190,6 @@
       if (e.target === lightbox) closeLightbox();
     });
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
       if (!lightbox.classList.contains('active')) return;
       if (e.key === 'Escape') closeLightbox();
@@ -200,7 +233,6 @@
   // DYNAMIC CONTENT RENDERING
   // ==========================================
 
-  // Render workshops from JSON
   async function renderWorkshops() {
     const container = document.getElementById('workshops-container');
     if (!container) return;
@@ -212,20 +244,15 @@
     let html = '';
 
     data.workshops.forEach(workshop => {
-      html += `
-        <div class="service-card has-image">
-          <img src="${workshop.image}" alt="${t(workshop.title, lang)}" class="category-image"
-               onerror="this.style.display='none'">
-          <h3>${t(workshop.title, lang)}</h3>
-          <p>${t(workshop.description, lang)}</p>
-        </div>
-      `;
+      html += '<div class="service-card has-image">' +
+        '<img src="' + workshop.image + '" alt="' + t(workshop.title, lang) + '" class="category-image" onerror="this.style.display=\'none\'">' +
+        '<h3>' + t(workshop.title, lang) + '</h3>' +
+        '<p>' + t(workshop.description, lang) + '</p></div>';
     });
 
     container.innerHTML = html;
   }
 
-  // Render gallery from JSON
   async function renderGallery() {
     const container = document.getElementById('gallery-container');
     if (!container) return;
@@ -248,12 +275,9 @@
 
     items.forEach(item => {
       const thumb = item.thumb || item.src;
-      html += `
-        <div class="gallery-item" data-src="${item.src}" data-caption="${t(item.caption, lang)}">
-          <img src="${thumb}" alt="${t(item.caption, lang)}" loading="lazy">
-          <div class="gallery-item-caption">${t(item.caption, lang)}</div>
-        </div>
-      `;
+      html += '<div class="gallery-item" data-src="' + item.src + '" data-caption="' + t(item.caption, lang) + '">' +
+        '<img src="' + thumb + '" alt="' + t(item.caption, lang) + '" loading="lazy">' +
+        '<div class="gallery-item-caption">' + t(item.caption, lang) + '</div></div>';
     });
 
     container.innerHTML = html;
@@ -261,16 +285,12 @@
     initGallery();
   }
 
-  // Render products from JSON
   async function renderProducts() {
     const container = document.getElementById('products-container');
     if (!container) return;
 
     const data = await loadContent('products.json');
     if (!data) return;
-
-    const lang = getLang();
-    // Products rendering would go here
   }
 
   // ==========================================
@@ -279,24 +299,18 @@
   function handleBookingParams() {
     const urlParams = new URLSearchParams(window.location.search);
     const bookTarget = urlParams.get('book');
-    
+
     if (bookTarget) {
-      // Find the form and select element
       const formSection = document.querySelector('.form-section');
       const selectEn = document.getElementById('ws-type-en') || document.getElementById('workshop-en') || document.getElementById('workshop-pedal-en');
       const selectHe = document.getElementById('ws-type-he') || document.getElementById('workshop-he') || document.getElementById('workshop-pedal-he');
-      
-      // Auto-select the option
+
       if (selectEn && bookTarget) selectEn.value = bookTarget;
       if (selectHe && bookTarget) selectHe.value = bookTarget;
-      
-      // Scroll to form immediately
+
       if (formSection) {
-        // slight delay to ensure render
         setTimeout(() => {
           formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          // Highlight the section
-          formSection.style.animation = 'highlight 1s ease';
         }, 100);
       }
     }
@@ -306,33 +320,30 @@
   // FORMSUBMIT REPLY-TO & ANALYTICS
   // ==========================================
   function trackFormSubmit(form) {
-    const formName = form.getAttribute('data-form-name') || form.getAttribute('name') || 'form';
-    const page = window.location.pathname.split('/').pop() || 'index.html';
-    const payload = { form: formName, page };
+    var formName = form.getAttribute('data-form-name') || form.getAttribute('name') || 'form';
+    var page = window.location.pathname.split('/').pop() || 'index.html';
+    var payload = { form: formName, page: page };
 
     if (window.gtag) {
       window.gtag('event', 'form_submit', payload);
     }
-
     if (window.plausible) {
       window.plausible('form_submit', { props: payload });
     }
-
     if (window.umami && typeof window.umami.track === 'function') {
       window.umami.track('form_submit', payload);
     }
-
     if (window.dataLayer && Array.isArray(window.dataLayer)) {
       window.dataLayer.push(Object.assign({ event: 'form_submit' }, payload));
     }
   }
 
   function initFormSubmitReplyTo() {
-    const forms = document.querySelectorAll('form[action*="formsubmit.co"]');
-    forms.forEach((form) => {
-      form.addEventListener('submit', () => {
-        const emailInput = form.querySelector('input[name="email"]');
-        const replyToInput = form.querySelector('input[name="_replyto"]');
+    var forms = document.querySelectorAll('form[action*="formsubmit.co"]');
+    forms.forEach(function(form) {
+      form.addEventListener('submit', function() {
+        var emailInput = form.querySelector('input[name="email"]');
+        var replyToInput = form.querySelector('input[name="_replyto"]');
         if (emailInput && replyToInput) {
           replyToInput.value = emailInput.value;
         }
@@ -345,14 +356,14 @@
   // BACK LINKS
   // ==========================================
   function initBackLinks() {
-    document.querySelectorAll('[data-back]').forEach((link) => {
-      link.addEventListener('click', (event) => {
+    document.querySelectorAll('[data-back]').forEach(function(link) {
+      link.addEventListener('click', function(event) {
         event.preventDefault();
         if (window.history.length > 1) {
           window.history.back();
           return;
         }
-        const fallback = link.getAttribute('data-back-fallback');
+        var fallback = link.getAttribute('data-back-fallback');
         if (fallback) {
           window.location.href = fallback;
         }
@@ -364,7 +375,6 @@
   // INITIALIZATION
   // ==========================================
   function init() {
-    // Apply saved preferences
     applyLang(getLang());
     applyTheme(getTheme());
 
@@ -385,18 +395,18 @@
     });
 
     // Mark current page in nav
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    var currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('nav a').forEach(link => {
-      const href = link.getAttribute('href');
+      var href = link.getAttribute('href');
       if (href === currentPage || (currentPage === '' && href === 'index.html')) {
         link.classList.add('active');
       }
     });
 
-    // Initialize gallery if present
+    // Init features
+    initMobileMenu();
+    initScrollReveal();
     initGallery();
-    
-    // Handle smart booking links
     handleBookingParams();
     initBackLinks();
     initFormSubmitReplyTo();
@@ -430,17 +440,16 @@
   // EASTER EGG: Konami Code -> OS Interface
   // Up Up Down Down Left Right Left Right B A
   // ==========================================
-  const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-  let konamiIndex = 0;
+  var konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+  var konamiIndex = 0;
 
-  document.addEventListener('keydown', (e) => {
-    const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  document.addEventListener('keydown', function(e) {
+    var key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
 
     if (key === konamiCode[konamiIndex]) {
       konamiIndex++;
 
       if (konamiIndex === konamiCode.length) {
-        // Easter egg triggered!
         konamiIndex = 0;
         activateOS();
       }
@@ -450,15 +459,14 @@
   });
 
   function activateOS() {
-    // Glitch effect before redirect
     document.body.style.transition = 'none';
     document.body.style.filter = 'invert(1)';
 
-    setTimeout(() => {
+    setTimeout(function() {
       document.body.style.filter = 'none';
-      setTimeout(() => {
+      setTimeout(function() {
         document.body.style.filter = 'invert(1) hue-rotate(90deg)';
-        setTimeout(() => {
+        setTimeout(function() {
           window.location.href = 'os.html';
         }, 200);
       }, 100);

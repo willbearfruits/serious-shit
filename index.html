@@ -88,9 +88,8 @@
   <meta property="twitter:title" content="Serious S.H.I.T. | Experimental Electronics">
   <meta property="twitter:description" content="Circuit-bending, gear modification, and creative electronics workshops. New courses starting Feb 3rd in Haifa!">
   <meta property="twitter:image" content="https://willbearfruits.github.io/serious-shit/images/products/fuzilator.jpg">
-  
+
   <script>
-    // Prevent language flicker - set before CSS renders
     (function(){
       var lang = localStorage.getItem('sshit-lang') || 'he';
       document.documentElement.setAttribute('data-lang', lang);
@@ -98,349 +97,207 @@
     })();
   </script>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .tech-ticker {
-      background: var(--text);
-      color: var(--bg);
-      padding: 1rem 0;
-      overflow: hidden;
-      white-space: nowrap;
-      border-top: 1px solid var(--accent);
-      border-bottom: 1px solid var(--accent);
-      margin-top: 4rem;
-    }
-    .ticker-content {
-      display: inline-block;
-      animation: ticker 20s linear infinite;
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
-    }
-    @keyframes ticker {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .syllabus-list {
-      margin-top: 1.5rem;
-      border-top: 1px dashed var(--border-light);
-      padding-top: 1rem;
-    }
-    .syllabus-item {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-    }
-    .syllabus-num {
-      font-family: var(--font-mono);
-      color: var(--accent);
-      font-weight: bold;
-      min-width: 2rem;
-    }
-    .syllabus-desc { color: var(--text-dim); }
-    
-    .lab-info-box {
-      background: var(--surface);
-      border: 1px solid var(--accent);
-      padding: 1.5rem;
-      margin: 2rem 0;
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- 1. FUNCTIONAL HEADER -->
   <header>
-    <div class="container header-inner">
-      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//HOME</span></a>
-      <nav class="nav-links uppercase mono">
-        <a href="index.html" class="active"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+    <div class="container header-bar">
+      <a class="logo" href="index.html">SERIOUS S.H.I.T.</a>
+      <span class="logo-sub">Haifa, IL</span>
+      <button class="menu-toggle" aria-label="Menu">///</button>
+      <nav class="nav" id="main-nav">
         <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
         <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
         <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
         <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-        <a href="#" class="theme-toggle">LIGHT/DARK</a>
-        <a href="#" class="lang-toggle">EN/HE</a>
+        <button class="theme-toggle" aria-label="Toggle theme"></button>
+        <button class="lang-toggle" aria-label="Toggle language">EN/HE</button>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- 2. DUAL ENTRY HERO -->
-    <section class="split-hero">
-      <!-- Left Pane: EDUCATION -->
-      <a href="#workshops" class="hero-pane">
-        <div class="pane-label uppercase">/ Intent: LEARN</div>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
         <div class="lang-en">
-          <h2 class="pane-title">Workshops!</h2>
-          <p class="pane-desc">Starting Feb 3rd in Haifa. Limited spots. Components included. Open lab access.</p>
-          <span class="pane-cta">View Schedule &rarr;</span>
+          <p class="hero-label">// NEW BATCH &mdash; FEB 2026</p>
+          <h1 class="hero-title">Build instruments.<br>From scratch.</h1>
+          <p class="hero-desc">Hands-on electronics workshops in Haifa. ESP32 synths, fuzz pedals, circuit bending.</p>
+          <div class="hero-actions">
+            <a href="workshops.html" class="btn btn-primary">View Workshops</a>
+            <a href="sales.html" class="btn btn-ghost">Shop Gear</a>
+          </div>
         </div>
         <div class="lang-he">
-          <h2 class="pane-title">קורסים!</h2>
-          <p class="pane-desc">מתחילים ב-3 בפברואר בחיפה. מספר מקומות מוגבל. רכיבים כלולים. גישה למעבדה פתוחה.</p>
-          <span class="pane-cta">ללוח הקורסים &larr;</span>
+          <p class="hero-label">// מחזור חדש &mdash; פברואר 2026</p>
+          <h1 class="hero-title">בנו כלי נגינה.<br>מאפס.</h1>
+          <p class="hero-desc">סדנאות אלקטרוניקה מעשיות בחיפה. סינת' ESP32, פדאלי פאז, כיפוף מעגלים.</p>
+          <div class="hero-actions">
+            <a href="workshops.html" class="btn btn-primary">לקורסים</a>
+            <a href="sales.html" class="btn btn-ghost">לציוד</a>
+          </div>
         </div>
-      </a>
-
-      <!-- Right Pane: GEAR -->
-      <a href="#gear" class="hero-pane" style="background: var(--surface);">
-        <div class="pane-label uppercase">/ Intent: EQUIP</div>
-        <div class="lang-en">
-          <h2 class="pane-title">The Fuzilator<br>PukeMachine.</h2>
-          <p class="pane-desc">Dual-stage gain monster with internal contact mic. Handmade. Limited run of 13 units.</p>
-          <span class="pane-cta">View Specs &rarr;</span>
-        </div>
-        <div class="lang-he">
-          <h2 class="pane-title">הפוזילטור<br>פיוק-משין.</h2>
-          <p class="pane-desc">מפלצת גיין דו-שלבית עם מיקרופון מגע פנימי. עבודת יד. מהדורה מוגבלת של 13 יחידות.</p>
-          <span class="pane-cta">למפרט טכני &larr;</span>
-        </div>
-      </a>
+      </div>
     </section>
 
-    <!-- 3. WORKSHOPS (FULL INFO + LAB) -->
-    <section id="workshops" class="container section-with-bg section-bg-workshops">
-      <div class="tech-header">
-        <h2 class="tech-title"><span class="lang-en">Education</span><span class="lang-he">חינוך</span></h2>
-        <span class="tech-meta mono">LOC: HAIFA // START: FEB 03</span>
-      </div>
-
-      <div class="lab-info-box">
+    <!-- WORKSHOPS -->
+    <section class="section container">
+      <div class="section-header reveal">
         <div class="lang-en">
-          <strong>> MAKERSPACE_ACCESS:</strong> All courses include 4 hours/week of open lab time for homework and exercise. 
-          The lab is equipped with <strong>3D Printers, CNC, Soldering Stations,</strong> and a library of components. 
-          Everything you need to practice is provided.
+          <p class="section-label">// Education</p>
+          <h2 class="section-title">Workshops</h2>
         </div>
         <div class="lang-he">
-          <strong>> גישה_למעבדה:</strong> כל הקורסים כוללים 4 שעות שבועיות של מעבדה פתוחה לשיעורי בית ותרגול. 
-          המעבדה מצוידת ב<strong>מדפסות תלת-מימד, CNC, עמדות הלחמה,</strong> ומלאי רכיבים. 
-          כל מה שצריך כדי לתרגל נמצא כאן.
+          <p class="section-label">// חינוך</p>
+          <h2 class="section-title">קורסים</h2>
         </div>
       </div>
 
-      <!-- Workshop 1: ESP32 -->
-      <article class="workshop-card">
-        <div class="ws-visual">
-          <img src="images/gallery/esp32-synth-oled.png" alt="ESP32 Synth Module" style="width: 100%; height: 100%; object-fit: cover;">
+      <div class="lab-info-box reveal">
+        <div class="lang-en">
+          <strong>> MAKERSPACE_ACCESS:</strong> All courses include 4 hours/week of open lab time. The lab is equipped with 3D Printers, CNC, Soldering Stations, and a library of components.
         </div>
-        <div class="ws-content">
-          <div class="lang-en">
-            <h3 class="ws-title">ESP32 Digital Synth & AI</h3>
-            <p class="ws-outcome mono">> OUTCOME: A programmable digital synth you built & understand.</p>
-            <p style="color: var(--text-dim); margin-bottom: 1rem;">Learn to use AI (Claude/ChatGPT) to write audio firmware for the ESP32. Includes a full kit: ESP32 WROOM, OLED screen, 2 pots, 2 buttons, encoder, and breadboard. (Tools provided in lab).</p>
-            
-            <div class="ws-specs">
-              <div class="spec-item"><strong>PRICE</strong>2,200 NIS</div>
-              <div class="spec-item"><strong>DURATION</strong>7 Meetings</div>
-              <div class="spec-item"><strong>COMPONENTS</strong>Included</div>
-            </div>
+        <div class="lang-he">
+          <strong>> גישה_למעבדה:</strong> כל הקורסים כוללים 4 שעות שבועיות של מעבדה פתוחה. המעבדה מצוידת במדפסות תלת-מימד, CNC, עמדות הלחמה, ומלאי רכיבים.
+        </div>
+      </div>
 
-            <div class="syllabus-list">
-              <div class="syllabus-item"><span class="syllabus-num">01</span><span class="syllabus-desc">Analog Fundamentals: Building a 1-bit square wave synth (CD40106).</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">02</span><span class="syllabus-desc">Microcontrollers & AI: ESP32 setup & Prompt Engineering.</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">03</span><span class="syllabus-desc">Audio Logic: Sampling, Bit Depth, and DACs.</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">04</span><span class="syllabus-desc">Peripherals: Wiring Pots, Encoders, OLEDs.</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">05</span><span class="syllabus-desc">Vision: PCB design thinking & Jam Session.</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">06</span><span class="syllabus-desc">Soldering: Moving from breadboard to perfboard.</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">07</span><span class="syllabus-desc">Boxing: Final build & group jam.</span></div>
+      <div class="ws-grid">
+        <!-- ESP32 -->
+        <article class="ws-card reveal">
+          <div class="ws-card-img">
+            <img src="images/gallery/esp32-synth-oled.png" alt="ESP32 Synth Module" loading="lazy">
+          </div>
+          <div class="ws-card-body">
+            <div class="lang-en">
+              <span class="ws-tag">7 Meetings</span>
+              <h3 class="ws-card-title">ESP32 Digital Synth + AI</h3>
+              <p class="ws-card-desc">Build a programmable digital synth. AI-assisted firmware coding. Full kit included.</p>
+              <div class="ws-card-meta">
+                <span>2,200 NIS</span>
+                <span>Components included</span>
+                <span>Open lab 4h/week</span>
+              </div>
+              <a href="workshop-esp32.html" class="btn btn-primary">Details & Register</a>
             </div>
-            
-            <div style="margin-top: 2rem;">
-               <a href="workshop-esp32.html#register" class="pane-cta">Secure Spot</a>
+            <div class="lang-he">
+              <span class="ws-tag">7 מפגשים</span>
+              <h3 class="ws-card-title">סינת' דיגיטלי ESP32 + AI</h3>
+              <p class="ws-card-desc">בנו סינתיסייזר מתוכנת. כתיבת קוד בעזרת AI. ערכה מלאה כלולה.</p>
+              <div class="ws-card-meta">
+                <span>2,200 ₪</span>
+                <span>רכיבים כלולים</span>
+                <span>מעבדה פתוחה 4 שעות/שבוע</span>
+              </div>
+              <a href="workshop-esp32.html" class="btn btn-primary">פרטים והרשמה</a>
             </div>
+          </div>
+        </article>
+
+        <!-- PEDAL -->
+        <article class="ws-card reveal">
+          <div class="ws-card-img">
+            <img src="images/gallery/pedal-build-workshop.png" alt="Pedal Building Workshop" loading="lazy">
+          </div>
+          <div class="ws-card-body">
+            <div class="lang-en">
+              <span class="ws-tag">8 Meetings</span>
+              <h3 class="ws-card-title">DIY Guitar Pedal / Fuzz</h3>
+              <p class="ws-card-desc">Build a stage-ready fuzz pedal from scratch. Soldering, enclosure design, finishing.</p>
+              <div class="ws-card-meta">
+                <span>2,200 NIS</span>
+                <span>Components included</span>
+                <span>Guest: Anton Nota</span>
+              </div>
+              <a href="workshop-pedal.html" class="btn btn-primary">Details & Register</a>
+            </div>
+            <div class="lang-he">
+              <span class="ws-tag">8 מפגשים</span>
+              <h3 class="ws-card-title">בניית פדאל גיטרה / פאז</h3>
+              <p class="ws-card-desc">בנו פדאל פאז מוכן לבמה מאפס. הלחמה, עיצוב מארז, גימור.</p>
+              <div class="ws-card-meta">
+                <span>2,200 ₪</span>
+                <span>רכיבים כלולים</span>
+                <span>אורח: אנטון נוטה</span>
+              </div>
+              <a href="workshop-pedal.html" class="btn btn-primary">פרטים והרשמה</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- GEAR TEASER -->
+    <section class="section section-border container">
+      <div class="gear-teaser reveal">
+        <div class="gear-teaser-img">
+          <img src="images/products/fuzilator.jpg" alt="Fuzilator PukeMachine" loading="lazy">
+        </div>
+        <div class="gear-teaser-body">
+          <div class="lang-en">
+            <p class="section-label">// Hardware</p>
+            <h2 class="section-title">The Fuzilator PukeMachine</h2>
+            <p style="color: var(--text-dim); margin: var(--space-md) 0;">Dual LPB2 gain stages. Feedback loop. Internal piezo mic. Handmade in Haifa. Limited run of 13 units.</p>
+            <p style="font-family: var(--font-mono); color: var(--accent); font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-lg);">$333 / 1,100 ₪</p>
+            <a href="sales.html" class="btn btn-ghost">View Specs</a>
           </div>
           <div class="lang-he">
-            <h3 class="ws-title">סינת' דיגיטלי ESP32 ו-AI</h3>
-            <p class="ws-outcome mono">> תוצאה: סינתיסייזר מתוכנת שבניתם והבנתם.</p>
-            <p style="color: var(--text-dim); margin-bottom: 1rem;">למדו להשתמש ב-AI לכתיבת קוד אודיו ל-ESP32. כולל ערכה מלאה: ESP32 WROOM, מסך OLED, 2 פוטנציומטרים, 2 כפתורים, אנקודר ומטריצה. (ציוד קיים במעבדה).</p>
-            
-            <div class="ws-specs">
-              <div class="spec-item"><strong>מחיר</strong>2,200 ₪</div>
-              <div class="spec-item"><strong>משך</strong>7 מפגשים</div>
-              <div class="spec-item"><strong>רכיבים</strong>כלולים</div>
-            </div>
-
-            <div class="syllabus-list">
-               <div class="syllabus-item"><span class="syllabus-num">01</span><span class="syllabus-desc">יסודות אנלוגיים: בניית סינת' גל מרובע 1-ביט (CD40106).</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">02</span><span class="syllabus-desc">מיקרו-בקרים ו-AI: הגדרת ESP32 והנדסת פרומפטים.</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">03</span><span class="syllabus-desc">לוגיקת אודיו: דגימה, עומק ביט ו-DAC.</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">04</span><span class="syllabus-desc">פריפריאלים: חיווט פוטים, אנקודרים ומסכים.</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">05</span><span class="syllabus-desc">חזון: חשיבה על עיצוב מעגל וג'אם סשן.</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">06</span><span class="syllabus-desc">הלחמה: מעבר מברדבורד לפרפבורד.</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">07</span><span class="syllabus-desc">זיווד: בנייה סופית וג'אם קבוצתי.</span></div>
-            </div>
-
-             <div style="margin-top: 2rem;">
-               <a href="workshop-esp32.html#register-he" class="pane-cta">שריין מקום</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Workshop 2: PEDAL -->
-      <article class="workshop-card">
-        <div class="ws-visual">
-          <img src="images/gallery/pedal-build-workshop.png" alt="Pedal Building Workshop" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-        <div class="ws-content">
-          <div class="lang-en">
-            <h3 class="ws-title">DIY Guitar Pedal</h3>
-            <p class="ws-outcome mono">> OUTCOME: A stage-ready Fuzz/Distortion pedal.</p>
-            <p style="color: var(--text-dim); margin-bottom: 1rem;">Build a Fuzz or Bitcrusher from scratch. Includes enclosure design and finishing techniques. Components included. (Lab equipment used for assembly).</p>
-            
-            <div class="ws-specs">
-              <div class="spec-item"><strong>PRICE</strong>2,200 NIS</div>
-              <div class="spec-item"><strong>DURATION</strong>8 Meetings</div>
-              <div class="spec-item"><strong>OPEN LAB</strong>4h/week</div>
-            </div>
-
-            <div class="syllabus-list">
-              <div class="syllabus-item"><span class="syllabus-num">01</span><span class="syllabus-desc">Basic Electronics & Waves.</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">02</span><span class="syllabus-desc">Breadboarding Phase Pedals.</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">03</span><span class="syllabus-desc">Review & Project Selection.</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">04</span><span class="syllabus-desc">Advanced Circuit Variations.</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">05</span><span class="syllabus-desc">Enclosure Design & Finishing.</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">06</span><span class="syllabus-desc">Soldering & PCB Prep.</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">07</span><span class="syllabus-desc">Integration & Testing.</span></div>
-              <div class="syllabus-item"><span class="syllabus-num">08</span><span class="syllabus-desc">Final Assembly & Go Home with Pedal.</span></div>
-            </div>
-
-            <div style="margin-top: 2rem;">
-               <a href="workshop-pedal.html#register" class="pane-cta">Secure Spot</a>
-            </div>
-          </div>
-          <div class="lang-he">
-            <h3 class="ws-title">בניית פדאל גיטרה</h3>
-            <p class="ws-outcome mono">> תוצאה: פדאל פאז/דיסטורשן מוכן לבמה.</p>
-            <p style="color: var(--text-dim); margin-bottom: 1rem;">בנו פאז או ביטקראשר מאפס. כולל עיצוב וגימור קופסאות. רכיבים כלולים. (שימוש בציוד מעבדה להרכבה).</p>
-            
-            <div class="ws-specs">
-              <div class="spec-item"><strong>מחיר</strong>2,200 ₪</div>
-              <div class="spec-item"><strong>משך</strong>8 מפגשים</div>
-              <div class="spec-item"><strong>מעבדה</strong>4 שעות/שבוע</div>
-            </div>
-
-             <div class="syllabus-list">
-               <div class="syllabus-item"><span class="syllabus-num">01</span><span class="syllabus-desc">אלקטרוניקה בסיסית וגלים.</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">02</span><span class="syllabus-desc">בניית פדאל פאזה על ברדבורד.</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">03</span><span class="syllabus-desc">בחירת פרויקט.</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">04</span><span class="syllabus-desc">וריאציות מעגל מתקדמות.</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">05</span><span class="syllabus-desc">עיצוב וגימור קופסאות.</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">06</span><span class="syllabus-desc">הלחמה והכנת PCB.</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">07</span><span class="syllabus-desc">אינטגרציה ובדיקות.</span></div>
-               <div class="syllabus-item"><span class="syllabus-num">08</span><span class="syllabus-desc">הרכבה סופית ויציאה עם פדאל.</span></div>
-            </div>
-
-            <div style="margin-top: 2rem;">
-               <a href="workshop-pedal.html#register-he" class="pane-cta">שריין מקום</a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- 4. TECH TICKER -->
-    <div class="tech-ticker">
-      <div class="ticker-content">
-        ESP32 /// DAISY SEED /// ARDUINO /// RASPBERRY PI /// FUZZ /// DISTORTION /// SYNTHESIS /// PHYSICS /// CIRCUIT BENDING /// ANALOG /// DSP /// NOISE /// GLITCH /// 
-        ESP32 /// DAISY SEED /// ARDUINO /// RASPBERRY PI /// FUZZ /// DISTORTION /// SYNTHESIS /// PHYSICS /// CIRCUIT BENDING /// ANALOG /// DSP /// NOISE /// GLITCH ///
-      </div>
-    </div>
-
-    <!-- 5. GEAR -->
-    <section id="gear" class="container section-with-bg section-bg-gear" style="margin-bottom: 5rem; margin-top: 5rem;">
-      <div class="tech-header">
-        <h2 class="tech-title"><span class="lang-en">Hardware</span><span class="lang-he">חומרה</span></h2>
-        <span class="tech-meta mono">BATCH: 001 // LTD: 13 UNITS</span>
-      </div>
-
-      <div class="product-spec">
-        <div class="product-visual">
-          <img src="images/products/fuzilator.jpg" alt="Fuzilator Internal PCB" style="max-width: 100%; filter: contrast(1.2) grayscale(0.5);" onerror="this.style.display='none'">
-        </div>
-        <div class="product-data">
-          <div class="lang-en">
-            <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">THE FUZILATOR</h3>
-            <p class="mono" style="color: var(--accent); margin-bottom: 2rem;">PUKEMACHINE MK.I</p>
-            <p style="margin-bottom: 1.5rem;">A dual-stage gain destruction unit with internal contact mic and "Puke" starve control.</p>
-            <div class="signal-flow">
-              > SIGNAL PATH:<br>
-              INPUT -> [LPB2 GAIN A] -> [LPB2 GAIN B] -> [VOLTAGE STARVE] -> OUTPUT<br>
-              + FEEDBACK LOOP // + INTERNAL PIEZO
-            </div>
-            <div class="ws-specs" style="border-top: none; padding-top: 0;">
-               <div class="spec-item"><strong>POWER</strong>9V Neg</div>
-               <div class="spec-item"><strong>BYPASS</strong>True</div>
-               <div class="spec-item"><strong>PRICE</strong> $333 / 1,100 ₪</div>
-            </div>
-            <div style="margin-top: 2rem;">
-               <a href="mailto:Dogme84@gmail.com?subject=Buy Fuzilator" class="pane-cta" style="background: var(--text); color: var(--bg);">Email to Buy</a>
-            </div>
-          </div>
-          <div class="lang-he">
-            <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">הפוזילטור</h3>
-            <p class="mono" style="color: var(--accent); margin-bottom: 2rem;">פיוק-משין סימן 1</p>
-            <p style="margin-bottom: 1.5rem;">יחידת הרס גיין דו-שלבית עם מיקרופון מגע פנימי ובקר הרעבת מתח "Puke".</p>
-            <div class="signal-flow" dir="ltr">
-              > SIGNAL PATH:<br>
-              INPUT -> [LPB2 GAIN A] -> [LPB2 GAIN B] -> [VOLTAGE STARVE] -> OUTPUT<br>
-              + FEEDBACK LOOP // + INTERNAL PIEZO
-            </div>
-            <div class="ws-specs" style="border-top: none; padding-top: 0;">
-               <div class="spec-item"><strong>חשמל</strong>9V Neg</div>
-               <div class="spec-item"><strong>בייפאס</strong>True</div>
-               <div class="spec-item"><strong>מחיר</strong>1,100 ₪ / $333</div>
-            </div>
-            <div style="margin-top: 2rem;">
-               <a href="mailto:Dogme84@gmail.com?subject=Buy Fuzilator" class="pane-cta" style="background: var(--text); color: var(--bg);">שלח מייל לקנייה</a>
-            </div>
+            <p class="section-label">// חומרה</p>
+            <h2 class="section-title">הפוזילטור פיוק-משין</h2>
+            <p style="color: var(--text-dim); margin: var(--space-md) 0;">שני שלבי גיין LPB2. לולאת פידבק. מיקרופון פיאזו פנימי. עבודת יד בחיפה. מהדורה מוגבלת של 13 יחידות.</p>
+            <p style="font-family: var(--font-mono); color: var(--accent); font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-lg);">1,100 ₪ / $333</p>
+            <a href="sales.html" class="btn btn-ghost">למפרט</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. CONTACT -->
-    <section class="container" style="margin-bottom: 5rem; text-align: center; border: 1px dashed var(--border); padding: 3rem;">
+    <!-- CTA -->
+    <section class="container">
+      <div class="cta-section reveal">
         <div class="lang-en">
-            <h2 class="tech-title" style="margin-bottom: 1rem;">Ready to start?</h2>
-            <p style="margin-bottom: 2rem;">Direct lines open for bookings and gear.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center;">
-                <a href="https://wa.me/972539263808?text=Hello%2C%20I%20have%20a%20question%20regarding%20Serious%20S.H.I.T." class="pane-cta" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                <a href="mailto:Dogme84@gmail.com" class="pane-cta" style="background: transparent; color: var(--text);">Email</a>
-            </div>
+          <h3>Ready to start?</h3>
+          <p>Direct lines open for bookings and gear.</p>
+          <div class="btn-group" style="justify-content: center;">
+            <a href="https://wa.me/972539263808?text=Hello%2C%20I%20have%20a%20question%20regarding%20Serious%20S.H.I.T." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="mailto:Dogme84@gmail.com" class="btn btn-ghost">Email</a>
+          </div>
         </div>
         <div class="lang-he">
-            <h2 class="tech-title" style="margin-bottom: 1rem;">מוכנים להתחיל?</h2>
-            <p style="margin-bottom: 2rem;">קווים ישירים להזמנות וציוד.</p>
-             <div style="display: flex; gap: 1rem; justify-content: center;">
-                <a href="https://wa.me/972539263808?text=%D7%94%D7%99%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%9C%D7%92%D7%91%D7%99..." class="pane-cta" target="_blank" rel="noopener noreferrer">וואטסאפ</a>
-                <a href="mailto:Dogme84@gmail.com" class="pane-cta" style="background: transparent; color: var(--text);">אימייל</a>
-            </div>
+          <h3>מוכנים להתחיל?</h3>
+          <p>קווים ישירים להזמנות וציוד.</p>
+          <div class="btn-group" style="justify-content: center;">
+            <a href="https://wa.me/972539263808?text=%D7%94%D7%99%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%9C%D7%92%D7%91%D7%99..." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">וואטסאפ</a>
+            <a href="mailto:Dogme84@gmail.com" class="btn btn-ghost">אימייל</a>
+          </div>
         </div>
+      </div>
     </section>
-
   </main>
 
   <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-links">
-          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
-          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
-          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
-          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
-          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-          <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
-        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">SERIOUS S.H.I.T.</p>
+        <p class="footer-geo">Haifa, Israel</p>
+        <p class="footer-motto">Nothing Is Holy.</p>
       </div>
+      <nav class="footer-nav">
+        <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="https://wa.me/972539263808" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+      <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+      <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
     </div>
   </footer>
 

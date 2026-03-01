@@ -23,15 +23,8 @@
           "name": "ESP32 Digital Synth + AI Workshop",
           "description": "Build a digital synthesizer using ESP32 with AI-assisted coding. 7 sessions.",
           "url": "https://willbearfruits.github.io/serious-shit/workshop-esp32.html",
-          "provider": {
-            "@type": "Organization",
-            "name": "Serious S.H.I.T."
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "2200",
-            "priceCurrency": "ILS"
-          }
+          "provider": { "@type": "Organization", "name": "Serious S.H.I.T." },
+          "offers": { "@type": "Offer", "price": "2200", "priceCurrency": "ILS" }
         }
       },
       {
@@ -42,15 +35,8 @@
           "name": "DIY Guitar Pedal Building Workshop",
           "description": "Build your own analog fuzz pedal from scratch. 8 sessions.",
           "url": "https://willbearfruits.github.io/serious-shit/workshop-pedal.html",
-          "provider": {
-            "@type": "Organization",
-            "name": "Serious S.H.I.T."
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "2200",
-            "priceCurrency": "ILS"
-          }
+          "provider": { "@type": "Organization", "name": "Serious S.H.I.T." },
+          "offers": { "@type": "Offer", "price": "2200", "priceCurrency": "ILS" }
         }
       }
     ]
@@ -79,282 +65,269 @@
     })();
   </script>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .workshop-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-    .workshop-card {
-      border: 1px solid var(--border);
-      padding: 2rem;
-      background: var(--surface);
-    }
-    .workshop-card h3 {
-      margin-bottom: 0.5rem;
-    }
-    .workshop-card .price {
-      font-family: var(--font-mono);
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-    .workshop-card .meta {
-      font-size: 0.85rem;
-      color: var(--text-dim);
-      margin-bottom: 1rem;
-    }
-    .workshop-card p {
-      margin-bottom: 1.5rem;
-    }
-    .workshop-card .btn {
-      width: 100%;
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <div class="container header-inner">
-      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//WORKSHOPS</span></a>
-      <nav class="nav-links uppercase mono">
-        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+    <div class="container header-bar">
+      <a class="logo" href="index.html">SERIOUS S.H.I.T.</a>
+      <span class="logo-sub">Haifa, IL</span>
+      <button class="menu-toggle" aria-label="Menu">///</button>
+      <nav class="nav" id="main-nav">
         <a href="workshops.html" class="active"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
         <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
         <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
         <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-        <a href="#" class="theme-toggle">LIGHT/DARK</a>
-        <a href="#" class="lang-toggle">EN/HE</a>
+        <button class="theme-toggle" aria-label="Toggle theme"></button>
+        <button class="lang-toggle" aria-label="Toggle language">EN/HE</button>
       </nav>
     </div>
   </header>
 
-  <!-- Urgent Banner - English -->
-  <section class="featured-banner lang-en">
+  <!-- Banner -->
+  <div class="featured-banner">
     <div class="container">
-      <div class="featured-content">
-        <div class="featured-badge" style="background: var(--accent); color: white; border: none;">STARTING FEB 3RD</div>
-        <h2>New Workshop Batch (Haifa)</h2>
-        <p>Two courses starting on <strong>February 3rd</strong>. Includes 4 hours/week of open lab time. <strong>20% OFF if you register for both!</strong></p>
+      <div class="lang-en">
+        <h2>New Workshop Batch &mdash; Starting Feb 3rd</h2>
+        <p>Two courses. Haifa makerspace. 4h/week open lab included. <strong>20% OFF if you register for both.</strong></p>
+      </div>
+      <div class="lang-he">
+        <h2>מחזור חדש &mdash; מתחילים ב-3 לפברואר</h2>
+        <p>שני קורסים. מייקרספייס חיפה. 4 שעות/שבוע מעבדה פתוחה כלולות. <strong>20% הנחה לנרשמים לשניהם!</strong></p>
       </div>
     </div>
-  </section>
-
-  <!-- Urgent Banner - Hebrew -->
-  <section class="featured-banner lang-he">
-    <div class="container">
-      <div class="featured-content">
-        <div class="featured-badge" style="background: var(--accent); color: white; border: none;">מתחילים ב-3 לפברואר</div>
-        <h2>מחזור חדש נפתח (חיפה)</h2>
-        <p>שני קורסים נפתחים ב-<strong>3 לפברואר</strong>. כולל 4 שעות בשבוע של מעבדה פתוחה. <strong>20% הנחה לנרשמים לשניהם!</strong></p>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <main>
     <div class="container">
 
-      <!-- English -->
-      <section class="lang-en">
-        <h1>Workshops</h1>
-        <p class="tagline">Complete multi-session courses. From zero to working instruments. All hands-on, no prior knowledge required.</p>
+      <div class="page-header">
+        <div class="lang-en">
+          <h1 class="page-title">Workshops</h1>
+          <p class="page-desc">Complete multi-session courses. From zero to working instruments. All hands-on, no prior knowledge required.</p>
+        </div>
+        <div class="lang-he">
+          <h1 class="page-title">קורסים</h1>
+          <p class="page-desc">קורסים מלאים עם מספר מפגשים. מאפס לכלי נגינה עובד. הכל מעשי, לא צריך ידע קודם.</p>
+        </div>
+      </div>
 
-        <div class="workshop-cards">
-
-          <!-- ESP32 Card -->
-          <div class="workshop-card">
-            <img src="images/gallery/esp32-synth-oled.png" alt="ESP32 Digital Synth" style="width: 100%; margin-bottom: 1rem; border: 1px solid var(--border);">
-            <span class="badge badge-new">NEW</span>
-            <h3>ESP32 Digital Synth + AI</h3>
-            <div class="price">2,200 NIS</div>
-            <div class="meta">7 meetings x 2.5h (16:00 - 18:30) | Haifa | Feb 3</div>
-            <p>Build a digital synthesizer using ESP32, with AI tools helping you write code. <strong>Requires laptop and AI subscription (~$20).</strong></p>
-            <div class="tech-stack" style="margin-bottom: 1rem;">
-              <span class="tech-tag">ESP32</span>
-              <span class="tech-tag">Arduino</span>
-              <span class="tech-tag">AI</span>
-            </div>
-            <a href="workshop-esp32.html" class="btn btn-primary">View Details & Register</a>
+      <div class="ws-grid">
+        <!-- ESP32 Card -->
+        <article class="ws-card reveal">
+          <div class="ws-card-img">
+            <img src="images/gallery/esp32-synth-oled.png" alt="ESP32 Digital Synth" loading="lazy">
           </div>
-
-          <!-- Pedal Card -->
-          <div class="workshop-card">
-            <img src="images/gallery/shit-pedal-red.png" alt="DIY Fuzz Pedal" style="width: 100%; margin-bottom: 1rem; border: 1px solid var(--border);">
-            <h3>DIY Guitar Pedal (Fuzz)</h3>
-            <div class="price">2,200 NIS</div>
-            <div class="meta">8 meetings (19:00 - 21:30) | Haifa | Feb 3</div>
-            <p>Build your own fuzz, overdrive, or bitcrusher pedal from scratch. Complete hands-on course from basic electronics to finished pedal.</p>
-            <div class="tech-stack" style="margin-bottom: 1rem;">
-              <span class="tech-tag">Analog</span>
-              <span class="tech-tag">Soldering</span>
-              <span class="tech-tag">Fuzz</span>
+          <div class="ws-card-body">
+            <div class="lang-en">
+              <span class="ws-tag">7 Meetings &middot; NEW</span>
+              <h3 class="ws-card-title">ESP32 Digital Synth + AI</h3>
+              <p class="ws-card-desc">Build a digital synthesizer using ESP32, with AI tools helping you write code. Requires laptop and AI subscription (~$20).</p>
+              <div class="tech-tags">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">AI</span>
+              </div>
+              <div class="ws-card-meta">
+                <span>2,200 NIS</span>
+                <span>16:00 - 18:30</span>
+                <span>Haifa &middot; Feb 3</span>
+              </div>
+              <a href="workshop-esp32.html" class="btn btn-primary">Details & Register</a>
             </div>
-            <a href="workshop-pedal.html" class="btn btn-primary">View Details & Register</a>
+            <div class="lang-he">
+              <span class="ws-tag">7 מפגשים &middot; חדש</span>
+              <h3 class="ws-card-title">סינת' ESP32 + AI</h3>
+              <p class="ws-card-desc">בניית סינתיסייזר דיגיטלי עם ESP32 ושימוש בבינה מלאכותית. דרישות: מחשב נייד ומנוי AI (כ-20$).</p>
+              <div class="tech-tags">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">ארדואינו</span>
+                <span class="tech-tag">AI</span>
+              </div>
+              <div class="ws-card-meta">
+                <span>2,200 ₪</span>
+                <span>16:00 - 18:30</span>
+                <span>חיפה &middot; 3 בפברואר</span>
+              </div>
+              <a href="workshop-esp32.html" class="btn btn-primary">פרטים והרשמה</a>
+            </div>
           </div>
+        </article>
 
+        <!-- Pedal Card -->
+        <article class="ws-card reveal">
+          <div class="ws-card-img">
+            <img src="images/gallery/shit-pedal-red.png" alt="DIY Fuzz Pedal" loading="lazy">
+          </div>
+          <div class="ws-card-body">
+            <div class="lang-en">
+              <span class="ws-tag">8 Meetings &middot; Cycle 5</span>
+              <h3 class="ws-card-title">DIY Guitar Pedal (Fuzz)</h3>
+              <p class="ws-card-desc">Build your own fuzz, overdrive, or bitcrusher pedal from scratch. Complete hands-on course from basic electronics to finished pedal.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Analog</span>
+                <span class="tech-tag">Soldering</span>
+                <span class="tech-tag">Fuzz</span>
+              </div>
+              <div class="ws-card-meta">
+                <span>2,200 NIS</span>
+                <span>19:00 - 21:30</span>
+                <span>Haifa &middot; Feb 3</span>
+              </div>
+              <a href="workshop-pedal.html" class="btn btn-primary">Details & Register</a>
+            </div>
+            <div class="lang-he">
+              <span class="ws-tag">8 מפגשים &middot; מחזור 5</span>
+              <h3 class="ws-card-title">בניית פדל גיטרה (פאז)</h3>
+              <p class="ws-card-desc">בנו פדל פאז, אוברדרייב או ביטקראשר משלכם מאפס. קורס מעשי מלא מיסודות אלקטרוניקה ועד פדל מוכן.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">אנלוגי</span>
+                <span class="tech-tag">הלחמה</span>
+                <span class="tech-tag">פאז</span>
+              </div>
+              <div class="ws-card-meta">
+                <span>2,200 ₪</span>
+                <span>19:00 - 21:30</span>
+                <span>חיפה &middot; 3 בפברואר</span>
+              </div>
+              <a href="workshop-pedal.html" class="btn btn-primary">פרטים והרשמה</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Quick Comparison -->
+      <section class="section reveal">
+        <div class="lang-en"><h2>Quick Comparison</h2></div>
+        <div class="lang-he"><h2>השוואה מהירה</h2></div>
+
+        <div class="lang-en">
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Duration</th>
+                  <th>Format</th>
+                  <th>Output</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>DIY Guitar Pedal</td>
+                  <td>8 meetings</td>
+                  <td>Analog > Veroboard > Enclosure</td>
+                  <td>Working pedal</td>
+                  <td><a href="workshop-pedal.html">Details</a></td>
+                </tr>
+                <tr>
+                  <td>ESP32 Synth + AI</td>
+                  <td>7 meetings</td>
+                  <td>Analog > Digital > Code > Enclosure</td>
+                  <td>Digital synth</td>
+                  <td><a href="workshop-esp32.html">Details</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        <!-- Quick Comparison -->
-        <h2>Quick Comparison</h2>
-        <div class="comparison-table-wrapper">
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Course</th>
-                <th>Duration</th>
-                <th>Format</th>
-                <th>Output</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>DIY Guitar Pedal</td>
-                <td>8 meetings</td>
-                <td>Analog > Veroboard > Enclosure</td>
-                <td>Working pedal</td>
-                <td><a href="workshop-pedal.html">Details</a></td>
-              </tr>
-              <tr>
-                <td>ESP32 Synth + AI</td>
-                <td>7 meetings</td>
-                <td>Analog > Digital > Code > Enclosure</td>
-                <td>Digital synth</td>
-                <td><a href="workshop-esp32.html">Details</a></td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="lang-he">
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>קורס</th>
+                  <th>משך</th>
+                  <th>פורמט</th>
+                  <th>תוצר</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>פדאל גיטרה DIY</td>
+                  <td>8 מפגשים</td>
+                  <td>אנלוגי > ווירובורד > מארז</td>
+                  <td>פדאל עובד</td>
+                  <td><a href="workshop-pedal.html">פרטים</a></td>
+                </tr>
+                <tr>
+                  <td>סינת' ESP32 + AI</td>
+                  <td>7 מפגשים</td>
+                  <td>אנלוגי > דיגיטלי > קוד > מארז</td>
+                  <td>סינת' דיגיטלי</td>
+                  <td><a href="workshop-esp32.html">פרטים</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </section>
 
-        <!-- Where -->
-        <h2>Where</h2>
-        <ul class="process">
-          <li><strong>MEZO Haifa (Sirkin 3)</strong> — Main workshop location</li>
-          <li><strong>Private sessions</strong> — At MEZO Haifa (Sirkin 3)</li>
-          <li style="color: var(--text-dim); margin-top: 1rem; border-top: 1px dashed var(--border-light); padding-top: 1rem;">
-             <strong>Past Collaborations:</strong> Matmon Space (Tel Aviv), Musrara Art School (Jerusalem)
-          </li>
-        </ul>
+      <!-- Where -->
+      <section class="section reveal">
+        <div class="lang-en">
+          <h2>Location</h2>
+          <ul class="location-list">
+            <li><strong>MEZO Haifa (Sirkin 3)</strong> &mdash; Main workshop location</li>
+            <li><strong>Private sessions</strong> &mdash; At MEZO Haifa (Sirkin 3)</li>
+            <li style="color: var(--text-dim); margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+              <strong>Past:</strong> Matmon Space (Tel Aviv), Musrara Art School (Jerusalem)
+            </li>
+          </ul>
+        </div>
+        <div class="lang-he">
+          <h2>מיקום</h2>
+          <ul class="location-list">
+            <li><strong>MEZO חיפה (סירקין 3)</strong> &mdash; מיקום הסדנה הראשי</li>
+            <li><strong>מפגשים פרטיים</strong> &mdash; ב-MEZO חיפה (סירקין 3)</li>
+            <li style="color: var(--text-dim); margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+              <strong>שיתופי פעולה קודמים:</strong> סלון המטמון (תל אביב), מוסררה (ירושלים)
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <div style="margin-top: 3rem; padding: 2rem; background: var(--surface); border: 1px solid var(--border); text-align: center;">
+      <!-- CTA -->
+      <div class="cta-section reveal">
+        <div class="lang-en">
           <h3>Questions?</h3>
           <p>Not sure which workshop is right for you?</p>
-          <a href="https://wa.me/972539263808" class="btn" style="background: #25d366; color: white; border: none;">Ask on WhatsApp</a>
+          <a href="https://wa.me/972539263808" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
         </div>
-      </section>
-
-      <!-- Hebrew -->
-      <section class="lang-he">
-        <h1>קורסים</h1>
-        <p class="tagline">קורסים מלאים עם מספר מפגשים. מאפס לכלי נגינה עובד. הכל מעשי, לא צריך ידע קודם.</p>
-
-        <div class="workshop-cards">
-
-          <!-- ESP32 Card -->
-          <div class="workshop-card">
-            <img src="images/gallery/esp32-synth-oled.png" alt="סינת' דיגיטלי ESP32" style="width: 100%; margin-bottom: 1rem; border: 1px solid var(--border);">
-            <span class="badge badge-new">חדש</span>
-            <h3>סינת' ESP32 + AI</h3>
-            <div class="price">2,200 ש"ח</div>
-            <div class="meta">7 מפגשים x 2.5 שעות (16:00 - 18:30) | חיפה | 3 בפברואר</div>
-            <p>בניית סינתיסייזר דיגיטלי עם ESP32 ושימוש בבינה מלאכותית. <strong>דרישות: מחשב נייד ומנוי AI (כ-20$).</strong></p>
-            <div class="tech-stack" style="margin-bottom: 1rem;">
-              <span class="tech-tag">ESP32</span>
-              <span class="tech-tag">ארדואינו</span>
-              <span class="tech-tag">AI</span>
-            </div>
-            <a href="workshop-esp32.html" class="btn btn-primary">פרטים והרשמה</a>
-          </div>
-
-          <!-- Pedal Card -->
-          <div class="workshop-card">
-            <img src="images/gallery/shit-pedal-red.png" alt="פדל פאז DIY" style="width: 100%; margin-bottom: 1rem; border: 1px solid var(--border);">
-            <h3>בניית פדל גיטרה (פאז)</h3>
-            <div class="price">2,200 ש"ח</div>
-            <div class="meta">8 מפגשים (19:00 - 21:30) | חיפה | 3 בפברואר</div>
-            <p>בנו פדל פאז, אוברדרייב או ביטקראשר משלכם מאפס. קורס מעשי מלא מיסודות אלקטרוניקה ועד פדל מוכן.</p>
-            <div class="tech-stack" style="margin-bottom: 1rem;">
-              <span class="tech-tag">אנלוגי</span>
-              <span class="tech-tag">הלחמה</span>
-              <span class="tech-tag">פאז</span>
-            </div>
-            <a href="workshop-pedal.html" class="btn btn-primary">פרטים והרשמה</a>
-          </div>
-
-        </div>
-
-        <!-- Quick Comparison -->
-        <h2>השוואה מהירה</h2>
-        <div class="comparison-table-wrapper">
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>קורס</th>
-                <th>משך</th>
-                <th>פורמט</th>
-                <th>תוצר</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>פדאל גיטרה DIY</td>
-                <td>8 מפגשים</td>
-                <td>אנלוגי > ווירובורד > מארז</td>
-                <td>פדאל עובד</td>
-                <td><a href="workshop-pedal.html">פרטים</a></td>
-              </tr>
-              <tr>
-                <td>סינת' ESP32 + AI</td>
-                <td>7 מפגשים</td>
-                <td>אנלוגי > דיגיטלי > קוד > מארז</td>
-                <td>סינת' דיגיטלי</td>
-                <td><a href="workshop-esp32.html">פרטים</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Where -->
-        <h2>היכן</h2>
-        <ul class="process">
-          <li><strong>MEZO חיפה (סירקין 3)</strong> — מיקום הסדנה הראשי</li>
-          <li><strong>מפגשים פרטיים</strong> — ב-MEZO חיפה (סירקין 3)</li>
-          <li style="color: var(--text-dim); margin-top: 1rem; border-top: 1px dashed var(--border-light); padding-top: 1rem;">
-             <strong>שיתופי פעולה קודמים:</strong> סלון המטמון (תל אביב), מוסררה (ירושלים)
-          </li>
-        </ul>
-
-        <div style="margin-top: 3rem; padding: 2rem; background: var(--surface); border: 1px solid var(--border); text-align: center;">
+        <div class="lang-he">
           <h3>שאלות?</h3>
           <p>לא בטוחים איזו סדנה מתאימה לכם?</p>
-          <a href="https://wa.me/972539263808" class="btn" style="background: #25d366; color: white; border: none;">שאלו בוואטסאפ</a>
+          <a href="https://wa.me/972539263808" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">שאלו בוואטסאפ</a>
         </div>
-      </section>
+      </div>
 
     </div>
   </main>
 
   <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-links">
-          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
-          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
-          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
-          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
-          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-          <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
-        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">SERIOUS S.H.I.T.</p>
+        <p class="footer-geo">Haifa, Israel</p>
+        <p class="footer-motto">Nothing Is Holy.</p>
       </div>
+      <nav class="footer-nav">
+        <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="https://wa.me/972539263808" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+      <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+      <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
     </div>
   </footer>
 

@@ -14,25 +14,15 @@
     "name": "Fuzilator PukeMachine",
     "description": "Handmade chaotic noise fuzz device with dual LPB2 gain stages, feedback loop, and internal piezo contact microphone. Limited run of 13 units.",
     "image": "https://willbearfruits.github.io/serious-shit/images/products/fuzilator.jpg",
-    "brand": {
-      "@type": "Brand",
-      "name": "Serious S.H.I.T."
-    },
-    "manufacturer": {
-      "@type": "Organization",
-      "name": "Serious S.H.I.T.",
-      "url": "https://willbearfruits.github.io/serious-shit/"
-    },
+    "brand": { "@type": "Brand", "name": "Serious S.H.I.T." },
+    "manufacturer": { "@type": "Organization", "name": "Serious S.H.I.T.", "url": "https://willbearfruits.github.io/serious-shit/" },
     "offers": {
       "@type": "Offer",
       "price": "333",
       "priceCurrency": "USD",
       "availability": "https://schema.org/LimitedAvailability",
       "itemCondition": "https://schema.org/NewCondition",
-      "seller": {
-        "@type": "Organization",
-        "name": "Serious S.H.I.T."
-      }
+      "seller": { "@type": "Organization", "name": "Serious S.H.I.T." }
     },
     "category": "Guitar Effects Pedal",
     "material": "Handmade electronics",
@@ -62,190 +52,162 @@
     })();
   </script>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .specs-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-    .philosophy-quote {
-      font-family: monospace;
-      font-size: 0.9rem;
-      color: var(--text-soft);
-      border-left: 2px solid var(--accent);
-      padding-left: 1rem;
-      margin: 2rem 0;
-      font-style: italic;
-    }
-    [dir="rtl"] .philosophy-quote {
-      border-left: none;
-      border-right: 2px solid var(--accent);
-      padding-left: 0;
-      padding-right: 1rem;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <div class="container header-inner">
-      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//GEAR</span></a>
-      <nav class="nav-links uppercase mono">
-        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+    <div class="container header-bar">
+      <a class="logo" href="index.html">SERIOUS S.H.I.T.</a>
+      <span class="logo-sub">Haifa, IL</span>
+      <button class="menu-toggle" aria-label="Menu">///</button>
+      <nav class="nav" id="main-nav">
         <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
         <a href="sales.html" class="active"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
         <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
         <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-        <a href="#" class="theme-toggle">LIGHT/DARK</a>
-        <a href="#" class="lang-toggle">EN/HE</a>
+        <button class="theme-toggle" aria-label="Toggle theme"></button>
+        <button class="lang-toggle" aria-label="Toggle language">EN/HE</button>
       </nav>
     </div>
   </header>
 
   <main>
     <div class="container">
-      
-      <!-- PRODUCT DETAIL -->
-      <section id="fuzilator-detail" style="margin-top: 2rem;">
-        
-        <div class="lang-en">
-          <h1>FUZILATOR PUKE MACHINE</h1>
-          <p class="tagline">Dual Gain Stage Fuzz & Noise Generator</p>
-        </div>
-        <div class="lang-he">
-          <h1>פוזילטור פיוק-משין</h1>
-          <p class="tagline">פאז גיין כפול ומחולל רעש</p>
-        </div>
 
-        <div class="product" style="display: block;">
-          <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
-            <div style="flex: 1; min-width: 300px;">
-              <img src="images/products/fuzilator.jpg" alt="Fuzilator PukeMachine" style="width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border);">
-              
-              <div class="philosophy-quote">
-                "They are all unique but also they are the same. You are not special, if everyone is special. You're just like everyone else, not you, nor anything is special."
+      <!-- Product Layout -->
+      <section class="section">
+        <div class="product-layout">
+          <div class="product-image">
+            <img src="images/products/fuzilator.jpg" alt="Fuzilator PukeMachine">
+            <div class="philosophy-quote" style="padding: var(--space-md);">
+              "They are all unique but also they are the same. You are not special, if everyone is special. You're just like everyone else."
+            </div>
+          </div>
+
+          <div class="product-info">
+            <div class="lang-en">
+              <h1>Fuzilator PukeMachine</h1>
+              <p class="product-subtitle">MK.I &mdash; DUAL GAIN STAGE FUZZ</p>
+              <p class="product-price">$333 USD / 1,100 ILS</p>
+              <p class="product-limited">Limited run of 13 units. Handmade in Haifa.</p>
+
+              <h3 style="margin-top: var(--space-lg);">What is it?</h3>
+              <p style="color: var(--text-dim); margin: var(--space-sm) 0 var(--space-lg);">Dual LPB2 gain stages with a tone stack between them. High gain on both stages&mdash;push hard for gated fuzz, back off for clean drive.</p>
+
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/DPi9fYsc-MU"
+                  title="Fuzilator PukeMachine demo"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  loading="lazy"
+                  allowfullscreen></iframe>
+              </div>
+
+              <div class="signal-flow">
+                > SIGNAL PATH:<br>
+                INPUT -> [LPB2 GAIN A] -> [LPB2 GAIN B] -> [VOLTAGE STARVE] -> OUTPUT<br>
+                + FEEDBACK LOOP // + INTERNAL PIEZO
+              </div>
+
+              <h3>Key Features</h3>
+              <ul class="feature-list">
+                <li><strong>Feedback Loop:</strong> "Eat myself" switch activates self-oscillation. All knobs affect the feedback pitch and texture.</li>
+                <li><strong>Internal Piezo:</strong> Built-in contact mic inside the enclosure. Picks up box resonance, taps, and screams.</li>
+                <li><strong>Guitar Volume Interaction:</strong> Your guitar's volume knob becomes a pitch control for the oscillation.</li>
+                <li><strong>Standalone Mode:</strong> Functions as a noise box when nothing is plugged into the input.</li>
+              </ul>
+
+              <div class="product-specs">
+                <div><span class="spec-label">Power</span>9V Neg</div>
+                <div><span class="spec-label">Bypass</span>True</div>
+                <div><span class="spec-label">Price</span>$333 / 1,100 ₪</div>
+              </div>
+
+              <h3>Versatility</h3>
+              <p style="color: var(--text-dim); margin: var(--space-sm) 0 var(--space-lg);">Works with guitar, baritone, bass, synthesizers, and drums. Range goes from subtle clean drive to hellish self-destruction.</p>
+
+              <div class="btn-group">
+                <a href="https://wa.me/972539263808?text=Hello%2C%20I%20would%20like%20to%20purchase%20a%20Fuzilator%20PukeMachine." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
+                <a href="mailto:Dogme84@gmail.com?subject=Fuzilator Order" class="btn btn-secondary">Email: Dogme84@gmail.com</a>
               </div>
             </div>
 
-            <div style="flex: 1; min-width: 300px;">
-              <div class="lang-en">
-                <p class="price" style="font-size: 2rem; color: var(--accent); margin-bottom: 0.5rem;">$333 USD / 1,100 ILS</p>
-                <p style="margin-bottom: 2rem;">Limited run of 13 units.</p>
-                
-                <h3>What is it?</h3>
-                <p>Dual LPB2 gain stages with a tone stack between them. High gain on both stages—push hard for gated fuzz, back off for clean drive.</p>
+            <div class="lang-he">
+              <h1>פוזילטור פיוק-משין</h1>
+              <p class="product-subtitle">סימן 1 &mdash; פאז גיין כפול</p>
+              <p class="product-price">1,100 ₪ / $333 USD</p>
+              <p class="product-limited">מהדורה מוגבלת של 13 יחידות. עבודת יד בחיפה.</p>
 
-                <div class="video-container is-compact" style="background: var(--text); padding: 0; border: 4px solid var(--text); overflow: hidden;">
-                  <iframe
-                    src="https://www.youtube.com/embed/DPi9fYsc-MU"
-                    title="Fuzilator PukeMachine demo"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    loading="lazy"
-                    allowfullscreen></iframe>
-                </div>
+              <h3 style="margin-top: var(--space-lg);">מה זה?</h3>
+              <p style="color: var(--text-dim); margin: var(--space-sm) 0 var(--space-lg);">שני שלבי גיין LPB2 עם טון-סטאק ביניהם. גיין גבוה בשני השלבים - דחפו חזק לפאז מקוטע, או הורידו ווליום לדרייב נקי.</p>
 
-                
-                <h3>Key Features</h3>
-                <ul class="workshop-list" style="padding: 0;">
-                  <li class="workshop-item" style="padding: 0.5rem 0; border: none;"><strong>Feedback Loop:</strong> "Eat myself" switch activates self-oscillation. All knobs affect the feedback pitch and texture.</li>
-                  <li class="workshop-item" style="padding: 0.5rem 0; border: none;"><strong>Internal Piezo:</strong> Built-in contact mic inside the enclosure. Picks up box resonance, taps, and screams.</li>
-                  <li class="workshop-item" style="padding: 0.5rem 0; border: none;"><strong>Guitar Volume Interaction:</strong> Your guitar's volume knob becomes a pitch control for the oscillation.</li>
-                  <li class="workshop-item" style="padding: 0.5rem 0; border: none;"><strong>Standalone Mode:</strong> Functions as a noise box when nothing is plugged into the input.</li>
-                </ul>
-
-                <h3>Versatility</h3>
-                <p>Works with guitar, baritone, bass, synthesizers, and drums. Range goes from subtle clean drive to hellish self-destruction.</p>
-
-                <div class="btn-group" style="margin-top: 2rem;">
-                  <a href="#order-form" class="btn btn-primary">Order Now</a>
-                  <a href="mailto:Dogme84@gmail.com" class="btn btn-secondary">Email: Dogme84@gmail.com</a>
-                </div>
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/DPi9fYsc-MU"
+                  title="Fuzilator PukeMachine demo"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  loading="lazy"
+                  allowfullscreen></iframe>
               </div>
 
-              <div class="lang-he">
-                <p class="price" style="font-size: 2rem; color: var(--accent); margin-bottom: 0.5rem;">1,100 ₪ / $333 USD</p>
-                <p style="margin-bottom: 2rem;">מהדורה מוגבלת של 13 יחידות.</p>
-                
-                <h3>מה זה?</h3>
-                <p>שני שלבי גיין LPB2 עם טון-סטאק ביניהם. גיין גבוה בשני השלבים - דחפו חזק לפאז מקוטע (gated), או הורידו ווליום לדרייב נקי.</p>
+              <div class="signal-flow" dir="ltr">
+                > SIGNAL PATH:<br>
+                INPUT -> [LPB2 GAIN A] -> [LPB2 GAIN B] -> [VOLTAGE STARVE] -> OUTPUT<br>
+                + FEEDBACK LOOP // + INTERNAL PIEZO
+              </div>
 
-                <div class="video-container is-compact" style="background: var(--text); padding: 0; border: 4px solid var(--text); overflow: hidden;">
-                  <iframe
-                    src="https://www.youtube.com/embed/DPi9fYsc-MU"
-                    title="Fuzilator PukeMachine demo"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    loading="lazy"
-                    allowfullscreen></iframe>
-                </div>
+              <h3>פיצ'רים מרכזיים</h3>
+              <ul class="feature-list">
+                <li><strong>לולאת פידבק:</strong> מתג "Eat myself" שמפעיל אוסילציה עצמית. כל הכפתורים משפיעים על גובה הצליל והטקסטורה.</li>
+                <li><strong>פיאזו פנימי:</strong> מיקרופון מגע מובנה בתוך המארז. קולט את הרזוננס של הקופסה, מכות וצרחות.</li>
+                <li><strong>אינטראקציה עם ווליום:</strong> כפתור הווליום בגיטרה שלכם הופך לשלוט פיץ' של האוסילציה.</li>
+                <li><strong>מצב עצמאי:</strong> מתפקד כמכונת רעש כשאף כלי לא מחובר לכניסה.</li>
+              </ul>
 
-                
-                <h3>פיצ'רים מרכזיים</h3>
-                <ul class="workshop-list" style="padding: 0;">
-                  <li class="workshop-item" style="padding: 0.5rem 0; border: none;"><strong>לולאת פידבק:</strong> מתג "Eat myself" שמפעיל אוסילציה עצמית. כל הכפתורים משפיעים על גובה הצליל והטקסטורה.</li>
-                  <li class="workshop-item" style="padding: 0.5rem 0; border: none;"><strong>פיאזו פנימי:</strong> מיקרופון מגע מובנה בתוך המארז. קולט את הרזוננס של הקופסה, מכות וצרחות.</li>
-                  <li class="workshop-item" style="padding: 0.5rem 0; border: none;"><strong>אינטראקציה עם ווליום:</strong> כפתור הווליום בגיטרה שלכם הופך לשלוט פיץ' (גובה צליל) של האוסילציה.</li>
-                  <li class="workshop-item" style="padding: 0.5rem 0; border: none;"><strong>מצב עצמאי:</strong> מתפקד כמכונת רעש כשאף כלי לא מחובר לכניסה.</li>
-                </ul>
+              <div class="product-specs">
+                <div><span class="spec-label">חשמל</span>9V Neg</div>
+                <div><span class="spec-label">בייפאס</span>True</div>
+                <div><span class="spec-label">מחיר</span>1,100 ₪ / $333</div>
+              </div>
 
-                <h3>ורסטיליות</h3>
-                <p>עובד עם גיטרה, בריטון, בס, סינתיסייזרים ותופים. הטווח נע מדרייב נקי ועדין ועד להרס עצמי גיהנומי.</p>
+              <h3>ורסטיליות</h3>
+              <p style="color: var(--text-dim); margin: var(--space-sm) 0 var(--space-lg);">עובד עם גיטרה, בריטון, בס, סינתיסייזרים ותופים. הטווח נע מדרייב נקי ועדין ועד להרס עצמי גיהנומי.</p>
 
-                <div class="btn-group" style="margin-top: 2rem;">
-                  <a href="#order-form" class="btn btn-primary">הזמן עכשיו</a>
-                  <a href="mailto:Dogme84@gmail.com" class="btn btn-secondary">אימייל: Dogme84@gmail.com</a>
-                </div>
+              <div class="btn-group">
+                <a href="https://wa.me/972539263808?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%9C%D7%A8%D7%9B%D7%95%D7%A9%20%D7%A4%D7%95%D7%96%D7%99%D7%9C%D7%98%D7%95%D7%A8." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">הזמנה בוואטסאפ</a>
+                <a href="mailto:Dogme84@gmail.com?subject=הזמנת פוזילטור" class="btn btn-secondary">אימייל: Dogme84@gmail.com</a>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Order Form -->
-        <div class="form-section" id="order-form">
-          <div class="lang-en">
-            <h2>Order Inquiry</h2>
-            <p>To secure one of the 13 units, contact directly:</p>
-
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0;">
-              <a href="https://wa.me/972539263808?text=Hello%2C%20I%20would%20like%20to%20purchase%20a%20Fuzilator%20PukeMachine." class="btn" style="background: #25d366; color: white; border: none;">WhatsApp Order</a>
-              <a href="mailto:Dogme84@gmail.com?subject=Fuzilator Order" class="btn btn-secondary">Email: Dogme84@gmail.com</a>
-            </div>
-          </div>
-
-          <div class="lang-he">
-            <h2>הזמנה</h2>
-            <p>כדי לשריין אחת מ-13 היחידות, צרו קשר ישירות:</p>
-
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0;">
-              <a href="https://wa.me/972539263808?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%9C%D7%A8%D7%9B%D7%95%D7%A9%20%D7%A4%D7%95%D7%96%D7%99%D7%9C%D7%98%D7%95%D7%A8." class="btn" style="background: #25d366; color: white; border: none;">הזמנה בוואטסאפ</a>
-              <a href="mailto:Dogme84@gmail.com?subject=הזמנת פוזילטור" class="btn btn-secondary">אימייל: Dogme84@gmail.com</a>
-            </div>
-          </div>
-        </div>
-
       </section>
+
     </div>
   </main>
 
   <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-links">
-          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
-          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
-          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
-          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
-          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-          <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
-        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">SERIOUS S.H.I.T.</p>
+        <p class="footer-geo">Haifa, Israel</p>
+        <p class="footer-motto">Nothing Is Holy.</p>
       </div>
+      <nav class="footer-nav">
+        <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="https://wa.me/972539263808" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+      <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+      <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
     </div>
   </footer>
 
