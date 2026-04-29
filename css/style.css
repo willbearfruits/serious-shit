@@ -67,6 +67,10 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  font-size: 18px;
+}
+@media (max-width: 600px) {
+  html { font-size: 17px; }
 }
 
 body {
@@ -448,6 +452,31 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: var(--space-lg);
+}
+
+.ws-grid.ws-grid-single {
+  grid-template-columns: minmax(0, 640px);
+  justify-content: center;
+}
+
+.ws-next-cycle {
+  margin-top: var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
+  border: 1px dashed var(--border);
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  text-align: center;
+}
+.ws-next-cycle .section-label {
+  margin-bottom: 0.4rem;
+}
+.ws-next-cycle a {
+  color: var(--accent);
+  font-weight: 700;
+  border-bottom: 1px solid currentColor;
+}
+.ws-next-cycle a:hover {
+  opacity: 0.75;
 }
 
 .ws-card {
@@ -1484,4 +1513,113 @@ footer {
   color: var(--text-dim);
   margin-bottom: var(--space-lg);
   font-size: 1rem;
+}
+
+/* ========================================
+   ANNOUNCEMENT MODAL (May 10 batch)
+   ======================================== */
+.announce-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.announce-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.announce-modal[hidden] { display: none; }
+
+.announce-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.announce-modal-card {
+  position: relative;
+  max-width: 540px;
+  width: 100%;
+  background: var(--bg);
+  border: 3px solid var(--accent);
+  box-shadow: 12px 12px 0 0 var(--border);
+  padding: var(--space-xl) var(--space-lg);
+  transform: translateY(20px) scale(0.96);
+  transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+.announce-modal.is-open .announce-modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.announce-modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  font-family: var(--font-mono);
+}
+[dir="rtl"] .announce-modal-close {
+  right: auto;
+  left: 0.75rem;
+}
+.announce-modal-close:hover { color: var(--accent); }
+
+.announce-modal-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+}
+
+.announce-modal-title {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin: 0 0 var(--space-md) 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.announce-modal-date {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
+.announce-modal-desc {
+  color: var(--text-dim);
+  margin: 0 0 var(--space-lg) 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.announce-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 480px) {
+  .announce-modal-card {
+    padding: var(--space-lg) var(--space-md);
+    box-shadow: 6px 6px 0 0 var(--border);
+  }
+  .announce-modal-title { font-size: 1.5rem; }
 }

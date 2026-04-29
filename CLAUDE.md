@@ -13,7 +13,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | **Platform** | GitHub Pages (static HTML/CSS/JS) |
 | **Languages** | Bilingual: Hebrew (RTL) + English (LTR) |
 | **Aesthetic** | Industrial, raw, glitch-punk. "Nothing Is Holy." |
-| **Status** | Active. Workshop batch starts Feb 3rd. |
+| **Status** | Active. Workshop batch starts May 10th, 2026. |
 
 ## Contact Info
 
@@ -103,7 +103,7 @@ Form URL: https://docs.google.com/forms/d/e/1FAIpQLSeXK0PPF8B9_xSPqBF5nfzZ-H9TAX
 
 ## Workshop & Product Info
 
-### Active Workshops (Feb 2026 batch)
+### Active Workshops (May 10, 2026 batch)
 - **ESP32 Digital Synth + AI**: 7 meetings, 2,200 NIS - Learn AI-assisted firmware coding
 - **DIY Guitar Pedal / Fuzz**: 8 meetings, 2,200 NIS - Build analog fuzz pedal (Cycle 5)
 
