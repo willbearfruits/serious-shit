@@ -1224,9 +1224,110 @@ html { scroll-behavior: smooth; }
 .btn-register-jump:hover { filter: brightness(1.15); transform: translateY(-1px); color: #fff; }
 .btn-register-jump:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
 
-/* Workshop dropdowns — collapsible list view for workshops.html catalog
-   Summary shows: [+] [thumb] [title + tag/meta] [REGISTER] — register is visible without expanding.
-*/
+/* Workshop catalog — bold centered hero cards (workshops.html)
+   Each workshop is a full block with big title, info pills, prominent REGISTER button. */
+.workshops-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 2rem 0 3rem;
+}
+.workshop-hero {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+@media (max-width: 600px) { .workshop-hero { padding: 2rem 1.25rem; } }
+.hero-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+.hero-title {
+  font-family: var(--font-mono);
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  margin: 0 0 1.75rem;
+  color: var(--text);
+}
+@media (max-width: 720px) { .hero-title { font-size: 2rem; } }
+.hero-pills {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  margin: 0 auto 2rem;
+}
+.hero-pill {
+  padding: 0.9rem 1.5rem;
+  border-inline-end: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  text-align: center;
+  color: var(--text);
+}
+.hero-pill:last-child { border-inline-end: none; }
+.hero-pill strong {
+  display: block;
+  color: var(--accent);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  .hero-pills { flex-direction: column; width: 100%; }
+  .hero-pill { border-inline-end: none; border-bottom: 1px solid var(--border); }
+  .hero-pill:last-child { border-bottom: none; }
+}
+.hero-register {
+  display: inline-block;
+  padding: 1.3rem 3.5rem;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 3px solid var(--accent);
+  margin-bottom: 2rem;
+  transition: transform 0.15s, filter 0.15s;
+}
+.hero-register:hover { filter: brightness(1.15); transform: translateY(-2px); color: #fff; }
+.hero-register:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+@media (max-width: 600px) {
+  .hero-register { width: 100%; padding: 1.3rem; font-size: 1.2rem; }
+}
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin: 0 auto 1.5rem;
+  max-width: 640px;
+  line-height: 1.6;
+}
+.hero-details {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+}
+.hero-details:hover { color: var(--accent); }
+
+/* Legacy dropdown styles — kept below in case we want a denser view later */
 .workshop-drops {
   display: flex;
   flex-direction: column;

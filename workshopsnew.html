@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>[PREVIEW] Workshops (new layout) | Serious S.H.I.T.</title>
+  <!-- ALTERNATE WORKSHOPS LAYOUT (hero-card style) — private preview for review.
+       noindex,nofollow. Not linked from nav, not in sitemap. Share by direct URL only. -->
+
+  <meta name="description" content="Electronics workshops in Haifa: ESP32 synth + AI, and DIY guitar pedal building. Small cohorts at MEZO Haifa.">
+  <!-- DRAFT-RESTORE meta description when 6 new workshops launch:
+       "Eight hands-on electronics workshops in Haifa: ESP32 synth + AI, DIY pedal, analog foundations, digital sequencer, circuit bending, glitch, vibecoding, soldering weekend." -->
+
+  <!-- Schema.org ItemList for courses -->
+  <!-- DRAFT-RESTORE — extra schema entries to add back when the 6 new workshops launch:
+      { "@type": "ListItem", "position": 1, "item": { "@type": "Course", "name": "Soldering & Salvage Weekend", "url": "https://willbearfruits.github.io/serious-shit/workshop-soldering.html", "provider": { "@type": "Organization", "name": "Serious S.H.I.T." }, "offers": { "@type": "Offer", "price": "600", "priceCurrency": "ILS" } }},
+      { "@type": "ListItem", "position": 2, "item": { "@type": "Course", "name": "Analog Electronics Foundations", "url": "https://willbearfruits.github.io/serious-shit/workshop-analog.html", "provider": { "@type": "Organization", "name": "Serious S.H.I.T." }, "offers": { "@type": "Offer", "price": "2200", "priceCurrency": "ILS" } }},
+      { "@type": "ListItem", "position": 3, "item": { "@type": "Course", "name": "Digital Electronics: Logic to Sequencer", "url": "https://willbearfruits.github.io/serious-shit/workshop-digital.html", "provider": { "@type": "Organization", "name": "Serious S.H.I.T." }, "offers": { "@type": "Offer", "price": "2200", "priceCurrency": "ILS" } }},
+      { "@type": "ListItem", "position": 6, "item": { "@type": "Course", "name": "Vibecoding for Artists", "url": "https://willbearfruits.github.io/serious-shit/workshop-vibecoding.html", "provider": { "@type": "Organization", "name": "Serious S.H.I.T." }, "offers": { "@type": "Offer", "price": "2200", "priceCurrency": "ILS" } }},
+      { "@type": "ListItem", "position": 7, "item": { "@type": "Course", "name": "Circuit Bending: Creative Destruction", "url": "https://willbearfruits.github.io/serious-shit/workshop-bending.html", "provider": { "@type": "Organization", "name": "Serious S.H.I.T." }, "offers": { "@type": "Offer", "price": "2200", "priceCurrency": "ILS" } }},
+      { "@type": "ListItem", "position": 8, "item": { "@type": "Course", "name": "Glitch Techniques: Audio/Video/Code", "url": "https://willbearfruits.github.io/serious-shit/workshop-glitch.html", "provider": { "@type": "Organization", "name": "Serious S.H.I.T." }, "offers": { "@type": "Offer", "price": "2200", "priceCurrency": "ILS" } }}
+       and set numberOfItems back to 8. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Electronics Workshops",
+    "description": "In-person electronics workshops at MEZO Haifa, Sirkin 3.",
+    "numberOfItems": 2,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": { "@type": "Course", "name": "ESP32 Digital Synth + AI Workshop", "url": "https://willbearfruits.github.io/serious-shit/workshop-esp32.html", "provider": { "@type": "Organization", "name": "Serious S.H.I.T." }, "offers": { "@type": "Offer", "price": "2200", "priceCurrency": "ILS" } }},
+      { "@type": "ListItem", "position": 2, "item": { "@type": "Course", "name": "DIY Guitar Pedal Building Workshop", "url": "https://willbearfruits.github.io/serious-shit/workshop-pedal.html", "provider": { "@type": "Organization", "name": "Serious S.H.I.T." }, "offers": { "@type": "Offer", "price": "2200", "priceCurrency": "ILS" } }}
+    ]
+  }
+  </script>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://willbearfruits.github.io/serious-shit/workshops.html">
+  <meta property="og:title" content="Workshops & Courses | Serious S.H.I.T.">
+  <meta property="og:description" content="Two electronics workshops currently running in Haifa: ESP32 synth + AI, and DIY guitar pedal.">
+  <meta property="og:image" content="https://willbearfruits.github.io/serious-shit/images/gallery/pedal-build-workshop.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://willbearfruits.github.io/serious-shit/workshops.html">
+  <meta property="twitter:title" content="Workshops & Courses | Serious S.H.I.T.">
+  <meta property="twitter:description" content="Two electronics workshops currently running in Haifa: ESP32 synth + AI, and DIY guitar pedal.">
+  <meta property="twitter:image" content="https://willbearfruits.github.io/serious-shit/images/gallery/pedal-build-workshop.png">
+
+  <script>
+    (function(){
+      var lang = localStorage.getItem('sshit-lang') || 'he';
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .workshop-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0 3rem;
+    }
+    .workshop-card {
+      border: 1px solid var(--border);
+      padding: 1.75rem;
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+    }
+    .workshop-card h3 { margin-bottom: 0.5rem; }
+    .workshop-card .price {
+      font-family: var(--font-mono);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .workshop-card .meta {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+      font-family: var(--font-mono);
+    }
+    .workshop-card p { margin-bottom: 1.25rem; font-size: 0.9rem; flex-grow: 1; }
+    .workshop-card .btn { width: 100%; text-align: center; }
+    .workshop-card .placeholder-img {
+      border: 1px solid var(--border);
+      background: var(--bg);
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      font-family: var(--font-mono);
+      color: var(--accent);
+      text-align: center;
+      font-size: 1.4rem;
+    }
+    .category-stripe {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+      margin: 2rem 0 0.5rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid var(--border-light);
+      width: 100%;
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .package-tile {
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      background: var(--surface);
+    }
+    .package-tile h4 {
+      font-family: var(--font-mono);
+      color: var(--accent);
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+    .package-tile .package-headline {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0.5rem 0;
+    }
+    .package-tile p { font-size: 0.9rem; color: var(--text-dim); }
+
+    .venue-block {
+      border: 1px solid var(--border);
+      padding: 2rem;
+      background: var(--surface);
+      margin: 3rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .venue-block h3 { margin-bottom: 0.75rem; }
+    .venue-block .venue-meta {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      line-height: 1.8;
+    }
+    @media (max-width: 768px) {
+      .venue-block { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//WORKSHOPS</span></a>
+      <nav class="nav-links uppercase mono">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+        <a href="workshops.html" class="active"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="support.html" class="not-offered-yet"><span class="lang-en">Support</span><span class="lang-he">תמיכה</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="#" class="theme-toggle">LIGHT/DARK</a>
+        <a href="#" class="lang-toggle">EN/HE</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Urgent Banner (online-first pivot) - hidden until digital offerings come back online -->
+  <section class="featured-banner lang-en not-offered-yet">
+    <div class="container">
+      <div class="featured-content">
+        <div class="featured-badge" style="background: var(--accent); color: white; border: none;">ONLINE FIRST</div>
+        <h2>Remote Mentoring + Digital Packs</h2>
+        <p>Immediate options now: one-on-one remote sessions, downloadable workshop materials, and async project support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-banner lang-he not-offered-yet">
+    <div class="container">
+      <div class="featured-content">
+        <div class="featured-badge" style="background: var(--accent); color: white; border: none;">אונליין פירסט</div>
+        <h2>מנטורינג מרחוק + חבילות דיגיטליות</h2>
+        <p>אפשר להתחיל עכשיו: סשנים אישיים אונליין, חומרים להורדה ותמיכה שוטפת בפרויקטים.</p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="container">
+
+      <!-- English -->
+      <section class="lang-en">
+        <h1>Workshops</h1>
+        <p class="tagline">Two cohorts currently running out of MEZO Haifa. Small cohorts, full kits, no prerequisites — just walk in.</p>
+        <!-- DRAFT-RESTORE tagline when 6 new workshops launch:
+             "Eight hands-on courses out of MEZO Haifa. Hardware, software, glitch, bending. Small cohorts, full kits, no prerequisites — just walk in." -->
+
+        <!-- DRAFT — FEEDER (Soldering & Salvage Weekend) hidden until launch
+        <span class="category-stripe">// START HERE — Weekend Intensive</span>
+        <div class="workshops-list">
+          <article class="workshop-hero">
+            <div class="hero-badge" style="background: var(--text); color: var(--bg);">FEEDER</div>
+            <h3 class="hero-title">Soldering & Salvage Weekend</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>Duration</strong>1 day · 8 hours</div>
+              <div class="hero-pill"><strong>Price</strong>600 NIS</div>
+              <div class="hero-pill"><strong>Next session</strong>TBA</div>
+            </div>
+            <div>
+              <a href="workshop-soldering.html#register" class="hero-register">Register &rarr;</a>
+            </div>
+            <p class="hero-desc">One-day intensive. Through-hole, SMD down to 0603, and desoldering. All tools provided. Designed to feed into the longer courses — or stand on its own.</p>
+            <a href="workshop-soldering.html" class="hero-details">Course Details</a>
+          </article>
+        </div>
+        -->
+
+        <!-- HARDWARE -->
+        <span class="category-stripe">// HARDWARE — Build Something That Works</span>
+        <div class="workshops-list">
+          <!-- DRAFT — Analog & Digital cards hidden until launch
+          <article class="workshop-hero">
+            <div class="hero-badge">NEW</div>
+            <h3 class="hero-title">Analog Electronics Foundations</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>Duration</strong>6 meetings · 2.5h</div>
+              <div class="hero-pill"><strong>Price</strong>2,200 NIS</div>
+              <div class="hero-pill"><strong>Next session</strong>TBA</div>
+            </div>
+            <div>
+              <a href="workshop-analog.html#register" class="hero-register">Register &rarr;</a>
+            </div>
+            <p class="hero-desc">From Ohm's law to a CD40106 hex Schmitt-trigger noise instrument you take home. Real foundation, hands on a breadboard from week 1.</p>
+            <a href="workshop-analog.html" class="hero-details">Course Details</a>
+          </article>
+          <article class="workshop-hero">
+            <div class="hero-badge">NEW</div>
+            <h3 class="hero-title">Digital Electronics: Logic to Sequencer</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>Duration</strong>6 meetings · 2.5h</div>
+              <div class="hero-pill"><strong>Price</strong>2,200 NIS</div>
+              <div class="hero-pill"><strong>Next session</strong>TBA</div>
+            </div>
+            <div>
+              <a href="workshop-digital.html#register" class="hero-register">Register &rarr;</a>
+            </div>
+            <p class="hero-desc">CMOS gates, the 555 timer, ending with a working 8-step CMOS sequencer in your hands. No microcontrollers, no code.</p>
+            <a href="workshop-digital.html" class="hero-details">Course Details</a>
+          </article>
+          -->
+          <article class="workshop-hero">
+            <div class="hero-badge">FLAGSHIP</div>
+            <h3 class="hero-title">ESP32 Digital Synth + AI</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>Duration</strong>7 meetings · 2.5h</div>
+              <div class="hero-pill"><strong>Price</strong>2,200 NIS</div>
+              <div class="hero-pill"><strong>Next session</strong>TBA</div>
+            </div>
+            <div>
+              <a href="workshop-esp32.html#register" class="hero-register">Register &rarr;</a>
+            </div>
+            <p class="hero-desc">Build a complete digital synthesizer using ESP32, with AI tools helping you write the code. From analog fundamentals to a boxed digital instrument.</p>
+            <a href="workshop-esp32.html" class="hero-details">Course Details</a>
+          </article>
+          <article class="workshop-hero">
+            <div class="hero-badge" style="background: var(--text-dim); color: white;">WAITLIST</div>
+            <h3 class="hero-title">DIY Guitar Pedal (Fuzz)</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>Duration</strong>8 meetings · 2.5h</div>
+              <div class="hero-pill"><strong>Price</strong>2,200 NIS</div>
+              <div class="hero-pill"><strong>Next session</strong>TBA</div>
+            </div>
+            <div>
+              <a href="workshop-pedal.html#register" class="hero-register">Register &rarr;</a>
+            </div>
+            <p class="hero-desc">Build your own analog fuzz pedal from scratch — schematic to veroboard to boxed pedal. Guest lecture by Anton Nota (Deaftone Audio).</p>
+            <a href="workshop-pedal.html" class="hero-details">Course Details</a>
+          </article>
+        </div>
+
+        <!-- DRAFT — SOFTWARE & SIGNATURE sections (Vibecoding, Glitch, Bending) hidden until launch
+        <span class="category-stripe">// SOFTWARE — Code as Material</span>
+        <div class="workshops-list">
+          <article class="workshop-hero">
+            <div class="hero-badge">NEW</div>
+            <h3 class="hero-title">Vibecoding for Artists</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>Duration</strong>6 meetings · 2.5h</div>
+              <div class="hero-pill"><strong>Price</strong>1,950 NIS</div>
+              <div class="hero-pill"><strong>Next session</strong>TBA</div>
+            </div>
+            <div>
+              <a href="workshop-vibecoding.html#register" class="hero-register">Register &rarr;</a>
+            </div>
+            <p class="hero-desc">Use AI (Claude / ChatGPT) as your code collaborator. Build sound + visual pieces that run in the browser. Deploy a URL by week 6. (Software course — no hardware kit, hence the lower price.)</p>
+            <a href="workshop-vibecoding.html" class="hero-details">Course Details</a>
+          </article>
+          <article class="workshop-hero">
+            <div class="hero-badge">NEW</div>
+            <h3 class="hero-title">Glitch Techniques: Audio/Video/Code</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>Duration</strong>6 meetings · 2.5h</div>
+              <div class="hero-pill"><strong>Price</strong>1,950 NIS</div>
+              <div class="hero-pill"><strong>Next session</strong>TBA</div>
+            </div>
+            <div>
+              <a href="workshop-glitch.html#register" class="hero-register">Register &rarr;</a>
+            </div>
+            <p class="hero-desc">Datamoshing, bitcrushing, pixel sorting, Zalgo. Six weeks of intentional breakage across media. Each week ends with a piece. (Software course — no hardware kit, hence the lower price.)</p>
+            <a href="workshop-glitch.html" class="hero-details">Course Details</a>
+          </article>
+        </div>
+
+        <span class="category-stripe">// SIGNATURE — The Serious S.H.I.T. Practice</span>
+        <div class="workshops-list">
+          <article class="workshop-hero">
+            <div class="hero-badge" style="background: var(--accent); color: white;">SIGNATURE</div>
+            <h3 class="hero-title">Circuit Bending: Creative Destruction</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>Duration</strong>6 meetings · 2.5h</div>
+              <div class="hero-pill"><strong>Price</strong>2,200 NIS</div>
+              <div class="hero-pill"><strong>Next session</strong>TBA</div>
+            </div>
+            <div>
+              <a href="workshop-bending.html#register" class="hero-register">Register &rarr;</a>
+            </div>
+            <p class="hero-desc">Open the toy. Find the noise. Make it yours. The original Serious S.H.I.T. practice — take battery-powered toys and bend them into instruments.</p>
+            <a href="workshop-bending.html" class="hero-details">Course Details</a>
+          </article>
+        </div>
+        -->
+
+
+        <!-- Quick Comparison -->
+        <h2 style="margin-top: 4rem;">Quick Comparison</h2>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr><th>Course</th><th>Length</th><th>Price</th><th>Output</th><th></th></tr>
+            </thead>
+            <tbody>
+              <!-- DRAFT — comparison rows for the 6 new workshops hidden until launch
+              <tr><td>Soldering & Salvage Weekend</td><td>1 day · 8h</td><td>600 NIS</td><td>Working hands</td><td><a href="workshop-soldering.html">Details</a></td></tr>
+              <tr><td>Analog Electronics Foundations</td><td>6 × 2.5h</td><td>2,200 NIS</td><td>CD40106 noise instrument</td><td><a href="workshop-analog.html">Details</a></td></tr>
+              <tr><td>Digital Electronics: Logic to Sequencer</td><td>6 × 2.5h</td><td>2,200 NIS</td><td>8-step CMOS sequencer</td><td><a href="workshop-digital.html">Details</a></td></tr>
+              -->
+              <tr><td>ESP32 Digital Synth + AI</td><td>7 × 2.5h</td><td>2,200 NIS</td><td>Boxed digital synth</td><td><a href="workshop-esp32.html">Details</a></td></tr>
+              <tr><td>DIY Guitar Pedal</td><td>8 × 2.5h</td><td>2,200 NIS</td><td>Working fuzz pedal</td><td><a href="workshop-pedal.html">Details</a></td></tr>
+              <!-- DRAFT — more hidden rows
+              <tr><td>Vibecoding for Artists</td><td>6 × 2.5h</td><td>1,950 NIS</td><td>Deployed web piece</td><td><a href="workshop-vibecoding.html">Details</a></td></tr>
+              <tr><td>Circuit Bending</td><td>6 × 2.5h</td><td>2,200 NIS</td><td>Bent instrument</td><td><a href="workshop-bending.html">Details</a></td></tr>
+              <tr><td>Glitch Techniques</td><td>6 × 2.5h</td><td>1,950 NIS</td><td>Cross-medium glitch piece</td><td><a href="workshop-glitch.html">Details</a></td></tr>
+              -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- PACKAGES / DISCOUNTS -->
+        <h2 style="margin-top: 4rem;">Packages & Discounts</h2>
+        <p style="color: var(--text-dim);">Stack courses, return for more, or bring a friend. Discounts apply automatically when you register together.</p>
+        <div class="package-grid">
+          <div class="package-tile">
+            <h4>// STACK 2</h4>
+            <div class="package-headline">20% off</div>
+            <p>Register for any 2 courses in the same season — 20% off both.</p>
+          </div>
+          <div class="package-tile">
+            <h4>// STACK 3</h4>
+            <div class="package-headline">25% off</div>
+            <p>Register for 3 courses in the same season — 25% off all three.</p>
+          </div>
+          <div class="package-tile">
+            <h4>// RETURNING</h4>
+            <div class="package-headline">15% off · forever</div>
+            <p>Done a course with us? Permanent 15% off every subsequent course you take.</p>
+          </div>
+          <div class="package-tile">
+            <h4>// REFERRAL</h4>
+            <div class="package-headline">10% off · both ways</div>
+            <p>Refer a new student — both you and they get 10% off the course they sign up for.</p>
+          </div>
+          <div class="package-tile">
+            <h4>// PRIVATE 1-ON-1</h4>
+            <div class="package-headline">Per project</div>
+            <p>Customized syllabus, your pace. Pricing scoped to the project — tell us what you want to build and we'll quote it.</p>
+          </div>
+        </div>
+
+        <!-- SEAT GUARANTEE / MINIMUM -->
+        <div style="margin: 2rem 0; padding: 1.5rem; border: 1px solid var(--accent); background: var(--surface);">
+          <h3 style="margin-bottom: 0.5rem;">// SEAT GUARANTEE</h3>
+          <p style="margin-bottom: 0.5rem;"><strong>Minimum 3 students per cohort.</strong> If we don't hit 3, the cohort doesn't run that month — and your deposit is refunded in full.</p>
+          <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-dim);">
+            &gt; Long courses (1,950 / 2,200 NIS): <strong>500 NIS prepaid deposit</strong> to reserve a seat<br>
+            &gt; Soldering Weekend (600 NIS): <strong>200 NIS prepaid deposit</strong> to reserve a seat<br>
+            &gt; Balance due on first session. Deposit fully credited toward course price.<br>
+            &gt; Refunded in full if the cohort doesn't reach min 3.
+          </p>
+        </div>
+
+        <!-- VENUE -->
+        <h2 style="margin-top: 4rem;">Where</h2>
+        <div class="venue-block">
+          <div>
+            <h3>MEZO Haifa</h3>
+            <p>Our primary makerspace. All workshops run here unless explicitly noted otherwise.</p>
+            <div class="venue-meta">
+              &gt; ADDRESS: Sirkin 3, Haifa<br>
+              &gt; LAB ACCESS: 4 hrs / week for course participants<br>
+              &gt; EQUIPMENT: 3D printers, CNC, soldering stations, component library
+            </div>
+          </div>
+          <div>
+            <h3>Past Partner Venues</h3>
+            <p>We've also run workshops with:</p>
+            <div class="venue-meta">
+              &gt; MATMON SPACE — Tel Aviv<br>
+              &gt; MUSRARA ART SCHOOL — Jerusalem<br>
+              &gt; Independent labs by collaboration
+            </div>
+          </div>
+        </div>
+
+        <!-- FORMAT / OPEN LAB -->
+        <h2>Format Standards</h2>
+        <ul class="process">
+          <li><strong>In-person, MEZO Haifa</strong> — small cohorts, min 3 / max 8 students per course, hands on the bench from session one</li>
+          <li><strong>Hardware courses include full kit</strong> — all components, PCBs, and consumables. Software courses (Vibecoding, Glitch) are 250 NIS less since there's no kit.</li>
+          <li><strong>4 hours / week open lab</strong> — between meetings, your bench is available (3D printers, CNC, soldering stations, component library)</li>
+          <li><strong>Schedule:</strong> ESP32 cohorts run 16:00–18:30. Pedal cohorts run 19:00–21:30. New course times announced per cohort.</li>
+          <li><strong>Prepaid seat guarantee</strong> — 500 NIS (long courses) / 200 NIS (weekend) reserves your seat. Balance due at first session. Refunded in full if min 3 isn't reached.</li>
+          <li style="color: var(--text-dim); margin-top: 1rem; border-top: 1px dashed var(--border-light); padding-top: 1rem;">
+             <strong>Private 1-on-1 course:</strong> priced per project &mdash; tell us what you want to build, we'll quote it. Available on request via WhatsApp.
+          </li>
+        </ul>
+
+        <div style="margin-top: 3rem; padding: 2rem; background: var(--surface); border: 1px solid var(--border); text-align: center;">
+          <h3>Questions?</h3>
+          <p>Want to know which course fits, when the next cohort starts, or how to stack discounts?</p>
+          <a href="https://wa.me/972539263808" class="btn" style="background: #25d366; color: white; border: none;">Ask on WhatsApp</a>
+        </div>
+      </section>
+
+      <!-- Hebrew -->
+      <section class="lang-he">
+        <h1>קורסים</h1>
+        <p class="tagline">שני קורסים פעילים כרגע במזו חיפה. קבוצות קטנות, ערכה מלאה, ללא דרישות קדם — פשוט להגיע.</p>
+        <!-- DRAFT-RESTORE HE tagline when 6 new workshops launch:
+             "שמונה קורסים מעשיים במזו חיפה. חומרה, תוכנה, גליץ', כיפוף. קבוצות קטנות, ערכה מלאה, ללא דרישות קדם — פשוט להגיע." -->
+
+        <!-- DRAFT — FEEDER (Soldering) hidden until launch
+        <span class="category-stripe">// להתחיל כאן — אינטנסיב סופ"ש</span>
+        <div class="workshops-list">
+          <article class="workshop-hero">
+            <div class="hero-badge" style="background: var(--text); color: var(--bg);">קורס מבוא</div>
+            <h3 class="hero-title">הלחמה והצלת רכיבים — סופש</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>משך</strong>יום אחד · 8 שעות</div>
+              <div class="hero-pill"><strong>מחיר</strong>600 ש"ח</div>
+              <div class="hero-pill"><strong>מחזור הבא</strong>יוכרז</div>
+            </div>
+            <div>
+              <a href="workshop-soldering.html#register-he" class="hero-register">&larr; הרשמה</a>
+            </div>
+            <p class="hero-desc">אינטנסיב יום אחד. חור-עובר, SMD עד 0603 ופירוק. כל הכלים מוכנים. בנוי כקורס מבוא לקורסים הארוכים — אבל גם עצמאי שלם בפני עצמו.</p>
+            <a href="workshop-soldering.html" class="hero-details">פרטי הקורס</a>
+          </article>
+        </div>
+        -->
+
+        <!-- HARDWARE -->
+        <span class="category-stripe">// חומרה — לבנות משהו שעובד</span>
+        <div class="workshops-list">
+          <!-- DRAFT — Analog & Digital HE cards hidden until launch
+          <article class="workshop-hero">
+            <div class="hero-badge">חדש</div>
+            <h3 class="hero-title">יסודות אלקטרוניקה אנלוגית</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>משך</strong>6 מפגשים · 2.5 שעות</div>
+              <div class="hero-pill"><strong>מחיר</strong>2,200 ש"ח</div>
+              <div class="hero-pill"><strong>מחזור הבא</strong>יוכרז</div>
+            </div>
+            <div>
+              <a href="workshop-analog.html#register-he" class="hero-register">&larr; הרשמה</a>
+            </div>
+            <p class="hero-desc">מחוק אוהם עד כלי רעש מבוסס CD40106 שאתם לוקחים הביתה. יסוד עבודה אמיתי, ידיים על המטריצה מהמפגש הראשון.</p>
+            <a href="workshop-analog.html" class="hero-details">פרטי הקורס</a>
+          </article>
+          <article class="workshop-hero">
+            <div class="hero-badge">חדש</div>
+            <h3 class="hero-title">אלקטרוניקה דיגיטלית: משערים לסיקוונסר</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>משך</strong>6 מפגשים · 2.5 שעות</div>
+              <div class="hero-pill"><strong>מחיר</strong>2,200 ש"ח</div>
+              <div class="hero-pill"><strong>מחזור הבא</strong>יוכרז</div>
+            </div>
+            <div>
+              <a href="workshop-digital.html#register-he" class="hero-register">&larr; הרשמה</a>
+            </div>
+            <p class="hero-desc">שערי CMOS, טיימר 555, וסטפ-סיקוונסר 8-צעדים עובד בידיים שלכם. בלי מיקרו-בקרים, בלי קוד.</p>
+            <a href="workshop-digital.html" class="hero-details">פרטי הקורס</a>
+          </article>
+          -->
+          <article class="workshop-hero">
+            <div class="hero-badge">דגל</div>
+            <h3 class="hero-title">סינת' ESP32 + AI</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>משך</strong>7 מפגשים · 2.5 שעות</div>
+              <div class="hero-pill"><strong>מחיר</strong>2,200 ש"ח</div>
+              <div class="hero-pill"><strong>מחזור הבא</strong>יוכרז</div>
+            </div>
+            <div>
+              <a href="workshop-esp32.html#register-he" class="hero-register">&larr; הרשמה</a>
+            </div>
+            <p class="hero-desc">בניית סינתיסייזר דיגיטלי מלא ב-ESP32 בעזרת כלי בינה מלאכותית. מיסודות אנלוגיים עד כלי דיגיטלי בארגז.</p>
+            <a href="workshop-esp32.html" class="hero-details">פרטי הקורס</a>
+          </article>
+          <article class="workshop-hero">
+            <div class="hero-badge" style="background: var(--text-dim); color: white;">רשימת המתנה</div>
+            <h3 class="hero-title">בניית פדל גיטרה (פאז)</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>משך</strong>8 מפגשים · 2.5 שעות</div>
+              <div class="hero-pill"><strong>מחיר</strong>2,200 ש"ח</div>
+              <div class="hero-pill"><strong>מחזור הבא</strong>יוכרז</div>
+            </div>
+            <div>
+              <a href="workshop-pedal.html#register-he" class="hero-register">&larr; הרשמה</a>
+            </div>
+            <p class="hero-desc">בניית פדל פאז אנלוגי מאפס — מסכמטיקה לוורובורד לפדל ארוז. כולל הרצאת אורח של אנטון נוטה (Deaftone Audio).</p>
+            <a href="workshop-pedal.html" class="hero-details">פרטי הקורס</a>
+          </article>
+        </div>
+
+        <!-- DRAFT — HE SOFTWARE & SIGNATURE sections hidden until launch
+        <span class="category-stripe">// תוכנה — קוד כחומר</span>
+        <div class="workshops-list">
+          <article class="workshop-hero">
+            <div class="hero-badge">חדש</div>
+            <h3 class="hero-title">וייבקודינג לאמנים</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>משך</strong>6 מפגשים · 2.5 שעות</div>
+              <div class="hero-pill"><strong>מחיר</strong>1,950 ש"ח</div>
+              <div class="hero-pill"><strong>מחזור הבא</strong>יוכרז</div>
+            </div>
+            <div>
+              <a href="workshop-vibecoding.html#register-he" class="hero-register">&larr; הרשמה</a>
+            </div>
+            <p class="hero-desc">שימוש ב-AI (Claude / ChatGPT) ככלי עזר. בניית יצירות צליל וויזואל שרצות בדפדפן. ייצוא URL ציבורי עד מפגש 6. (קורס תוכנה — בלי ערכת חומרה, ולכן המחיר נמוך יותר.)</p>
+            <a href="workshop-vibecoding.html" class="hero-details">פרטי הקורס</a>
+          </article>
+          <article class="workshop-hero">
+            <div class="hero-badge">חדש</div>
+            <h3 class="hero-title">טכניקות גליץ': אודיו/וידאו/קוד</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>משך</strong>6 מפגשים · 2.5 שעות</div>
+              <div class="hero-pill"><strong>מחיר</strong>1,950 ש"ח</div>
+              <div class="hero-pill"><strong>מחזור הבא</strong>יוכרז</div>
+            </div>
+            <div>
+              <a href="workshop-glitch.html#register-he" class="hero-register">&larr; הרשמה</a>
+            </div>
+            <p class="hero-desc">דאטה-מושינג, ביטקראש, מיון פיקסלים, זאלגו. שישה שבועות של שבירה מכוונת חוצת מדיה. כל מפגש מסתיים ביצירה. (קורס תוכנה — בלי ערכת חומרה, ולכן המחיר נמוך יותר.)</p>
+            <a href="workshop-glitch.html" class="hero-details">פרטי הקורס</a>
+          </article>
+        </div>
+
+        <span class="category-stripe">// סדנת חתימה — הפרקטיקה של סיריוס ש.י.ט.</span>
+        <div class="workshops-list">
+          <article class="workshop-hero">
+            <div class="hero-badge" style="background: var(--accent); color: white;">חתימה</div>
+            <h3 class="hero-title">כיפוף מעגלים: הרס יצירתי</h3>
+            <div class="hero-pills">
+              <div class="hero-pill"><strong>משך</strong>6 מפגשים · 2.5 שעות</div>
+              <div class="hero-pill"><strong>מחיר</strong>2,200 ש"ח</div>
+              <div class="hero-pill"><strong>מחזור הבא</strong>יוכרז</div>
+            </div>
+            <div>
+              <a href="workshop-bending.html#register-he" class="hero-register">&larr; הרשמה</a>
+            </div>
+            <p class="hero-desc">לפתוח את הצעצוע. למצוא את הרעש. להפוך אותו לשלכם. הפרקטיקה המקורית של סיריוס ש.י.ט. — צעצועים מבוססי סוללה הופכים לכלי נגינה.</p>
+            <a href="workshop-bending.html" class="hero-details">פרטי הקורס</a>
+          </article>
+        </div>
+        -->
+
+
+        <h2 style="margin-top: 4rem;">השוואה מהירה</h2>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr><th>קורס</th><th>אורך</th><th>מחיר</th><th>תוצר</th><th></th></tr>
+            </thead>
+            <tbody>
+              <!-- DRAFT — HE comparison rows for 6 new workshops hidden until launch
+              <tr><td>הלחמה והצלת רכיבים — סופש</td><td>יום · 8 שעות</td><td>600 ש"ח</td><td>ידיים עובדות</td><td><a href="workshop-soldering.html">פרטים</a></td></tr>
+              <tr><td>יסודות אלקטרוניקה אנלוגית</td><td>6 × 2.5 שעות</td><td>2,200 ש"ח</td><td>כלי רעש CD40106</td><td><a href="workshop-analog.html">פרטים</a></td></tr>
+              <tr><td>אלקטרוניקה דיגיטלית: סיקוונסר</td><td>6 × 2.5 שעות</td><td>2,200 ש"ח</td><td>סיקוונסר 8-צעדים</td><td><a href="workshop-digital.html">פרטים</a></td></tr>
+              -->
+              <tr><td>סינת' ESP32 + AI</td><td>7 × 2.5 שעות</td><td>2,200 ש"ח</td><td>סינת' דיגיטלי בארגז</td><td><a href="workshop-esp32.html">פרטים</a></td></tr>
+              <tr><td>פדאל גיטרה DIY</td><td>8 × 2.5 שעות</td><td>2,200 ש"ח</td><td>פדל פאז עובד</td><td><a href="workshop-pedal.html">פרטים</a></td></tr>
+              <!-- DRAFT — more hidden HE rows
+              <tr><td>וייבקודינג לאמנים</td><td>6 × 2.5 שעות</td><td>1,950 ש"ח</td><td>יצירת web מפורסמת</td><td><a href="workshop-vibecoding.html">פרטים</a></td></tr>
+              <tr><td>כיפוף מעגלים</td><td>6 × 2.5 שעות</td><td>2,200 ש"ח</td><td>כלי בנד</td><td><a href="workshop-bending.html">פרטים</a></td></tr>
+              <tr><td>טכניקות גליץ'</td><td>6 × 2.5 שעות</td><td>1,950 ש"ח</td><td>יצירת גליץ' חוצת-מדיה</td><td><a href="workshop-glitch.html">פרטים</a></td></tr>
+              -->
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="margin-top: 4rem;">חבילות והנחות</h2>
+        <p style="color: var(--text-dim);">לערום קורסים, לחזור שוב, להביא חבר. ההנחות חלות אוטומטית כשנרשמים יחד.</p>
+        <div class="package-grid">
+          <div class="package-tile">
+            <h4>// 2 קורסים</h4>
+            <div class="package-headline">20% הנחה</div>
+            <p>הרשמה ל-2 קורסים באותה עונה — 20% הנחה על שניהם.</p>
+          </div>
+          <div class="package-tile">
+            <h4>// 3 קורסים</h4>
+            <div class="package-headline">25% הנחה</div>
+            <p>הרשמה ל-3 קורסים באותה עונה — 25% הנחה על שלושתם.</p>
+          </div>
+          <div class="package-tile">
+            <h4>// תלמידים חוזרים</h4>
+            <div class="package-headline">15% הנחה · קבוע</div>
+            <p>סיימתם קורס איתנו? 15% הנחה קבועה על כל קורס נוסף.</p>
+          </div>
+          <div class="package-tile">
+            <h4>// חבר מביא חבר</h4>
+            <div class="package-headline">10% הנחה · לשניים</div>
+            <p>תפנו תלמיד חדש — שניכם מקבלים 10% הנחה על הקורס.</p>
+          </div>
+          <div class="package-tile">
+            <h4>// קורס פרטי 1-על-1</h4>
+            <div class="package-headline">לפי פרויקט</div>
+            <p>סילבוס מותאם, הקצב שלכם. התמחור נקבע לפי הפרויקט &mdash; ספרו לנו מה אתם רוצים לבנות ונציע מחיר.</p>
+          </div>
+        </div>
+
+        <!-- SEAT GUARANTEE HE -->
+        <div style="margin: 2rem 0; padding: 1.5rem; border: 1px solid var(--accent); background: var(--surface);">
+          <h3 style="margin-bottom: 0.5rem;">// שריון מקום</h3>
+          <p style="margin-bottom: 0.5rem;"><strong>מינימום 3 משתתפים למחזור.</strong> אם לא הגענו ל-3, המחזור לא יוצא לדרך — והמקדמה מוחזרת במלואה.</p>
+          <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-dim);">
+            &gt; קורסים ארוכים (1,950 / 2,200 ש"ח): <strong>500 ש"ח מקדמה</strong> לשריון מקום<br>
+            &gt; סופ"ש הלחמה (600 ש"ח): <strong>200 ש"ח מקדמה</strong> לשריון מקום<br>
+            &gt; היתרה משולמת במפגש הראשון. המקדמה נזקפת לטובת מחיר הקורס.<br>
+            &gt; החזר מלא אם לא הגענו למינימום 3.
+          </p>
+        </div>
+
+        <h2 style="margin-top: 4rem;">איפה</h2>
+        <div class="venue-block">
+          <div>
+            <h3>מזו חיפה</h3>
+            <p>המייקרספייס העיקרי שלנו. כל הקורסים מתקיימים כאן אלא אם צוין אחרת.</p>
+            <div class="venue-meta">
+              &gt; כתובת: סירקין 3, חיפה<br>
+              &gt; גישה למעבדה: 4 שעות/שבוע למשתתפי הקורס<br>
+              &gt; ציוד: מדפסות 3D, CNC, עמדות הלחמה, ספריית רכיבים
+            </div>
+          </div>
+          <div>
+            <h3>שיתופי פעולה קודמים</h3>
+            <p>בעבר העברנו סדנאות גם ב:</p>
+            <div class="venue-meta">
+              &gt; מתמון ספייס — תל אביב<br>
+              &gt; מוסררה — ירושלים<br>
+              &gt; מעבדות עצמאיות בשיתוף פעולה
+            </div>
+          </div>
+        </div>
+
+        <h2>סטנדרטים של הפורמט</h2>
+        <ul class="process">
+          <li><strong>פרונטלי, מזו חיפה</strong> — קבוצות קטנות, מינ' 3 / מקס' 8 משתתפים לקורס, ידיים על השולחן מהמפגש הראשון</li>
+          <li><strong>קורסי חומרה כוללים ערכה מלאה</strong> — כל הרכיבים, המעגלים והמתכלים. קורסי תוכנה (וייבקודינג, גליץ') זולים ב-250 ש"ח כי אין ערכה.</li>
+          <li><strong>4 שעות / שבוע מעבדה פתוחה</strong> — בין המפגשים, השולחן שלך זמין (מדפסות 3D, CNC, עמדות הלחמה, ספריית רכיבים)</li>
+          <li><strong>לוחות זמנים:</strong> מחזורי ESP32 רצים 16:00–18:30. מחזורי הפדל רצים 19:00–21:30. שעות הקורסים החדשים יוכרזו לכל מחזור.</li>
+          <li><strong>מקדמה לשריון מקום</strong> — 500 ש"ח (קורסים ארוכים) / 200 ש"ח (סופ"ש) שומרים את המקום. היתרה משולמת במפגש הראשון. החזר מלא אם לא הגענו למינימום 3.</li>
+          <li style="color: var(--text-dim); margin-top: 1rem; border-top: 1px dashed var(--border-light); padding-top: 1rem;">
+             <strong>קורס פרטי 1-על-1:</strong> תמחור לפי פרויקט &mdash; ספרו לנו מה אתם רוצים לבנות, ונציע מחיר. זמין לפי בקשה בוואטסאפ.
+          </li>
+        </ul>
+
+        <div style="margin-top: 3rem; padding: 2rem; background: var(--surface); border: 1px solid var(--border); text-align: center;">
+          <h3>שאלות?</h3>
+          <p>רוצים לדעת איזה קורס מתאים, מתי המחזור הבא, או איך לערום הנחות?</p>
+          <a href="https://wa.me/972539263808" class="btn" style="background: #25d366; color: white; border: none;">שאלו בוואטסאפ</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+          <a href="support.html" class="not-offered-yet"><span class="lang-en">Support</span><span class="lang-he">תמיכה</span></a>
+          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+          <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
