@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glitch Techniques: Audio/Video/Code | Serious S.H.I.T.</title>
+  <meta name="description" content="Cross-medium glitch workshop in Haifa — datamoshing, bitcrushing, pixel sorting, Zalgo. 6 meetings, 1,950 NIS (software course — no kit). Each week you ship a piece.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Glitch Techniques: Audio/Video/Code",
+    "description": "Six weeks of intentional breakage across image, sound, video, and code. Datamoshing, bitcrushing, pixel sorting, Zalgo. 6 hands-on meetings.",
+    "provider": { "@type": "Organization", "name": "Serious S.H.I.T.", "url": "https://willbearfruits.github.io/serious-shit/" },
+    "instructor": { "@type": "Person", "name": "Yaniv Schonfeld" },
+    "courseCode": "GLITCH",
+    "numberOfCredits": "6 meetings",
+    "occupationalCategory": "Digital Art / New Media",
+    "educationalLevel": "Beginner",
+    "teaches": ["Datamoshing", "Bitcrushing", "Pixel sorting", "Hex editing", "Zalgo text", "Glitch aesthetics"],
+    "inLanguage": ["en", "he"],
+    "availableLanguage": ["English", "Hebrew"],
+    "locationCreated": { "@type": "Place", "name": "MEZO Haifa, Sirkin 3, Israel" },
+    "offers": { "@type": "Offer", "price": "1950", "priceCurrency": "ILS", "availability": "https://schema.org/PreOrder" },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "onsite",
+      "locationCreated": { "@type": "Place", "name": "MEZO Haifa, Sirkin 3, Israel" }
+    }
+  }
+  </script>
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://willbearfruits.github.io/serious-shit/workshop-glitch.html">
+  <meta property="og:title" content="Glitch Techniques: Audio/Video/Code | Serious S.H.I.T.">
+  <meta property="og:description" content="Datamoshing, bitcrushing, pixel sorting, Zalgo. 6 hands-on meetings in Haifa.">
+  <meta property="og:image" content="https://willbearfruits.github.io/serious-shit/images/products/fuzilator.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://willbearfruits.github.io/serious-shit/workshop-glitch.html">
+  <meta property="twitter:title" content="Glitch Techniques: Audio/Video/Code | Serious S.H.I.T.">
+  <meta property="twitter:description" content="Datamoshing, bitcrushing, pixel sorting, Zalgo. 6 hands-on meetings in Haifa.">
+  <meta property="twitter:image" content="https://willbearfruits.github.io/serious-shit/images/products/fuzilator.jpg">
+
+  <script>
+    (function(){
+      var lang = localStorage.getItem('sshit-lang') || 'he';
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .header-placeholder { border: 1px solid var(--border); background: var(--surface); padding: 3rem 2rem; font-family: var(--font-mono); color: var(--text-dim); text-align: center; font-size: 0.85rem; line-height: 1.4; }
+    .header-placeholder .glyph { font-size: 3rem; color: var(--accent); display: block; margin-bottom: 0.5rem; letter-spacing: -0.05em; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//GLITCH</span></a>
+      <nav class="nav-links uppercase mono">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+        <a href="workshops.html" class="active"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="support.html" class="not-offered-yet"><span class="lang-en">Support</span><span class="lang-he">תמיכה</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="#" class="theme-toggle">LIGHT/DARK</a>
+        <a href="#" class="lang-toggle">EN/HE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="lang-en">
+        <a href="workshops.html" class="btn" style="margin-bottom: 2rem; display: inline-block;">&larr; Back to Workshops</a>
+        <div class="course-section">
+          <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
+            <div class="course-header-content">
+              <span class="badge badge-new">1,950 NIS — Next cohort: TBA</span>
+              <h1>Glitch Techniques: Audio/Video/Code</h1>
+              <p class="course-tagline">Datamoshing, bitcrushing, pixel sorting, Zalgo — the cross-medium glitch toolkit</p>
+              <p>Six weeks of intentional breakage. Each session covers one medium (text, image, audio, video, code) and ends with a piece you exported. Final week: a composition that crosses the mediums.</p>
+              <div class="course-meta">
+                <span><strong>Duration:</strong> 6 meetings × 2.5 hours</span>
+                <span><strong>Participants:</strong> Up to 8</span>
+                <span><strong>Location:</strong> MEZO Haifa, Sirkin 3</span>
+                <span><strong>Prerequisites:</strong> None</span>
+              </div>
+              <p class="course-audience"><strong>Target:</strong> Visual artists, video editors, musicians, anyone interested in the aesthetics of breakage. <strong>Requirements:</strong> Laptop (Mac/Win/Linux) + free software list provided pre-course.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Hex Editing</span>
+                <span class="tech-tag">ffmpeg</span>
+                <span class="tech-tag">Processing</span>
+                <span class="tech-tag">Audacity</span>
+                <span class="tech-tag">Unicode</span>
+              </div>
+              <div class="kit-box">
+                <strong>Includes:</strong> Curated software setup guide, 4 hours/week open-lab access at MEZO Haifa, optional file-corruption "starter pack" with practice media.
+              </div>
+            </div>
+            <div class="header-placeholder">
+              <span class="glyph">G̷L̴I̸T̶C̷H̸</span>
+              GLITCH.bin<br>
+              // break · render · share
+            </div>
+          </div>
+
+          <h2>Meeting Breakdown</h2>
+          <div class="meetings-list">
+            <div class="meeting-item">
+              <div class="meeting-number">1</div>
+              <div class="meeting-content">
+                <h4>Glitch as Aesthetic</h4>
+                <ul>
+                  <li>History: from Nam June Paik to JODI to today</li>
+                  <li>Theory: error as authorship, the ethics of breakage</li>
+                  <li>Hex editor basics: open a JPEG, corrupt it on purpose</li>
+                  <li>Your first hex-edited image</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A vocabulary for what you're about to break and why.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">2</div>
+              <div class="meeting-content">
+                <h4>Datamoshing</h4>
+                <ul>
+                  <li>How video compression actually works (I-frames, P-frames)</li>
+                  <li>Avidemux: removing I-frames for motion-bleeding</li>
+                  <li>ffmpeg: scripted video corruption</li>
+                  <li>Export a short datamoshed clip</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A finished datamoshed video clip.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">3</div>
+              <div class="meeting-content">
+                <h4>Audio Glitch</h4>
+                <ul>
+                  <li>Bitcrushing in Audacity (effects + scripts)</li>
+                  <li>Data-bending audio files via hex editor</li>
+                  <li>Broken codecs as instruments: GSM, μ-law, intentional bitrate abuse</li>
+                  <li>Export your glitched audio piece</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A finished audio piece built from breakage.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">4</div>
+              <div class="meeting-content">
+                <h4>Image Glitch</h4>
+                <ul>
+                  <li>Pixel sorting in Processing (sketch provided)</li>
+                  <li>JPEG quality corruption — sub-1% quality, multi-pass saves</li>
+                  <li>Channel-shift and chromatic aberration</li>
+                  <li>Export a series of glitched stills</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A set of finished glitched images.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">5</div>
+              <div class="meeting-content">
+                <h4>Text & Code Glitch</h4>
+                <ul>
+                  <li>Zalgo: combining diacritics for cursed text</li>
+                  <li>Unicode misuse, right-to-left override, zero-width chaos</li>
+                  <li>Terminal glitch effects (ANSI escapes, cmatrix-style)</li>
+                  <li>Glitch as typography</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A typographic glitch piece (poster or sequence).</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">6</div>
+              <div class="meeting-content">
+                <h4>Final Piece</h4>
+                <ul>
+                  <li>Compose across mediums — image into audio, audio into video</li>
+                  <li>Sequencing the glitch: rhythm of corruption</li>
+                  <li>Export to a final file (video or web piece)</li>
+                  <li>Group screening</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A cross-medium glitch composition that's finished and shareable.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" id="register">
+            <h2>Register Now</h2>
+            <p>Reserve your spot in the next cohort — dates TBA. We'll confirm with you before the course opens.</p>
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background: #e8faf3; border: 1px solid #25d366; border-radius: var(--radius-sm); text-align: center;">
+              <a href="https://wa.me/972539263808?text=Hi%2C%20I%20would%20like%20to%20register%20for%20the%20Glitch%20Techniques%20course.%20Please%20send%20details." class="btn" style="background: #25d366; color: white; border: none;">Register via WhatsApp</a>
+            </div>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-dim);">Or fill out the form below:</p>
+            <form action="https://formsubmit.co/Dogme84@gmail.com" method="POST" class="registration-form" data-form-name="workshop-glitch-en">
+              <input type="hidden" name="_next" value="https://willbearfruits.github.io/serious-shit/thank-you.html">
+              <input type="hidden" name="_subject" value="Workshop Registration (Glitch Techniques)">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <div class="form-group"><label for="name-glitch-en">Full Name *</label><input type="text" id="name-glitch-en" name="name" required placeholder="Your name"></div>
+              <div class="form-group"><label for="email-glitch-en">Email *</label><input type="email" id="email-glitch-en" name="email" required placeholder="your@email.com"></div>
+              <div class="form-group"><label for="phone-glitch-en">Phone (optional)</label><input type="tel" id="phone-glitch-en" name="phone" placeholder="+972-..."></div>
+              <input type="hidden" name="workshop" value="Glitch Techniques (Next Cohort TBA)">
+              <div class="form-group"><label for="message-glitch-en">Questions/Comments (optional)</label><textarea id="message-glitch-en" name="message" rows="3" placeholder="Any questions about the workshop?"></textarea></div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Registration</button>
+            </form>
+          </div>
+          <div class="btn-group" style="margin-top: 2rem;"><a href="workshops.html" class="btn btn-secondary">&lt; Back to All Workshops</a></div>
+        </div>
+      </section>
+
+      <section class="lang-he">
+        <a href="workshops.html" class="btn" style="margin-bottom: 2rem; display: inline-block;">חזרה לקורסים &rarr;</a>
+        <div class="course-section">
+          <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
+            <div class="course-header-content">
+              <span class="badge badge-new">1,950 ש"ח — מחזור הבא: יוכרז</span>
+              <h1>טכניקות גליץ': אודיו/וידאו/קוד</h1>
+              <p class="course-tagline">דאטה-מושינג, ביטקראש, מיון פיקסלים, זאלגו — ארגז כלים לגליץ' חוצה-מדיה</p>
+              <p>שישה שבועות של שבירה מכוונת. כל מפגש מכסה מדיום אחד (טקסט, תמונה, אודיו, וידאו, קוד) ומסתיים ביצירה שייצאתם. בשבוע האחרון: קומפוזיציה חוצת-מדיה.</p>
+              <div class="course-meta">
+                <span><strong>משך:</strong> 6 מפגשים × 2.5 שעות</span>
+                <span><strong>משתתפים:</strong> עד 8</span>
+                <span><strong>מיקום:</strong> מזו חיפה, סירקין 3</span>
+                <span><strong>דרישות קדם:</strong> אין</span>
+              </div>
+              <p class="course-audience"><strong>קהל יעד:</strong> אמני ויזואל, עורכי וידאו, מוזיקאים — כל מי שמתעניין באסתטיקה של שבירה. <strong>דרישות:</strong> מחשב נייד (Mac/Win/Linux) + רשימת תוכנות חינמיות שתישלח לפני הקורס.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Hex Editor</span>
+                <span class="tech-tag">ffmpeg</span>
+                <span class="tech-tag">Processing</span>
+                <span class="tech-tag">Audacity</span>
+                <span class="tech-tag">Unicode</span>
+              </div>
+              <div class="kit-box">
+                <strong>כולל:</strong> מדריך התקנת תוכנות, 4 שעות/שבוע גישה למעבדה פתוחה במזו חיפה, ערכת מדיה לתרגול שיבושים.
+              </div>
+            </div>
+            <div class="header-placeholder">
+              <span class="glyph">G̷L̴I̸T̶C̷H̸</span>
+              GLITCH.bin<br>
+              // לשבור · לרנדר · לשתף
+            </div>
+          </div>
+
+          <h2>פירוט המפגשים</h2>
+          <div class="meetings-list">
+            <div class="meeting-item">
+              <div class="meeting-number">1</div>
+              <div class="meeting-content">
+                <h4>גליץ' כאסתטיקה</h4>
+                <ul>
+                  <li>היסטוריה: מנם ג'ון פייק עד JODI ועד היום</li>
+                  <li>תיאוריה: שגיאה כסמכות, האתיקה של השבירה</li>
+                  <li>יסודות עורך hex: פתיחת JPEG, השחתה מכוונת</li>
+                  <li>התמונה הראשונה שלכם בעריכת hex</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> שפה למה שאתם עומדים לשבור ולמה.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">2</div>
+              <div class="meeting-content">
+                <h4>דאטה-מושינג</h4>
+                <ul>
+                  <li>איך דחיסת וידאו באמת עובדת (I-frame, P-frame)</li>
+                  <li>Avidemux: הסרת I-frame לזליגת תנועה</li>
+                  <li>ffmpeg: השחתת וידאו בסקריפט</li>
+                  <li>ייצוא קליפ דאטה-מושינג קצר</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> קליפ וידאו דאטה-מושינג מוגמר.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">3</div>
+              <div class="meeting-content">
+                <h4>גליץ' אודיו</h4>
+                <ul>
+                  <li>ביטקראש ב-Audacity (אפקטים + סקריפטים)</li>
+                  <li>שיבוש קבצי אודיו דרך עורך hex</li>
+                  <li>קודקים שבורים ככלי נגינה: GSM, μ-law, ביטרייט לא טבעי</li>
+                  <li>ייצוא יצירת אודיו משובשת</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> יצירת אודיו מוגמרת מבוססת שבירה.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">4</div>
+              <div class="meeting-content">
+                <h4>גליץ' תמונה</h4>
+                <ul>
+                  <li>מיון פיקסלים ב-Processing (סקיצה מוכנה)</li>
+                  <li>השחתת איכות JPEG — מתחת ל-1%, שמירה רב-פעמית</li>
+                  <li>הזחת ערוצים וסטייה כרומטית</li>
+                  <li>ייצוא סדרה של תמונות סטילס משובשות</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> סט תמונות משובשות מוגמרות.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">5</div>
+              <div class="meeting-content">
+                <h4>גליץ' טקסט וקוד</h4>
+                <ul>
+                  <li>זאלגו: שילוב סימני ניקוד לטקסט מקולל</li>
+                  <li>שימוש ב-Unicode, RTL Override, תוהו של רוחב-אפס</li>
+                  <li>אפקטי גליץ' בטרמינל (ANSI escapes, סגנון cmatrix)</li>
+                  <li>גליץ' כטיפוגרפיה</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> יצירת גליץ' טיפוגרפי (פוסטר או סדרה).</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">6</div>
+              <div class="meeting-content">
+                <h4>היצירה הסופית</h4>
+                <ul>
+                  <li>חיבור בין המדיות — תמונה לאודיו, אודיו לוידאו</li>
+                  <li>סקוונסינג של הגליץ': קצב של השחתה</li>
+                  <li>ייצוא לקובץ סופי (וידאו או יצירת web)</li>
+                  <li>הקרנה קבוצתית</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> קומפוזיציית גליץ' חוצת-מדיה מוגמרת וניתנת לשיתוף.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" id="register-he">
+            <h2>הרשמה עכשיו</h2>
+            <p>שריינו מקום במחזור הבא — תאריכים יוכרזו. נחזור אליכם לפני פתיחת הקורס.</p>
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background: #e8faf3; border: 1px solid #25d366; border-radius: var(--radius-sm); text-align: center;">
+              <a href="https://wa.me/972539263808?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%91%D7%A7%D7%95%D7%A8%D7%A1%20%D7%92%D7%9C%D7%99%D7%A5%27" class="btn" style="background: #25d366; color: white; border: none;">הרשמה בוואטסאפ</a>
+            </div>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-dim);">או מלאו את הטופס למטה:</p>
+            <form action="https://formsubmit.co/Dogme84@gmail.com" method="POST" class="registration-form" data-form-name="workshop-glitch-he">
+              <input type="hidden" name="_next" value="https://willbearfruits.github.io/serious-shit/thank-you.html">
+              <input type="hidden" name="_subject" value="הרשמה לסדנה (גליץ')">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <div class="form-group"><label for="name-glitch-he">שם מלא *</label><input type="text" id="name-glitch-he" name="name" required placeholder="השם שלך"></div>
+              <div class="form-group"><label for="email-glitch-he">אימייל *</label><input type="email" id="email-glitch-he" name="email" required placeholder="your@email.com"></div>
+              <div class="form-group"><label for="phone-glitch-he">טלפון (אופציונלי)</label><input type="tel" id="phone-glitch-he" name="phone" placeholder="05X-XXX-XXXX"></div>
+              <input type="hidden" name="workshop" value="Glitch Techniques (Next Cohort TBA)">
+              <div class="form-group"><label for="message-glitch-he">שאלות/הערות (אופציונלי)</label><textarea id="message-glitch-he" name="message" rows="3" placeholder="יש שאלות על הסדנה?"></textarea></div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">שליחת הרשמה</button>
+            </form>
+          </div>
+          <div class="btn-group" style="margin-top: 2rem;"><a href="workshops.html" class="btn btn-secondary">חזרה לכל הקורסים &rarr;</a></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+          <a href="support.html" class="not-offered-yet"><span class="lang-en">Support</span><span class="lang-he">תמיכה</span></a>
+          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+          <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

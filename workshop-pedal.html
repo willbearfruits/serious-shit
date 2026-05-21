@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIY Guitar Pedal Building | Serious S.H.I.T.</title>
-  <meta name="description" content="Build your own fuzz, overdrive, or bitcrusher pedal from scratch. 8-session hands-on course in Haifa.">
+  <meta name="description" content="Build your own fuzz, overdrive, or bitcrusher guitar pedal from scratch. 8-meeting hands-on course in Haifa. 2,200 NIS, kit included. Next cycle TBA.">
 
   <!-- Schema.org Course data -->
   <script type="application/ld+json">
@@ -23,7 +23,7 @@
       "name": "Yaniv Schonfeld"
     },
     "courseCode": "PEDAL-BUILD",
-    "numberOfCredits": "8 sessions",
+    "numberOfCredits": "8 meetings",
     "occupationalCategory": "Electronics / Music Technology",
     "educationalLevel": "Beginner to Intermediate",
     "teaches": ["Soldering", "Circuit theory", "Analog electronics", "Pedal enclosure building"],
@@ -31,27 +31,20 @@
     "availableLanguage": ["English", "Hebrew"],
     "locationCreated": {
       "@type": "Place",
-      "name": "Haifa Makerspace",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Haifa",
-        "addressCountry": "IL"
-      }
+      "name": "Haifa, Israel"
     },
     "offers": {
       "@type": "Offer",
       "price": "2200",
       "priceCurrency": "ILS",
-      "availability": "https://schema.org/InStock",
-      "validFrom": "2026-02-03"
+      "availability": "https://schema.org/PreOrder"
     },
     "hasCourseInstance": {
       "@type": "CourseInstance",
       "courseMode": "onsite",
-      "startDate": "2026-02-03",
       "locationCreated": {
         "@type": "Place",
-        "name": "Haifa"
+        "name": "Haifa, Israel"
       }
     }
   }
@@ -61,14 +54,14 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://willbearfruits.github.io/serious-shit/workshop-pedal.html">
   <meta property="og:title" content="DIY Guitar Pedal Building Workshop | Serious S.H.I.T.">
-  <meta property="og:description" content="Build your own fuzz, overdrive, or bitcrusher pedal from scratch. 8-session hands-on course in Haifa. Next cycle date TBA — join the waitlist.">
+  <meta property="og:description" content="Build your own fuzz, overdrive, or bitcrusher guitar pedal from scratch. 8-meeting hands-on course in Haifa. Next cycle TBA — join the waitlist.">
   <meta property="og:image" content="https://willbearfruits.github.io/serious-shit/images/gallery/shit-pedal-red.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://willbearfruits.github.io/serious-shit/workshop-pedal.html">
   <meta property="twitter:title" content="DIY Guitar Pedal Building Workshop | Serious S.H.I.T.">
-  <meta property="twitter:description" content="Build your own fuzz, overdrive, or bitcrusher pedal from scratch. 8-session hands-on course in Haifa. Next cycle date TBA — join the waitlist.">
+  <meta property="twitter:description" content="Build your own fuzz, overdrive, or bitcrusher guitar pedal from scratch. 8-meeting hands-on course in Haifa. Next cycle TBA — join the waitlist.">
   <meta property="twitter:image" content="https://willbearfruits.github.io/serious-shit/images/gallery/shit-pedal-red.png">
 
   <script>
@@ -82,18 +75,19 @@
 </head>
 <body>
   <header>
-    <div class="container header-bar">
-      <a class="logo" href="index.html">SERIOUS S.H.I.T.</a>
-      <span class="logo-sub">Haifa, IL</span>
-      <button class="menu-toggle" aria-label="Menu">///</button>
-      <nav class="nav" id="main-nav">
+    <div class="container header-inner">
+      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//PEDALS</span></a>
+      <nav class="nav-links uppercase mono">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
         <a href="workshops.html" class="active"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
         <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="support.html" class="not-offered-yet"><span class="lang-en">Support</span><span class="lang-he">תמיכה</span></a>
         <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
+        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
         <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-        <button class="theme-toggle" aria-label="Toggle theme"></button>
-        <button class="lang-toggle" aria-label="Toggle language">EN/HE</button>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="#" class="theme-toggle">LIGHT/DARK</a>
+        <a href="#" class="lang-toggle">EN/HE</a>
       </nav>
     </div>
   </header>
@@ -107,19 +101,19 @@
         <div class="course-section">
           <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
             <div class="course-header-content">
-              <span class="badge badge-new" style="background: var(--text-dim); color: #fff;">NEXT CYCLE - DATE TBA</span>
+              <span class="badge badge-new" style="background: var(--text-dim); color: white;">2,200 NIS — Next Cycle TBA · Waitlist Open</span>
               <h1>DIY Guitar Pedal Building (Fuzz)</h1>
               <p class="course-tagline">From zero to your own working pedal</p>
-              <p>Complete hands-on course taking you from basic electronics to a finished, boxed guitar pedal. Build a Fuzz, Overdrive, Buffer or Bitcrusher - your choice.</p>
+              <p>Complete hands-on course taking you from basic electronics to a finished, boxed guitar pedal. Build a Fuzz, Overdrive, Buffer or Bitcrusher — your choice. <strong>This course is between cycles — register to join the waitlist for the next cohort.</strong></p>
               <div class="course-meta">
                 <span><strong>Duration:</strong> 8 meetings (19:00 - 21:30)</span>
                 <span><strong>Participants:</strong> Up to 8</span>
-                <span><strong>Location:</strong> MEZO Haifa (Sirkin 3)</span>
+                <span><strong>Location:</strong> MEZO Haifa, Sirkin 3</span>
                 <span><strong>Prerequisites:</strong> None</span>
               </div>
-              <p class="course-audience"><strong>Target:</strong> Guitarists, bassists, the curious. No prior knowledge required.</p>
+              <p class="course-audience"><strong>Target:</strong> Guitarists, bassists, the curious. No prior knowledge required. Guest lecture by Anton Nota (Deaftone Audio).</p>
               <div class="kit-box">
-                <strong>Bonuses:</strong> Makerspace open 4 hours a week for homework included.
+                <strong>Includes:</strong> Full kit + 4 hours/week open-lab access at MEZO Haifa.
               </div>
             </div>
             <div class="course-header-image" style="border: 1px solid var(--border);">
@@ -220,12 +214,12 @@
           </div>
 
           <div class="form-section" id="register">
-            <h2>Register Now</h2>
-            <p>This cycle is closed. Sign up below for the <strong>next cycle waitlist</strong> &mdash; you'll get the date as soon as it's set.</p>
+            <h2>Join the Waitlist</h2>
+            <p>The next pedal cycle hasn't been scheduled yet. Add yourself to the waitlist and we'll reach out as soon as dates are confirmed.</p>
 
             <div style="margin-bottom: 2rem; padding: 1.5rem; background: #e8faf3; border: 1px solid #25d366; border-radius: var(--radius-sm); text-align: center;">
-              <a href="https://wa.me/972539263808?text=Hi%2C%20I%20would%20like%20to%20register%20for%20the%20DIY%20Guitar%20Pedal%20Course%20(Feb%203).%20Please%20send%20details." class="btn" style="background: #25d366; color: white; border: none;">
-                Register via WhatsApp
+              <a href="https://wa.me/972539263808?text=Hi%2C%20please%20add%20me%20to%20the%20waitlist%20for%20the%20next%20DIY%20Guitar%20Pedal%20course%20cycle." class="btn" style="background: #25d366; color: white; border: none;">
+                Join Waitlist via WhatsApp
               </a>
             </div>
 
@@ -256,7 +250,8 @@
               <div class="form-group">
                 <label for="workshop-pedal-en">Workshop *</label>
                 <select id="workshop-pedal-en" name="workshop" required>
-                  <option value="DIY Pedal (Next Cycle Waitlist)" selected>DIY Guitar Pedal - Next Cycle Waitlist</option>
+                  <option value="DIY Pedal (Waitlist - Next Cycle TBA)" selected>DIY Guitar Pedal - Waitlist (Next Cycle TBA)</option>
+                  <option value="ESP32 Synth (Next Cohort TBA)">ESP32 Digital Synth & AI - Next cohort TBA</option>
                   <option value="Private Course">Private Course (1-on-1)</option>
                 </select>
               </div>
@@ -282,19 +277,19 @@
         <div class="course-section">
           <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
             <div class="course-header-content">
-              <span class="badge badge-new" style="background: var(--text-dim); color: #fff;">מחזור הבא - תאריך בקרוב</span>
+              <span class="badge badge-new" style="background: var(--text-dim); color: white;">2,200 ש"ח — מחזור הבא: יוכרז · רשימת המתנה פתוחה</span>
               <h1>בניית פדל גיטרה או בס</h1>
-              <p class="course-tagline">שמונה מפגשים עם יניב שיינפלד ב-MEZO חיפה</p>
-              <p>למדו לבנות פדלי פאז, אוברדרייב, באפר וביטקראשר משלכם. צלילה מעשית לאלקטרוניקה וסאונד. בסיום הקורס תצאו עם פדל מתפקד שבניתם בעצמכם.</p>
+              <p class="course-tagline">שמונה מפגשים מעשיים בליווי אישי</p>
+              <p>למדו לבנות פדלי פאז, אוברדרייב, באפר וביטקראשר משלכם. צלילה מעשית לאלקטרוניקה וסאונד. בסיום הקורס תצאו עם פדל מתפקד שבניתם בעצמכם. <strong>הקורס בין מחזורים — הירשמו לרשימת המתנה למחזור הבא.</strong></p>
               <div class="course-meta">
                 <span><strong>משך:</strong> 8 מפגשים (19:00 - 21:30)</span>
                 <span><strong>משתתפים:</strong> עד 8</span>
-                <span><strong>מיקום:</strong> MEZO חיפה (סירקין 3)</span>
+                <span><strong>מיקום:</strong> מזו חיפה, סירקין 3</span>
                 <span><strong>דרישות קדם:</strong> אין</span>
               </div>
-              <p class="course-audience"><strong>קהל יעד:</strong> גיטריסטים, בסיסטים, סקרנים. לא נדרש ידע קודם.</p>
+              <p class="course-audience"><strong>קהל יעד:</strong> גיטריסטים, בסיסטים, סקרנים. לא נדרש ידע קודם. כולל הרצאת אורח של אנטון נוטה (Deaftone Audio).</p>
               <div class="kit-box">
-                <strong>בונוסים:</strong> מעבדה פתוחה 4 שעות בשבוע לשיעורי בית (כלול). <strong>20% הנחה לנרשמים לשני הקורסים!</strong>
+                <strong>כולל:</strong> ערכה מלאה + 4 שעות/שבוע גישה למעבדה פתוחה במזו חיפה.
               </div>
             </div>
             <div class="course-header-image" style="border: 1px solid var(--border);">
@@ -388,11 +383,11 @@
           </div>
 
           <div class="form-section" id="register-he">
-            <h2>הרשמה עכשיו</h2>
-            <p>המחזור הנוכחי סגור. הירשמו לרשימת ההמתנה <strong>למחזור הבא</strong> &mdash; ונעדכן ברגע שיקבע תאריך.</p>
+            <h2>הצטרפו לרשימת המתנה</h2>
+            <p>המחזור הבא של קורס הפדל עדיין לא נקבע. הירשמו לרשימת המתנה ונחזור אליכם ברגע שהתאריכים יאושרו.</p>
 
             <div style="margin-bottom: 2rem; padding: 1.5rem; background: #e8faf3; border: 1px solid #25d366; border-radius: var(--radius-sm); text-align: center;">
-              <a href="https://wa.me/972539263808?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%94%D7%99%D7%A8%D7%A9%D7%9D%20%D7%9C%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A4%D7%93%D7%90%D7%9C%D7%99%D7%9D%20(%D7%A4%D7%91%D7%A8%D7%95%D7%90%D7%A8%203).%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D" class="btn" style="background: #25d366; color: white; border: none;">
+              <a href="https://wa.me/972539263808?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%94%D7%A6%D7%98%D7%A8%D7%A3%20%D7%9C%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A4%D7%93%D7%90%D7%9C%D7%99%D7%9D%20(%D7%94%D7%A8%D7%A9%D7%9E%D7%94%20%D7%9E%D7%AA%D7%92%D7%9C%D7%92%D7%9C%D7%AA).%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D" class="btn" style="background: #25d366; color: white; border: none;">
                 הרשמה בוואטסאפ
               </a>
             </div>
@@ -424,7 +419,8 @@
               <div class="form-group">
                 <label for="workshop-pedal-he">סדנה *</label>
                 <select id="workshop-pedal-he" name="workshop" required>
-                  <option value="DIY Pedal (Next Cycle Waitlist)" selected>בניית פדאל גיטרה - רשימת המתנה למחזור הבא</option>
+                  <option value="DIY Pedal (Waitlist - Next Cycle TBA)" selected>בניית פדאל גיטרה - רשימת המתנה (מחזור הבא: יוכרז)</option>
+                  <option value="ESP32 Synth (Next Cohort TBA)">סינת' דיגיטלי ESP32 + AI - מחזור הבא: יוכרז</option>
                   <option value="Private Course">קורס פרטי (1 על 1)</option>
                 </select>
               </div>
@@ -448,26 +444,22 @@
   </main>
 
   <footer>
-    <div class="container footer-grid">
-      <div>
-        <p class="footer-brand">SERIOUS S.H.I.T.</p>
-        <p class="footer-geo">Haifa, Israel</p>
-        <p class="footer-motto">Nothing Is Holy.</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="support.html" class="not-offered-yet"><span class="lang-en">Support</span><span class="lang-he">תמיכה</span></a>
+          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+          <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
       </div>
-      <nav class="footer-nav">
-        <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
-        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
-        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
-        <a href="about.html"><span class="lang-en">About</span><span class="lang-he">אודות</span></a>
-        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
-      </nav>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
-        <a href="https://wa.me/972539263808" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-      </div>
-      <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
-      <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
     </div>
   </footer>
 

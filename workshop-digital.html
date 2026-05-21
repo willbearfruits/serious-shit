@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Electronics: Logic to Sequencer | Serious S.H.I.T.</title>
+  <meta name="description" content="Hands-on digital electronics course in Haifa. CMOS gates, 555 timer, end with a working 8-step CMOS sequencer. 6 meetings, 2,200 NIS, kit included.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Digital Electronics: Logic to Sequencer",
+    "description": "Discrete digital logic from the bottom up. CMOS gates, the 555 timer, ending with a working 8-step CMOS sequencer. 6 hands-on meetings.",
+    "provider": { "@type": "Organization", "name": "Serious S.H.I.T.", "url": "https://willbearfruits.github.io/serious-shit/" },
+    "instructor": { "@type": "Person", "name": "Yaniv Schonfeld" },
+    "courseCode": "DIGITAL-SEQ",
+    "numberOfCredits": "6 meetings",
+    "occupationalCategory": "Electronics",
+    "educationalLevel": "Beginner",
+    "teaches": ["Binary logic", "CMOS chips", "555 timer", "Counters", "Step sequencer design"],
+    "inLanguage": ["en", "he"],
+    "availableLanguage": ["English", "Hebrew"],
+    "locationCreated": { "@type": "Place", "name": "MEZO Haifa, Sirkin 3, Israel" },
+    "offers": { "@type": "Offer", "price": "2200", "priceCurrency": "ILS", "availability": "https://schema.org/PreOrder" },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "onsite",
+      "locationCreated": { "@type": "Place", "name": "MEZO Haifa, Sirkin 3, Israel" }
+    }
+  }
+  </script>
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://willbearfruits.github.io/serious-shit/workshop-digital.html">
+  <meta property="og:title" content="Digital Electronics: Logic to Sequencer | Serious S.H.I.T.">
+  <meta property="og:description" content="CMOS gates + 555 + an 8-step sequencer you built. 6 hands-on meetings in Haifa.">
+  <meta property="og:image" content="https://willbearfruits.github.io/serious-shit/images/products/fuzilator.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://willbearfruits.github.io/serious-shit/workshop-digital.html">
+  <meta property="twitter:title" content="Digital Electronics: Logic to Sequencer | Serious S.H.I.T.">
+  <meta property="twitter:description" content="CMOS gates + 555 + an 8-step sequencer you built. 6 hands-on meetings in Haifa.">
+  <meta property="twitter:image" content="https://willbearfruits.github.io/serious-shit/images/products/fuzilator.jpg">
+
+  <script>
+    (function(){
+      var lang = localStorage.getItem('sshit-lang') || 'he';
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .header-placeholder { border: 1px solid var(--border); background: var(--surface); padding: 3rem 2rem; font-family: var(--font-mono); color: var(--text-dim); text-align: center; font-size: 0.85rem; line-height: 1.4; }
+    .header-placeholder .glyph { font-size: 3rem; color: var(--accent); display: block; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//DIGITAL</span></a>
+      <nav class="nav-links uppercase mono">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+        <a href="workshops.html" class="active"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="support.html" class="not-offered-yet"><span class="lang-en">Support</span><span class="lang-he">תמיכה</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="#" class="theme-toggle">LIGHT/DARK</a>
+        <a href="#" class="lang-toggle">EN/HE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="lang-en">
+        <a href="workshops.html" class="btn" style="margin-bottom: 2rem; display: inline-block;">&larr; Back to Workshops</a>
+        <div class="course-section">
+          <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
+            <div class="course-header-content">
+              <span class="badge badge-new">2,200 NIS — Next cohort: TBA</span>
+              <h1>Digital Electronics: Logic to Sequencer</h1>
+              <p class="course-tagline">CMOS gates, a 555, and a step sequencer in your hands by week 6</p>
+              <p>Discrete digital logic from the bottom up — no microcontrollers, no code. Just gates, flip-flops, counters, and a 555 timer wired into a working 8-step sequencer that you take home.</p>
+              <div class="course-meta">
+                <span><strong>Duration:</strong> 6 meetings × 2.5 hours</span>
+                <span><strong>Participants:</strong> Up to 8</span>
+                <span><strong>Location:</strong> MEZO Haifa, Sirkin 3</span>
+                <span><strong>Prerequisites:</strong> None</span>
+              </div>
+              <p class="course-audience"><strong>Target:</strong> Anyone who wants to understand digital electronics by holding it in their hands — without code in the way. Pairs well with Analog Foundations.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">CMOS</span>
+                <span class="tech-tag">555</span>
+                <span class="tech-tag">4017</span>
+                <span class="tech-tag">4040</span>
+                <span class="tech-tag">Step Sequencer</span>
+              </div>
+              <div class="kit-box">
+                <strong>Includes:</strong> Full kit (555, 4001, 4011, 4017, 4040, pots, switches, LEDs, breadboard, sequencer enclosure components) + 4 hours/week open-lab access at MEZO Haifa.
+              </div>
+            </div>
+            <div class="course-header-image" style="border: 1px solid var(--border);">
+              <img src="images/gallery/cnc-milled-pcb.png" alt="CNC-milled copper PCB on wood substrate" style="width: 100%; display: block;">
+            </div>
+          </div>
+
+          <h2>Meeting Breakdown</h2>
+          <div class="meetings-list">
+            <div class="meeting-item">
+              <div class="meeting-number">1</div>
+              <div class="meeting-content">
+                <h4>Bits & Gates</h4>
+                <ul>
+                  <li>Binary as voltage: HIGH/LOW, not abstract 1/0</li>
+                  <li>AND, OR, NOT — what they look like on a chip</li>
+                  <li>The CD4001 and CD4011 in your hands</li>
+                  <li>LEDs as the world's simplest logic output</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> Logic you can probe with a meter.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">2</div>
+              <div class="meeting-content">
+                <h4>Flip-flops & Counters</h4>
+                <ul>
+                  <li>Memory in a circuit: what a flip-flop actually does</li>
+                  <li>CD4017 decade counter (10 outputs, one at a time)</li>
+                  <li>CD4040 binary counter (12-bit ripple counter)</li>
+                  <li>Chaining counters for bigger ranges</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A counting circuit you understand at every node.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">3</div>
+              <div class="meeting-content">
+                <h4>Clocking with the 555</h4>
+                <ul>
+                  <li>The 555 timer: astable vs monostable</li>
+                  <li>RC values to set frequency</li>
+                  <li>Tempo control with a pot</li>
+                  <li>Clean clock pulse to drive the counters</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A variable-speed clock driving an LED chase.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">4</div>
+              <div class="meeting-content">
+                <h4>The Sequencer Core</h4>
+                <ul>
+                  <li>555 → 4017 → 8 step outputs</li>
+                  <li>Per-step pots for pitch / value setting</li>
+                  <li>Per-step switches for skip / mute</li>
+                  <li>Reset and direction logic</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A working 8-step sequencer driving LEDs.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">5</div>
+              <div class="meeting-content">
+                <h4>Voicing It</h4>
+                <ul>
+                  <li>Convert step outputs into audio (square / triangle)</li>
+                  <li>Pitch CV from a per-step pot</li>
+                  <li>Gate / trigger output to drive an external synth</li>
+                  <li>Mixing the audio out</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> The sequencer makes sound, not just blinks.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">6</div>
+              <div class="meeting-content">
+                <h4>Build & Box</h4>
+                <ul>
+                  <li>Transfer to perfboard</li>
+                  <li>Enclosure planning and drilling</li>
+                  <li>Final assembly</li>
+                  <li>Group jam — all sequencers running together</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A boxed 8-step sequencer that's yours.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" id="register">
+            <h2>Register Now</h2>
+            <p>Reserve your spot in the next cohort — dates TBA. We'll confirm with you before the course opens.</p>
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background: #e8faf3; border: 1px solid #25d366; border-radius: var(--radius-sm); text-align: center;">
+              <a href="https://wa.me/972539263808?text=Hi%2C%20I%20would%20like%20to%20register%20for%20the%20Digital%20Electronics%20course%20(Logic%20to%20Sequencer).%20Please%20send%20details." class="btn" style="background: #25d366; color: white; border: none;">Register via WhatsApp</a>
+            </div>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-dim);">Or fill out the form below:</p>
+            <form action="https://formsubmit.co/Dogme84@gmail.com" method="POST" class="registration-form" data-form-name="workshop-digital-en">
+              <input type="hidden" name="_next" value="https://willbearfruits.github.io/serious-shit/thank-you.html">
+              <input type="hidden" name="_subject" value="Workshop Registration (Digital Sequencer)">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <div class="form-group"><label for="name-dig-en">Full Name *</label><input type="text" id="name-dig-en" name="name" required placeholder="Your name"></div>
+              <div class="form-group"><label for="email-dig-en">Email *</label><input type="email" id="email-dig-en" name="email" required placeholder="your@email.com"></div>
+              <div class="form-group"><label for="phone-dig-en">Phone (optional)</label><input type="tel" id="phone-dig-en" name="phone" placeholder="+972-..."></div>
+              <input type="hidden" name="workshop" value="Digital Electronics: Logic to Sequencer (Next Cohort TBA)">
+              <div class="form-group"><label for="message-dig-en">Questions/Comments (optional)</label><textarea id="message-dig-en" name="message" rows="3" placeholder="Any questions about the workshop?"></textarea></div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Registration</button>
+            </form>
+          </div>
+          <div class="btn-group" style="margin-top: 2rem;"><a href="workshops.html" class="btn btn-secondary">&lt; Back to All Workshops</a></div>
+        </div>
+      </section>
+
+      <section class="lang-he">
+        <a href="workshops.html" class="btn" style="margin-bottom: 2rem; display: inline-block;">חזרה לקורסים &rarr;</a>
+        <div class="course-section">
+          <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
+            <div class="course-header-content">
+              <span class="badge badge-new">2,200 ש"ח — מחזור הבא: יוכרז</span>
+              <h1>אלקטרוניקה דיגיטלית: משערים לסיקוונסר</h1>
+              <p class="course-tagline">שערי CMOS, 555 וסטפ-סיקוונסר בידיים שלכם עד מפגש 6</p>
+              <p>לוגיקה דיגיטלית בדיד מהבסיס — בלי מיקרו-בקרים, בלי קוד. רק שערים, פליפ-פלופים, מונים וטיימר 555 שמחוברים לסטפ-סיקוונסר עובד של 8 צעדים שאתם לוקחים הביתה.</p>
+              <div class="course-meta">
+                <span><strong>משך:</strong> 6 מפגשים × 2.5 שעות</span>
+                <span><strong>משתתפים:</strong> עד 8</span>
+                <span><strong>מיקום:</strong> מזו חיפה, סירקין 3</span>
+                <span><strong>דרישות קדם:</strong> אין</span>
+              </div>
+              <p class="course-audience"><strong>קהל יעד:</strong> מי שרוצה להבין אלקטרוניקה דיגיטלית עם ידיים על המעגל, בלי קוד באמצע. משלים יפה את יסודות האנלוג.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">CMOS</span>
+                <span class="tech-tag">555</span>
+                <span class="tech-tag">4017</span>
+                <span class="tech-tag">4040</span>
+                <span class="tech-tag">סיקוונסר</span>
+              </div>
+              <div class="kit-box">
+                <strong>כולל:</strong> ערכה מלאה (555, 4001, 4011, 4017, 4040, פוטים, מתגים, LED-ים, מטריצה ורכיבי קופסא לסיקוונסר) + 4 שעות/שבוע גישה למעבדה פתוחה במזו חיפה.
+              </div>
+            </div>
+            <div class="course-header-image" style="border: 1px solid var(--border);">
+              <img src="images/gallery/cnc-milled-pcb.png" alt="מעגל נחושת מעובד CNC על עץ" style="width: 100%; display: block;">
+            </div>
+          </div>
+
+          <h2>פירוט המפגשים</h2>
+          <div class="meetings-list">
+            <div class="meeting-item">
+              <div class="meeting-number">1</div>
+              <div class="meeting-content">
+                <h4>ביטים ושערים</h4>
+                <ul>
+                  <li>בינארי כמתח: HIGH/LOW, לא 1/0 מופשטים</li>
+                  <li>AND, OR, NOT — איך הם נראים על שבב</li>
+                  <li>CD4001 ו-CD4011 בידיים</li>
+                  <li>LED כיציאת לוגיקה הכי פשוטה</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> לוגיקה שניתן לבדוק עם מודד.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">2</div>
+              <div class="meeting-content">
+                <h4>פליפ-פלופים ומונים</h4>
+                <ul>
+                  <li>זיכרון במעגל: מה פליפ-פלופ באמת עושה</li>
+                  <li>CD4017 — מונה עשרוני (10 יציאות, אחת בכל פעם)</li>
+                  <li>CD4040 — מונה בינארי 12-ביט</li>
+                  <li>שרשור מונים לטווחים גדולים</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> מעגל סופר שאתם מבינים בכל צומת.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">3</div>
+              <div class="meeting-content">
+                <h4>שעון עם 555</h4>
+                <ul>
+                  <li>טיימר 555: Astable מול Monostable</li>
+                  <li>R ו-C לקביעת תדר</li>
+                  <li>שליטת טמפו דרך פוט</li>
+                  <li>פולס שעון נקי שמניע את המונים</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> שעון במהירות משתנה שמניע רצף LED.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">4</div>
+              <div class="meeting-content">
+                <h4>גרעין הסיקוונסר</h4>
+                <ul>
+                  <li>555 → 4017 → 8 יציאות צעדים</li>
+                  <li>פוט לכל צעד לקביעת גובה/ערך</li>
+                  <li>מתג לכל צעד ל-skip / mute</li>
+                  <li>לוגיקת reset וכיוון</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> סיקוונסר 8-צעדים עובד עם LED-ים.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">5</div>
+              <div class="meeting-content">
+                <h4>נותנים לזה קול</h4>
+                <ul>
+                  <li>המרת יציאות צעד לאודיו (ריבוע / משולש)</li>
+                  <li>CV של גובה מפוט לכל צעד</li>
+                  <li>Gate / Trigger להנעת סינת' חיצוני</li>
+                  <li>מיקס יציאת האודיו</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> סיקוונסר שמשמיע, לא רק מהבהב.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">6</div>
+              <div class="meeting-content">
+                <h4>בנייה וזיווד</h4>
+                <ul>
+                  <li>מעבר ל-perfboard</li>
+                  <li>תכנון קופסא וקידוח</li>
+                  <li>הרכבה סופית</li>
+                  <li>ג'אם קבוצתי — כל הסיקוונסרים יחד</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> סיקוונסר 8-צעדים מוארז שלכם.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" id="register-he">
+            <h2>הרשמה עכשיו</h2>
+            <p>שריינו מקום במחזור הבא — תאריכים יוכרזו. נחזור אליכם לפני פתיחת הקורס.</p>
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background: #e8faf3; border: 1px solid #25d366; border-radius: var(--radius-sm); text-align: center;">
+              <a href="https://wa.me/972539263808?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%91%D7%A7%D7%95%D7%A8%D7%A1%20%D7%93%D7%99%D7%92%D7%99%D7%98%D7%9C%20%D7%A1%D7%99%D7%A7%D7%95%D7%95%D7%A0%D7%A1%D7%A8" class="btn" style="background: #25d366; color: white; border: none;">הרשמה בוואטסאפ</a>
+            </div>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-dim);">או מלאו את הטופס למטה:</p>
+            <form action="https://formsubmit.co/Dogme84@gmail.com" method="POST" class="registration-form" data-form-name="workshop-digital-he">
+              <input type="hidden" name="_next" value="https://willbearfruits.github.io/serious-shit/thank-you.html">
+              <input type="hidden" name="_subject" value="הרשמה לסדנה (דיגיטל)">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <div class="form-group"><label for="name-dig-he">שם מלא *</label><input type="text" id="name-dig-he" name="name" required placeholder="השם שלך"></div>
+              <div class="form-group"><label for="email-dig-he">אימייל *</label><input type="email" id="email-dig-he" name="email" required placeholder="your@email.com"></div>
+              <div class="form-group"><label for="phone-dig-he">טלפון (אופציונלי)</label><input type="tel" id="phone-dig-he" name="phone" placeholder="05X-XXX-XXXX"></div>
+              <input type="hidden" name="workshop" value="Digital Electronics: Logic to Sequencer (Next Cohort TBA)">
+              <div class="form-group"><label for="message-dig-he">שאלות/הערות (אופציונלי)</label><textarea id="message-dig-he" name="message" rows="3" placeholder="יש שאלות על הסדנה?"></textarea></div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">שליחת הרשמה</button>
+            </form>
+          </div>
+          <div class="btn-group" style="margin-top: 2rem;"><a href="workshops.html" class="btn btn-secondary">חזרה לכל הקורסים &rarr;</a></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+          <a href="support.html" class="not-offered-yet"><span class="lang-en">Support</span><span class="lang-he">תמיכה</span></a>
+          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+          <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

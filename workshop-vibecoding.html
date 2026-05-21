@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibecoding for Artists | Serious S.H.I.T.</title>
+  <meta name="description" content="AI-assisted creative coding workshop in Haifa. Web Audio, canvas, generative visuals, deploy to GitHub Pages. 6-meeting hands-on course. 1,950 NIS (software course — no kit).">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Vibecoding for Artists",
+    "description": "AI-assisted creative coding. Build sound + visual pieces in the browser using Claude/ChatGPT as a code collaborator. 6 hands-on meetings in Haifa.",
+    "provider": { "@type": "Organization", "name": "Serious S.H.I.T.", "url": "https://willbearfruits.github.io/serious-shit/" },
+    "instructor": { "@type": "Person", "name": "Yaniv Schonfeld" },
+    "courseCode": "VIBECODE",
+    "numberOfCredits": "6 meetings",
+    "occupationalCategory": "Creative Coding / New Media",
+    "educationalLevel": "Beginner",
+    "teaches": ["AI-assisted coding", "Web Audio API", "HTML5 Canvas", "Generative art", "GitHub Pages deployment"],
+    "inLanguage": ["en", "he"],
+    "availableLanguage": ["English", "Hebrew"],
+    "locationCreated": { "@type": "Place", "name": "MEZO Haifa, Sirkin 3, Israel" },
+    "offers": { "@type": "Offer", "price": "1950", "priceCurrency": "ILS", "availability": "https://schema.org/PreOrder" },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "onsite",
+      "locationCreated": { "@type": "Place", "name": "MEZO Haifa, Sirkin 3, Israel" }
+    }
+  }
+  </script>
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://willbearfruits.github.io/serious-shit/workshop-vibecoding.html">
+  <meta property="og:title" content="Vibecoding for Artists | Serious S.H.I.T.">
+  <meta property="og:description" content="AI-assisted creative coding. Web Audio, canvas, deploy to GitHub Pages. 6-meeting in-person course in Haifa.">
+  <meta property="og:image" content="https://willbearfruits.github.io/serious-shit/images/products/fuzilator.jpg">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://willbearfruits.github.io/serious-shit/workshop-vibecoding.html">
+  <meta property="twitter:title" content="Vibecoding for Artists | Serious S.H.I.T.">
+  <meta property="twitter:description" content="AI-assisted creative coding. Web Audio, canvas, deploy to GitHub Pages. 6-meeting in-person course in Haifa.">
+  <meta property="twitter:image" content="https://willbearfruits.github.io/serious-shit/images/products/fuzilator.jpg">
+
+  <script>
+    (function(){
+      var lang = localStorage.getItem('sshit-lang') || 'he';
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .header-placeholder {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 3rem 2rem;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      text-align: center;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+    .header-placeholder .glyph {
+      font-size: 3rem;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//VIBECODE</span></a>
+      <nav class="nav-links uppercase mono">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+        <a href="workshops.html" class="active"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="support.html" class="not-offered-yet"><span class="lang-en">Support</span><span class="lang-he">תמיכה</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="#" class="theme-toggle">LIGHT/DARK</a>
+        <a href="#" class="lang-toggle">EN/HE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- English -->
+      <section class="lang-en">
+        <a href="workshops.html" class="btn" style="margin-bottom: 2rem; display: inline-block;">&larr; Back to Workshops</a>
+        <div class="course-section">
+          <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
+            <div class="course-header-content">
+              <span class="badge badge-new">1,950 NIS — Next cohort: TBA</span>
+              <h1>Vibecoding for Artists</h1>
+              <p class="course-tagline">Code your ideas, let AI write the syntax</p>
+              <p>Use AI (Claude / ChatGPT) as your code collaborator to build sound + visual pieces that run in the browser. From canvas sketches to a deployed URL you can share. No coding background required.</p>
+              <div class="course-meta">
+                <span><strong>Duration:</strong> 6 meetings × 2.5 hours</span>
+                <span><strong>Participants:</strong> Up to 8</span>
+                <span><strong>Location:</strong> MEZO Haifa, Sirkin 3</span>
+                <span><strong>Prerequisites:</strong> None</span>
+              </div>
+              <p class="course-audience"><strong>Target:</strong> Artists, designers, musicians, anyone curious about making web-based pieces with AI assistance. <strong>Requirements:</strong> Laptop + AI subscription (~$20/month) + headphones.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Claude / ChatGPT</span>
+                <span class="tech-tag">Web Audio</span>
+                <span class="tech-tag">Canvas</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">GitHub Pages</span>
+              </div>
+              <div class="kit-box">
+                <strong>Includes:</strong> 4 hours/week open-lab access at MEZO Haifa (3D printers, CNC, soldering, component library). No physical kit — bring your laptop.
+              </div>
+            </div>
+            <div class="course-header-image" style="border: 1px solid var(--border);">
+              <img src="images/gallery/hand-pcb-cad.png" alt="Typographic PCB layout spelling HAND" style="width: 100%; display: block;">
+            </div>
+          </div>
+
+          <h2>Meeting Breakdown</h2>
+          <div class="meetings-list">
+            <div class="meeting-item">
+              <div class="meeting-number">1</div>
+              <div class="meeting-content">
+                <h4>Setup & First Canvas Sketch</h4>
+                <ul>
+                  <li>Editor setup (VSCode + Cursor, or Claude.ai with artifacts)</li>
+                  <li>How to talk to AI for code: prompts that actually work</li>
+                  <li>Hello world in the browser, drawing shapes on HTML5 Canvas</li>
+                  <li>Your first generative sketch</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A working dev setup and your first running canvas piece.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">2</div>
+              <div class="meeting-content">
+                <h4>Web Audio Basics</h4>
+                <ul>
+                  <li>The Web Audio API mental model: nodes and graphs</li>
+                  <li>Oscillators, gain, envelopes</li>
+                  <li>Your first browser synth, scaffolded with AI</li>
+                  <li>Parameter control with simple UI</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A playable web synth you can iterate on.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">3</div>
+              <div class="meeting-content">
+                <h4>Generative Visuals</h4>
+                <ul>
+                  <li>Time-based animation loops</li>
+                  <li>Particle systems, noise functions, simple physics</li>
+                  <li>Color, composition, intentional aesthetic choices</li>
+                  <li>Saving + reloading sketches</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A toolkit of visual patterns you can compose.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">4</div>
+              <div class="meeting-content">
+                <h4>Reactive Pieces</h4>
+                <ul>
+                  <li>FFT and audio analysis in the browser</li>
+                  <li>Wire microphone or audio file into visual parameters</li>
+                  <li>Cross-modal feedback (visual reacts to sound and back)</li>
+                  <li>Performance considerations</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> An audio-reactive visual piece.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">5</div>
+              <div class="meeting-content">
+                <h4>Inputs & Interactivity</h4>
+                <ul>
+                  <li>Keyboard, mouse, touch events</li>
+                  <li>Microphone and webcam as input</li>
+                  <li>Designing an instrument: what gestures map to what sounds</li>
+                  <li>Saving presets</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A playable interactive piece, not just a fixed sketch.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">6</div>
+              <div class="meeting-content">
+                <h4>Deploy</h4>
+                <ul>
+                  <li>Git basics with AI handling the syntax</li>
+                  <li>Publish to GitHub Pages — a real URL anyone can open</li>
+                  <li>Sharing, documenting, embedding in a portfolio</li>
+                  <li>Group showcase</li>
+                </ul>
+                <p class="takeaway"><strong>Takeaway:</strong> A deployed piece with a public URL — and the knowledge to ship the next one solo.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" id="register">
+            <h2>Register Now</h2>
+            <p>Reserve your spot in the next cohort — dates TBA. We'll confirm with you before the course opens.</p>
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background: #e8faf3; border: 1px solid #25d366; border-radius: var(--radius-sm); text-align: center;">
+              <a href="https://wa.me/972539263808?text=Hi%2C%20I%20would%20like%20to%20register%20for%20the%20Vibecoding%20for%20Artists%20course.%20Please%20send%20details." class="btn" style="background: #25d366; color: white; border: none;">Register via WhatsApp</a>
+            </div>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-dim);">Or fill out the form below:</p>
+            <form action="https://formsubmit.co/Dogme84@gmail.com" method="POST" class="registration-form" data-form-name="workshop-vibecoding-en">
+              <input type="hidden" name="_next" value="https://willbearfruits.github.io/serious-shit/thank-you.html">
+              <input type="hidden" name="_subject" value="Workshop Registration (Vibecoding)">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <div class="form-group"><label for="name-vibe-en">Full Name *</label><input type="text" id="name-vibe-en" name="name" required placeholder="Your name"></div>
+              <div class="form-group"><label for="email-vibe-en">Email *</label><input type="email" id="email-vibe-en" name="email" required placeholder="your@email.com"></div>
+              <div class="form-group"><label for="phone-vibe-en">Phone (optional)</label><input type="tel" id="phone-vibe-en" name="phone" placeholder="+972-..."></div>
+              <input type="hidden" name="workshop" value="Vibecoding for Artists (Next Cohort TBA)">
+              <div class="form-group"><label for="message-vibe-en">Questions/Comments (optional)</label><textarea id="message-vibe-en" name="message" rows="3" placeholder="Any questions about the workshop?"></textarea></div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Registration</button>
+            </form>
+          </div>
+          <div class="btn-group" style="margin-top: 2rem;"><a href="workshops.html" class="btn btn-secondary">&lt; Back to All Workshops</a></div>
+        </div>
+      </section>
+
+      <!-- Hebrew -->
+      <section class="lang-he">
+        <a href="workshops.html" class="btn" style="margin-bottom: 2rem; display: inline-block;">חזרה לקורסים &rarr;</a>
+        <div class="course-section">
+          <div class="course-header" style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
+            <div class="course-header-content">
+              <span class="badge badge-new">1,950 ש"ח — מחזור הבא: יוכרז</span>
+              <h1>וייבקודינג לאמנים</h1>
+              <p class="course-tagline">לקודד רעיונות, לתת ל-AI לכתוב את הסינטקס</p>
+              <p>שימוש ב-AI (Claude / ChatGPT) ככלי עזר לכתיבת קוד, לבנייה של יצירות צליל וויזואל שרצות בדפדפן. מסקיצות קנבס ועד URL פומבי שאפשר לשתף. אין צורך ברקע בתכנות.</p>
+              <div class="course-meta">
+                <span><strong>משך:</strong> 6 מפגשים × 2.5 שעות</span>
+                <span><strong>משתתפים:</strong> עד 8</span>
+                <span><strong>מיקום:</strong> מזו חיפה, סירקין 3</span>
+                <span><strong>דרישות קדם:</strong> אין</span>
+              </div>
+              <p class="course-audience"><strong>קהל יעד:</strong> אמנים, מעצבים, מוזיקאים — כל מי שרוצה ליצור עבודות מבוססות דפדפן בעזרת AI. <strong>דרישות:</strong> מחשב נייד, מנוי AI (~20$/חודש) ואוזניות.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Claude / ChatGPT</span>
+                <span class="tech-tag">Web Audio</span>
+                <span class="tech-tag">Canvas</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">GitHub Pages</span>
+              </div>
+              <div class="kit-box">
+                <strong>כולל:</strong> 4 שעות/שבוע גישה למעבדה פתוחה במזו חיפה (מדפסות 3D, CNC, הלחמה, ספריית רכיבים). אין ערכה פיזית — להביא מחשב.
+              </div>
+            </div>
+            <div class="course-header-image" style="border: 1px solid var(--border);">
+              <img src="images/gallery/hand-pcb-cad.png" alt="פריסת PCB טיפוגרפית עם המילה HAND" style="width: 100%; display: block;">
+            </div>
+          </div>
+
+          <h2>פירוט המפגשים</h2>
+          <div class="meetings-list">
+            <div class="meeting-item">
+              <div class="meeting-number">1</div>
+              <div class="meeting-content">
+                <h4>הגדרה וסקיצת קנבס ראשונה</h4>
+                <ul>
+                  <li>הגדרת סביבת פיתוח (VSCode + Cursor, או Claude.ai)</li>
+                  <li>איך מדברים עם AI לקבלת קוד שעובד: פרומפטים יעילים</li>
+                  <li>Hello world בדפדפן, ציור צורות על HTML5 Canvas</li>
+                  <li>סקיצה גנרטיבית ראשונה</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> סביבת פיתוח עובדת ויצירת קנבס ראשונה.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">2</div>
+              <div class="meeting-content">
+                <h4>יסודות Web Audio</h4>
+                <ul>
+                  <li>המודל המנטלי של Web Audio API: צמתים וגרפים</li>
+                  <li>אוסילטורים, גיין, מעטפות</li>
+                  <li>סינת' דפדפן ראשון בעזרת AI</li>
+                  <li>שליטה בפרמטרים דרך UI פשוט</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> סינתיסייזר דפדפן ניתן לנגינה.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">3</div>
+              <div class="meeting-content">
+                <h4>ויזואל גנרטיבי</h4>
+                <ul>
+                  <li>לולאות אנימציה מבוססות זמן</li>
+                  <li>מערכות חלקיקים, פונקציות רעש, פיזיקה פשוטה</li>
+                  <li>צבע, קומפוזיציה, בחירות אסתטיות מודעות</li>
+                  <li>שמירה וטעינה של סקיצות</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> ארגז כלים של דפוסים ויזואליים שניתן לחבר.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">4</div>
+              <div class="meeting-content">
+                <h4>יצירות ריאקטיביות</h4>
+                <ul>
+                  <li>FFT וניתוח אודיו בדפדפן</li>
+                  <li>חיבור מיקרופון או קובץ אודיו לפרמטרים ויזואליים</li>
+                  <li>פידבק חוצה-מדיה (ויזואל מגיב לסאונד וההפך)</li>
+                  <li>שיקולי ביצועים</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> יצירה ויזואלית שמגיבה לאודיו.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">5</div>
+              <div class="meeting-content">
+                <h4>קלטים ואינטראקטיביות</h4>
+                <ul>
+                  <li>מקלדת, עכבר, אירועי מגע</li>
+                  <li>מיקרופון ומצלמה כקלט</li>
+                  <li>עיצוב כלי: אילו מחוות מפעילות אילו צלילים</li>
+                  <li>שמירת preset-ים</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> יצירה אינטראקטיבית ולא סקיצה קבועה.</p>
+              </div>
+            </div>
+            <div class="meeting-item">
+              <div class="meeting-number">6</div>
+              <div class="meeting-content">
+                <h4>פרסום</h4>
+                <ul>
+                  <li>יסודות Git עם AI שמטפל בסינטקס</li>
+                  <li>פרסום ב-GitHub Pages — URL ציבורי לכל אחד</li>
+                  <li>שיתוף, תיעוד, הטמעה בפורטפוליו</li>
+                  <li>תצוגה קבוצתית</li>
+                </ul>
+                <p class="takeaway"><strong>תוצר:</strong> יצירה מפורסמת עם URL פומבי — והיכולת לעשות זאת שוב לבד.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section" id="register-he">
+            <h2>הרשמה עכשיו</h2>
+            <p>שריינו מקום במחזור הבא — תאריכים יוכרזו. נחזור אליכם לפני פתיחת הקורס.</p>
+            <div style="margin-bottom: 2rem; padding: 1.5rem; background: #e8faf3; border: 1px solid #25d366; border-radius: var(--radius-sm); text-align: center;">
+              <a href="https://wa.me/972539263808?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%91%D7%A7%D7%95%D7%A8%D7%A1%20%D7%95%D7%99%D7%99%D7%91%D7%A7%D7%95%D7%93%D7%99%D7%A0%D7%92%20%D7%9C%D7%90%D7%9E%D7%A0%D7%99%D7%9D" class="btn" style="background: #25d366; color: white; border: none;">הרשמה בוואטסאפ</a>
+            </div>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-dim);">או מלאו את הטופס למטה:</p>
+            <form action="https://formsubmit.co/Dogme84@gmail.com" method="POST" class="registration-form" data-form-name="workshop-vibecoding-he">
+              <input type="hidden" name="_next" value="https://willbearfruits.github.io/serious-shit/thank-you.html">
+              <input type="hidden" name="_subject" value="הרשמה לסדנה (וייבקודינג)">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <div class="form-group"><label for="name-vibe-he">שם מלא *</label><input type="text" id="name-vibe-he" name="name" required placeholder="השם שלך"></div>
+              <div class="form-group"><label for="email-vibe-he">אימייל *</label><input type="email" id="email-vibe-he" name="email" required placeholder="your@email.com"></div>
+              <div class="form-group"><label for="phone-vibe-he">טלפון (אופציונלי)</label><input type="tel" id="phone-vibe-he" name="phone" placeholder="05X-XXX-XXXX"></div>
+              <input type="hidden" name="workshop" value="Vibecoding for Artists (Next Cohort TBA)">
+              <div class="form-group"><label for="message-vibe-he">שאלות/הערות (אופציונלי)</label><textarea id="message-vibe-he" name="message" rows="3" placeholder="יש שאלות על הסדנה?"></textarea></div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">שליחת הרשמה</button>
+            </form>
+          </div>
+          <div class="btn-group" style="margin-top: 2rem;"><a href="workshops.html" class="btn btn-secondary">חזרה לכל הקורסים &rarr;</a></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+          <a href="workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+          <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+          <a href="support.html" class="not-offered-yet"><span class="lang-en">Support</span><span class="lang-he">תמיכה</span></a>
+          <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+          <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+          <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+          <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+          <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+        <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

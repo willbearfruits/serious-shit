@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>HEX BENDING // Crash Course | Serious S.H.I.T.</title>
+  <meta name="description" content="Self-paced hex-editor data-bending crash course. One technique, five glitches. Downloadable PDF + practice media kit.">
+
+  <!--
+    HEX BENDING — self-paced crash course microsite.
+    Folder: /hex-bending/
+    Status: HIDDEN. Not linked from nav, workshops.html, sitemap.xml, or social cards.
+    Reached only by direct URL until launch. Source inspiration for the syllabus:
+    https://www.youtube.com/watch?v=1oIHwIItiPs ("Intro to Data-bending techniques.
+    How to do 5 different glitches with 1 technique (heX Bending)").
+    The five lessons below are DRAFT placeholders aligned with the video's framing —
+    confirm/refine wording against the video before sharing the URL.
+  -->
+
+  <script>
+    (function(){
+      var lang = localStorage.getItem('sshit-lang') || 'he';
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+      var theme = localStorage.getItem('sshit-theme');
+      if (!theme) theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .hex-hero {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 2rem;
+      align-items: start;
+      margin-top: 2rem;
+    }
+    @media (max-width: 720px) { .hex-hero { grid-template-columns: 1fr; } }
+    .hex-glyph {
+      font-family: var(--font-mono);
+      font-size: 5rem;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      background: var(--surface);
+      word-break: break-all;
+    }
+    .hex-glyph small {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+    }
+    .lesson-list {
+      display: grid;
+      gap: 1.25rem;
+      margin: 2rem 0 3rem;
+    }
+    .lesson-item {
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      background: var(--surface);
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .lesson-num {
+      font-family: var(--font-mono);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .lesson-item h4 { margin: 0 0 0.5rem; font-family: var(--font-mono); letter-spacing: 0.04em; }
+    .lesson-item ul { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.25rem; }
+    .lesson-item .draft-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      border: 1px dashed var(--border-light);
+      padding: 0.1rem 0.4rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.1em;
+    }
+    .pricing-box {
+      border: 2px solid var(--accent);
+      padding: 2rem;
+      margin: 3rem 0;
+      background: var(--surface);
+      text-align: center;
+    }
+    .pricing-box .price-tag {
+      font-family: var(--font-mono);
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin: 1rem 0;
+    }
+    .pricing-box .price-line {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-bottom: 1.5rem;
+    }
+    .kit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .kit-item {
+      border: 1px solid var(--border);
+      padding: 1rem;
+      background: var(--surface);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+    }
+    .kit-item strong { display: block; color: var(--accent); margin-bottom: 0.25rem; }
+    .crumb-back {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      text-decoration: none;
+    }
+    .crumb-back:hover { color: var(--accent); }
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin: 2.5rem 0;
+      border: 1px solid var(--border);
+      background: #000;
+    }
+    .video-frame iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    .video-caption {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-top: -1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .video-caption a { color: var(--accent); }
+
+    /* Sample-chapter preview */
+    .page-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+    @media (max-width: 600px) { .page-preview-grid { grid-template-columns: 1fr; } }
+    .page-preview {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      margin: 0;
+      overflow: hidden;
+    }
+    .page-preview img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .page-preview-stub {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      letter-spacing: 0.08em;
+      padding: 1rem;
+      text-align: center;
+      background:
+        repeating-linear-gradient(135deg,
+          transparent 0, transparent 9px,
+          rgba(255,51,0,0.05) 9px, rgba(255,51,0,0.05) 10px);
+    }
+    .page-preview-stub strong { color: var(--accent); display: block; margin-bottom: 0.5rem; }
+    .page-preview figcaption {
+      position: absolute;
+      bottom: 0; inset-inline: 0;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      padding: 0.45rem 0.6rem;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+    }
+    .preview-caption {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin: 0.5rem 0 2.5rem;
+    }
+
+    /* Buy row */
+    .buy-row {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 2rem;
+      border: 2px solid var(--accent);
+      background: var(--surface);
+      margin: 2.5rem 0 0.4rem;
+    }
+    @media (max-width: 600px) {
+      .buy-row { grid-template-columns: 1fr; text-align: center; }
+      .buy-actions { align-items: center !important; }
+    }
+    .buy-price { display: flex; flex-direction: column; gap: 0.25rem; }
+    .price-main {
+      font-family: var(--font-mono);
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .price-aux {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+    .buy-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      align-items: flex-start;
+    }
+    .buy-primary {
+      font-family: var(--font-mono);
+      font-weight: 800;
+      padding: 0.9rem 1.6rem;
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      display: inline-block;
+    }
+    .buy-primary:hover { filter: brightness(1.1); }
+    .buy-fallback {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin: 0;
+    }
+    .buy-fallback a { color: var(--text); text-decoration: underline; }
+    .buy-meta {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-align: center;
+      margin: 0 0 3rem;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="../index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//HEX_BENDING</span></a>
+      <nav class="nav-links uppercase mono">
+        <a href="../index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+        <a href="../workshops.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="../sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="../contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="#" class="theme-toggle">LIGHT/DARK</a>
+        <a href="#" class="lang-toggle">EN/HE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- ============ ENGLISH ============ -->
+      <section class="lang-en">
+        <a href="../workshops.html" class="crumb-back">&larr; Back to all workshops</a>
+
+        <div class="hex-hero">
+          <div>
+            <span class="badge badge-new">SELF-PACED · INSTANT DOWNLOAD</span>
+            <h1>HEX BENDING // CRASH COURSE</h1>
+            <p class="tagline">One hex-editor technique. Five file types &mdash; image, audio, video, font, one wildcard. Five glitches that look nothing alike.</p>
+            <p>Self-paced PDF + practice files. No software to buy. Works on whatever machine you have open.</p>
+            <div class="course-meta">
+              <span><strong>Format:</strong> PDF + practice files (.zip)</span>
+              <span><strong>Length:</strong> ~90 minutes of reading + practice</span>
+              <span><strong>OS:</strong> Mac / Win / Linux</span>
+              <span><strong>Prereq:</strong> Knowing how to open a file</span>
+            </div>
+            <div class="tech-stack">
+              <span class="tech-tag">Hex Editing</span>
+              <span class="tech-tag">Data Bending</span>
+              <span class="tech-tag">JPEG</span>
+              <span class="tech-tag">WAV</span>
+              <span class="tech-tag">TTF</span>
+              <span class="tech-tag">Cross-format</span>
+            </div>
+          </div>
+          <div class="hex-glyph">
+            0xFF<br>D8&nbsp;FF<br>E0&nbsp;??
+            <small>// JPEG header · pre-corruption</small>
+          </div>
+        </div>
+
+        <h2>Watch the technique</h2>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/1oIHwIItiPs?start=773&rel=0"
+            title="Intro to Data-bending techniques — heX Bending"
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="video-caption">// Source &mdash; the technique demoed live. The PDF turns it into a repeatable, OS-agnostic recipe with practice files. <a href="https://www.youtube.com/watch?v=1oIHwIItiPs&t=773s" target="_blank" rel="noopener noreferrer">Open on YouTube &rarr;</a></p>
+
+        <h2>What you get</h2>
+        <div class="kit-grid">
+          <div class="kit-item"><strong>// THE PDF</strong>Step-by-step crash course. Screenshots, byte-level diagrams, do-this/avoid-this rules. ~30 pages.</div>
+          <div class="kit-item"><strong>// PRACTICE MEDIA</strong>A starter pack of files known to glitch well: a JPEG, a WAV, an MP4, a TTF, and one wildcard.</div>
+          <div class="kit-item"><strong>// HEX-EDITOR PICKS</strong>Free hex editors per OS &mdash; what to install, what to ignore, why.</div>
+          <div class="kit-item"><strong>// SHARE-READY EXPORT</strong>How to keep your glitch viewable after upload (Instagram, Twitter, browser quirks).</div>
+        </div>
+
+        <h2>Inside the PDF</h2>
+        <!-- DROP-IN: replace each .page-preview-stub with <img src="assets/preview-XX.png" alt="..." loading="lazy"> when sample pages are ready -->
+        <div class="page-preview-grid">
+          <figure class="page-preview">
+            <div class="page-preview-stub"><strong>p. 04</strong>JPEG anatomy &middot; byte map</div>
+            <figcaption>// JPEG anatomy</figcaption>
+          </figure>
+          <figure class="page-preview">
+            <div class="page-preview-stub"><strong>p. 11</strong>WAV header walkthrough</div>
+            <figcaption>// WAV walkthrough</figcaption>
+          </figure>
+          <figure class="page-preview">
+            <div class="page-preview-stub"><strong>p. 22</strong>Wildcard cross-format recipe</div>
+            <figcaption>// Wildcard recipe</figcaption>
+          </figure>
+        </div>
+        <p class="preview-caption">Three pages from the PDF &mdash; actual layout, actual bytes.</p>
+
+        <h2>The five glitches &mdash; one technique</h2>
+        <div class="lesson-list">
+
+          <div class="lesson-item">
+            <div class="lesson-num">01</div>
+            <div>
+              <span class="draft-tag">// IMAGE</span>
+              <h4>JPEG Byte Storm</h4>
+              <ul>
+                <li>How a JPEG actually unrolls (header → DQT → DHT → SOS)</li>
+                <li>The safe zone: which bytes you can punch without the file refusing to open</li>
+                <li>Save it, view it, repeat &mdash; controlled iteration</li>
+              </ul>
+              <p class="takeaway"><strong>Output:</strong> A JPEG that still loads but bleeds color and structure.</p>
+            </div>
+          </div>
+
+          <div class="lesson-item">
+            <div class="lesson-num">02</div>
+            <div>
+              <span class="draft-tag">// AUDIO</span>
+              <h4>WAV / MP3 Byte Storm</h4>
+              <ul>
+                <li>Same technique, different format &mdash; what changes</li>
+                <li>Where the WAV header ends and the audio data begins</li>
+                <li>Why MP3 corruption sounds different from WAV corruption</li>
+              </ul>
+              <p class="takeaway"><strong>Output:</strong> Audio that's still playable but full of intentional rupture.</p>
+            </div>
+          </div>
+
+          <div class="lesson-item">
+            <div class="lesson-num">03</div>
+            <div>
+              <span class="draft-tag">// VIDEO</span>
+              <h4>Video Frame Bleed</h4>
+              <ul>
+                <li>Container vs. codec &mdash; what you can corrupt without crashing the player</li>
+                <li>Frame-edge bytes: where to find them, what they do</li>
+                <li>Datamosh-like results without a video editor</li>
+              </ul>
+              <p class="takeaway"><strong>Output:</strong> A video clip with frame-bleeding glitch artifacts.</p>
+            </div>
+          </div>
+
+          <div class="lesson-item">
+            <div class="lesson-num">04</div>
+            <div>
+              <span class="draft-tag">// FONT</span>
+              <h4>TTF / OTF Hex Bend</h4>
+              <ul>
+                <li>Fonts are files too &mdash; bend the glyph table, type with the result</li>
+                <li>Picking glyphs that won't make the font refuse to install</li>
+                <li>Installing your bent font and screenshotting the output</li>
+              </ul>
+              <p class="takeaway"><strong>Output:</strong> A custom corrupted typeface usable in any app.</p>
+            </div>
+          </div>
+
+          <div class="lesson-item">
+            <div class="lesson-num">05</div>
+            <div>
+              <span class="draft-tag">// CROSS-FORMAT</span>
+              <h4>The Wildcard</h4>
+              <ul>
+                <li>Open one file type as another &mdash; image-as-audio, audio-as-image</li>
+                <li>Hex-editing the boundary between formats</li>
+                <li>The technique pushed to its weirdest edge</li>
+              </ul>
+              <p class="takeaway"><strong>Output:</strong> A piece that can't be classified &mdash; sound that looks, image that plays.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BUY ROW
+             SWAP: paste your Lemon Squeezy / Gumroad / Stripe Payment Link checkout URL into .buy-primary href.
+             Recommended: Lemon Squeezy (Merchant-of-Record, handles Israeli + EU VAT, 5%+$0.50 on $10).
+             Keep WhatsApp + email as the fallback line for buyers who can't or won't use a card. -->
+        <div class="buy-row">
+          <div class="buy-price">
+            <span class="price-main">$10</span>
+            <span class="price-aux">USD &middot; ≈ 37 ₪</span>
+          </div>
+          <div class="buy-actions">
+            <a href="#REPLACE-WITH-LEMONSQUEEZY-BUY-URL" class="buy-primary">Buy &amp; instant download &rarr;</a>
+            <p class="buy-fallback">Or <a href="https://wa.me/972539263808?text=Hi%2C%20I%20want%20to%20buy%20the%20HEX%20BENDING%20crash%20course.">WhatsApp</a> / <a href="mailto:Dogme84@gmail.com?subject=HEX%20BENDING%20crash%20course">email</a> for manual delivery.</p>
+          </div>
+        </div>
+        <p class="buy-meta">// one-time &middot; lifetime download &middot; DRM-free &middot; 7-day refund if it taught you nothing</p>
+
+        <h2>FAQ</h2>
+        <ul class="process">
+          <li><strong>Do I need to know how to code?</strong> No. If you can open a file and edit text, you can do this.</li>
+          <li><strong>Will this work on my OS?</strong> Yes &mdash; the PDF lists free hex editors for Mac, Windows, and Linux.</li>
+          <li><strong>Is it DRM'd?</strong> No. Plain PDF + zip. Yours to keep.</li>
+          <li><strong>Refunds?</strong> 7 days, no questions. Write me, I refund.</li>
+        </ul>
+      </section>
+
+      <!-- ============ HEBREW ============ -->
+      <section class="lang-he">
+        <a href="../workshops.html" class="crumb-back">&larr; חזרה לכל הקורסים</a>
+
+        <div class="hex-hero">
+          <div>
+            <span class="badge badge-new">קצב עצמי · הורדה מיידית</span>
+            <h1>HEX BENDING // קורס מזורז</h1>
+            <p class="tagline">טכניקה אחת בהקס-עורך. חמישה סוגי קבצים &mdash; תמונה, אודיו, וידאו, פונט, ויעד מפתיע. חמישה גליצ'ים שלא נראים אותו דבר.</p>
+            <p>PDF בקצב שלכם + קבצי תרגול. בלי תוכנות לקנות. עובד על כל מחשב שיש לכם.</p>
+            <div class="course-meta">
+              <span><strong>פורמט:</strong> PDF + קבצי תרגול (zip)</span>
+              <span><strong>אורך:</strong> כ-90 דקות קריאה + תרגול</span>
+              <span><strong>מערכת:</strong> Mac / Win / Linux</span>
+              <span><strong>דרישות קדם:</strong> לדעת לפתוח קובץ</span>
+            </div>
+            <div class="tech-stack">
+              <span class="tech-tag">Hex Editing</span>
+              <span class="tech-tag">Data Bending</span>
+              <span class="tech-tag">JPEG</span>
+              <span class="tech-tag">WAV</span>
+              <span class="tech-tag">TTF</span>
+              <span class="tech-tag">חוצה פורמטים</span>
+            </div>
+          </div>
+          <div class="hex-glyph">
+            0xFF<br>D8&nbsp;FF<br>E0&nbsp;??
+            <small>// כותרת JPEG · לפני קלקול</small>
+          </div>
+        </div>
+
+        <h2>הטכניקה בווידאו</h2>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/1oIHwIItiPs?start=773&rel=0"
+            title="Intro to Data-bending techniques — heX Bending"
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="video-caption">// המקור &mdash; הטכניקה מודגמת חי. ה-PDF הופך אותה למתכון חוזר, ללא תלות במערכת הפעלה, עם קבצי תרגול. <a href="https://www.youtube.com/watch?v=1oIHwIItiPs&t=773s" target="_blank" rel="noopener noreferrer">פתיחה ביוטיוב &larr;</a></p>
+
+        <h2>מה מקבלים</h2>
+        <div class="kit-grid">
+          <div class="kit-item"><strong>// ה-PDF</strong>קורס מזורז שלב אחר שלב. צילומי מסך, דיאגרמות ברמת ה-byte, מה לעשות / ממה להיזהר. כ-30 עמודים.</div>
+          <div class="kit-item"><strong>// קבצי תרגול</strong>חבילת התחלה של קבצים שעובדים טוב לגליץ': JPEG, WAV, MP4, TTF ועוד אחד מפתיע.</div>
+          <div class="kit-item"><strong>// הקס-עורכים מומלצים</strong>הקס-עורכים חינמיים לפי מערכת הפעלה &mdash; מה להתקין, מה לעזוב, ולמה.</div>
+          <div class="kit-item"><strong>// ייצוא לשיתוף</strong>איך לשמור את הגליץ' שלכם כך שייראה כמו שצריך אחרי העלאה (אינסטגרם, טוויטר, דפדפנים).</div>
+        </div>
+
+        <h2>בתוך ה-PDF</h2>
+        <div class="page-preview-grid">
+          <figure class="page-preview">
+            <div class="page-preview-stub"><strong>עמ' 04</strong>אנטומיה של JPEG &middot; מפת בייטים</div>
+            <figcaption>// אנטומיית JPEG</figcaption>
+          </figure>
+          <figure class="page-preview">
+            <div class="page-preview-stub"><strong>עמ' 11</strong>פירוק כותרת WAV</div>
+            <figcaption>// פירוק WAV</figcaption>
+          </figure>
+          <figure class="page-preview">
+            <div class="page-preview-stub"><strong>עמ' 22</strong>מתכון חוצה-פורמטים</div>
+            <figcaption>// מתכון הוויילד-קארד</figcaption>
+          </figure>
+        </div>
+        <p class="preview-caption">שלושה עמודים מתוך ה-PDF &mdash; פריסה אמיתית, בייטים אמיתיים.</p>
+
+        <h2>חמישה גליצ'ים &mdash; טכניקה אחת</h2>
+        <div class="lesson-list">
+
+          <div class="lesson-item">
+            <div class="lesson-num">01</div>
+            <div>
+              <span class="draft-tag">// תמונה</span>
+              <h4>סופת בייטים על JPEG</h4>
+              <ul>
+                <li>איך JPEG באמת נפתח (כותרת → DQT → DHT → SOS)</li>
+                <li>אזור בטוח: באילו בייטים אפשר לפגוע בלי שהקובץ יסרב להיפתח</li>
+                <li>לשמור, לראות, לחזור &mdash; איטרציה מבוקרת</li>
+              </ul>
+              <p class="takeaway"><strong>תוצר:</strong> JPEG שעדיין נטען אבל מדמם צבע ומבנה.</p>
+            </div>
+          </div>
+
+          <div class="lesson-item">
+            <div class="lesson-num">02</div>
+            <div>
+              <span class="draft-tag">// אודיו</span>
+              <h4>סופת בייטים על WAV / MP3</h4>
+              <ul>
+                <li>אותה טכניקה, פורמט אחר &mdash; מה משתנה</li>
+                <li>איפה כותרת ה-WAV נגמרת ואיפה הדאטה האודיו מתחיל</li>
+                <li>למה קלקול MP3 נשמע שונה מקלקול WAV</li>
+              </ul>
+              <p class="takeaway"><strong>תוצר:</strong> אודיו שעדיין מתנגן אבל מלא בשבירה מכוונת.</p>
+            </div>
+          </div>
+
+          <div class="lesson-item">
+            <div class="lesson-num">03</div>
+            <div>
+              <span class="draft-tag">// וידאו</span>
+              <h4>דימום פריימים בווידאו</h4>
+              <ul>
+                <li>קונטיינר מול קודק &mdash; מה אפשר לקלקל בלי לקרוס את הנגן</li>
+                <li>בייטים בגבולות פריימים: איפה למצוא, מה הם עושים</li>
+                <li>תוצאות בסגנון דאטה-מושינג בלי עורך וידאו</li>
+              </ul>
+              <p class="takeaway"><strong>תוצר:</strong> קליפ וידאו עם ארטיפקטים של דימום פריימים.</p>
+            </div>
+          </div>
+
+          <div class="lesson-item">
+            <div class="lesson-num">04</div>
+            <div>
+              <span class="draft-tag">// פונט</span>
+              <h4>כיפוף TTF / OTF</h4>
+              <ul>
+                <li>פונטים הם גם קבצים &mdash; לכופף את טבלת הגליפים ולהקליד את התוצאה</li>
+                <li>איך לבחור גליפים שלא יגרמו לפונט לסרב להתקנה</li>
+                <li>התקנת הפונט המכופף שלכם וצילום מסך התוצאה</li>
+              </ul>
+              <p class="takeaway"><strong>תוצר:</strong> פונט מקולקל שאפשר להשתמש בו בכל אפליקציה.</p>
+            </div>
+          </div>
+
+          <div class="lesson-item">
+            <div class="lesson-num">05</div>
+            <div>
+              <span class="draft-tag">// חוצה פורמטים</span>
+              <h4>הוויילד-קארד</h4>
+              <ul>
+                <li>לפתוח סוג קובץ אחד כסוג אחר &mdash; תמונה-כאודיו, אודיו-כתמונה</li>
+                <li>עריכת הגבול בין פורמטים</li>
+                <li>הטכניקה דחוקה לקצה הכי מוזר שלה</li>
+              </ul>
+              <p class="takeaway"><strong>תוצר:</strong> יצירה שאי אפשר לסווג &mdash; צליל שנראה, תמונה שמתנגנת.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="buy-row">
+          <div class="buy-price">
+            <span class="price-main">$10</span>
+            <span class="price-aux">USD &middot; ≈ 37 ₪</span>
+          </div>
+          <div class="buy-actions">
+            <a href="#REPLACE-WITH-LEMONSQUEEZY-BUY-URL" class="buy-primary">קנייה והורדה מיידית &larr;</a>
+            <p class="buy-fallback">או דרך <a href="https://wa.me/972539263808?text=%D7%94%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A7%D7%A0%D7%95%D7%AA%20%D7%90%D7%AA%20%D7%94%D7%A7%D7%95%D7%A8%D7%A1%20HEX%20BENDING.">וואטסאפ</a> / <a href="mailto:Dogme84@gmail.com?subject=HEX%20BENDING%20%D7%A7%D7%95%D7%A8%D7%A1%20%D7%9E%D7%96%D7%95%D7%A8%D7%96">מייל</a> למשלוח ידני.</p>
+          </div>
+        </div>
+        <p class="buy-meta">// תשלום חד-פעמי &middot; הורדה לכל החיים &middot; ללא DRM &middot; החזר תוך 7 ימים אם לא למדתם כלום</p>
+
+        <h2>שאלות נפוצות</h2>
+        <ul class="process">
+          <li><strong>צריך לדעת לכתוב קוד?</strong> לא. אם אתם יודעים לפתוח קובץ ולערוך טקסט, אתם יכולים.</li>
+          <li><strong>זה יעבוד לי במערכת ההפעלה שלי?</strong> כן &mdash; ה-PDF מפרט הקס-עורכים חינמיים ל-Mac, Windows ו-Linux.</li>
+          <li><strong>יש DRM?</strong> אין. PDF רגיל + zip. שלכם להחזיק.</li>
+          <li><strong>החזר כספי?</strong> תוך 7 ימים, בלי שאלות. שולחים הודעה, אני מחזיר.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="mono" style="text-align: center; opacity: 0.7;">
+        <span class="lang-en">Hidden preview &middot; Nothing Is Holy &middot; <a href="../index.html">SERIOUS S.H.I.T.</a></span>
+        <span class="lang-he">תצוגה מוקדמת מוסתרת &middot; שום דבר לא קדוש &middot; <a href="../index.html">SERIOUS S.H.I.T.</a></span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
