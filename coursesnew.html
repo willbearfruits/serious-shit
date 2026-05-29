@@ -4,32 +4,80 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>קורסים | Serious S.H.I.T. / MEZO</title>
+  <meta name="description" content="קורסים לבניית חומרה, סאונד, קוד, גליץ׳ וכיפוף מעגלים ב-MEZO חיפה. קבוצות קטנות, ידיים על השולחן, בלי דרישות קדם.">
+  <script>
+    // Prevent language flicker - set before CSS renders
+    (function(){
+      var lang = localStorage.getItem('sshit-lang') || 'he';
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('dir', lang === 'he' ? 'rtl' : 'ltr');
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    :root{
-      --bg:#f4efe5; --text:#111; --text-dim:#5f574d; --surface:#fffaf0;
-      --accent:#e23b2f; --border:#111; --border-light:#c9bda9;
-      --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
-      --sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-    }
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6}
-    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background:repeating-linear-gradient(0deg,#000 0,#000 1px,transparent 1px,transparent 3px);z-index:10}
-    a{color:inherit}.container{width:min(1120px,calc(100% - 32px));margin:auto}.mono{font-family:var(--mono)}
-    header{border-bottom:2px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:9}.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}.brand{font-weight:900;text-decoration:none;letter-spacing:-.03em}.nav{display:flex;gap:.8rem;flex-wrap:wrap;font-size:.8rem}.nav a{text-decoration:none;border-bottom:1px solid transparent}.nav a:hover{border-color:var(--accent)}
-    .hero{padding:5rem 0 3rem;border-bottom:2px solid var(--border)}.eyebrow{font-family:var(--mono);color:var(--accent);font-weight:800;letter-spacing:.08em}.hero h1{font-size:clamp(3.2rem,10vw,8.5rem);line-height:.9;margin:.5rem 0;letter-spacing:-.08em}.hero p{font-size:clamp(1.15rem,2.3vw,1.65rem);max-width:850px;color:var(--text-dim)}.hero-grid{display:grid;grid-template-columns:2fr 1fr;gap:2rem;align-items:end}.stamp{border:2px solid var(--border);background:var(--surface);padding:1.2rem;transform:rotate(-2deg);font-family:var(--mono);box-shadow:8px 8px 0 var(--accent)}
-    .section{padding:3rem 0}.section h2{font-size:clamp(2rem,5vw,4rem);line-height:1;margin:0 0 1rem;letter-spacing:-.05em}.tagline{color:var(--text-dim);max-width:780px}.category-stripe{display:block;font-family:var(--mono);font-size:.82rem;letter-spacing:.12em;color:var(--text-dim);border-bottom:1px solid var(--border-light);padding-bottom:.35rem;margin:2rem 0 1rem;text-align:right}.workshops-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}.workshop-hero{border:2px solid var(--border);background:var(--surface);padding:1.5rem;display:flex;flex-direction:column;min-height:360px;box-shadow:5px 5px 0 rgba(0,0,0,.12)}.hero-badge{align-self:flex-start;background:var(--accent);color:#fff;font-family:var(--mono);font-weight:900;font-size:.75rem;padding:.35rem .55rem;margin-bottom:.8rem}.hero-title{font-size:clamp(1.65rem,3vw,2.6rem);line-height:1.03;margin:.2rem 0 .75rem;letter-spacing:-.04em}.sub{font-weight:800;color:var(--accent);margin:0 0 .75rem}.hero-desc{color:var(--text-dim);flex:1}.hero-pills{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:1rem 0}.hero-pill{border:1px solid var(--border-light);padding:.65rem;background:var(--bg);font-family:var(--mono);font-size:.8rem}.hero-pill strong{display:block;color:var(--text);font-family:var(--sans);font-size:.75rem}.actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.75rem}.btn{display:inline-block;background:var(--text);color:var(--bg);text-decoration:none;font-family:var(--mono);font-weight:800;padding:.75rem 1rem;border:2px solid var(--text)}.btn.alt{background:transparent;color:var(--text)}
-    .comparison,.package-grid,.venue-block,.deposit{border:2px solid var(--border);background:var(--surface);padding:1.3rem;margin:1rem 0}.comparison-grid{display:grid;grid-template-columns:1.4fr .8fr .7fr 1fr;gap:0;border-top:1px solid var(--border)}.comparison-grid>div{padding:.7rem;border-bottom:1px solid var(--border-light)}.comparison-grid .head{font-family:var(--mono);font-weight:900;color:var(--accent)}.package-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}.package-tile{border:1px solid var(--border);padding:1rem;background:var(--bg)}.package-tile h4{font-family:var(--mono);color:var(--accent);margin:.1rem 0}.package-headline{font-size:1.35rem;font-weight:900}.deposit{border-color:var(--accent)}.venue-block{display:grid;grid-template-columns:1fr 1fr;gap:2rem}.venue-meta{font-family:var(--mono);font-size:.9rem;color:var(--text-dim)} footer{border-top:2px solid var(--border);padding:2.5rem 0;color:var(--text-dim)}
-    @media(max-width:850px){.hero-grid,.workshops-list,.venue-block{grid-template-columns:1fr}.package-grid{grid-template-columns:1fr 1fr}.comparison-grid{grid-template-columns:1fr}.hero-pills{grid-template-columns:1fr}.nav{display:none}}
+    /* coursesnew — page-specific layout, scoped to this page.
+       Colour tokens, base reset, scanline, header/footer all come from css/style.css. */
+    .courses-hero{padding:5rem 0 3rem;border-bottom:2px solid var(--border)}
+    .eyebrow{font-family:var(--font-mono);color:var(--accent);font-weight:800;letter-spacing:.08em}
+    .courses-hero h1{font-size:clamp(3.2rem,10vw,8.5rem);line-height:.9;margin:.5rem 0;letter-spacing:-.08em}
+    .courses-hero p{font-size:clamp(1.15rem,2.3vw,1.65rem);max-width:850px;color:var(--text-dim)}
+    .hero-grid{display:grid;grid-template-columns:2fr 1fr;gap:2rem;align-items:end}
+    .stamp{border:2px solid var(--border);background:var(--surface);padding:1.2rem;transform:rotate(-2deg);font-family:var(--font-mono);box-shadow:8px 8px 0 var(--accent)}
+    .section{padding:3rem 0}
+    .section h2{font-size:clamp(2rem,5vw,4rem);line-height:1;margin:0 0 1rem;letter-spacing:-.05em}
+    .tagline{color:var(--text-dim);max-width:780px}
+    .category-stripe{display:block;font-family:var(--font-mono);font-size:.82rem;letter-spacing:.12em;color:var(--text-dim);border-bottom:1px solid var(--border-light);padding-bottom:.35rem;margin:2rem 0 1rem;text-align:right}
+    .workshops-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+    .workshop-hero{border:2px solid var(--border);background:var(--surface);padding:1.5rem;display:flex;flex-direction:column;min-height:360px;box-shadow:5px 5px 0 rgba(0,0,0,.12)}
+    .hero-badge{align-self:flex-start;background:#b32d23;color:#fff;font-family:var(--font-mono);font-weight:900;font-size:.75rem;padding:.35rem .55rem;margin-bottom:.8rem}
+    .hero-title{font-size:clamp(1.65rem,3vw,2.6rem);line-height:1.03;margin:.2rem 0 .75rem;letter-spacing:-.04em}
+    .sub{font-weight:800;color:var(--accent);margin:0 0 .75rem}
+    .hero-desc{color:var(--text-dim);flex:1}
+    .hero-pills{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:1rem 0}
+    .hero-pill{border:1px solid var(--border-light);padding:.65rem;background:var(--bg);font-family:var(--font-mono);font-size:.8rem}
+    .hero-pill strong{display:block;color:var(--text);font-family:var(--font-sans);font-size:.75rem}
+    .actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.75rem}
+    .btn{display:inline-block;background:var(--text);color:var(--bg);text-decoration:none;font-family:var(--font-mono);font-weight:800;padding:.75rem 1rem;border:2px solid var(--text);text-transform:none}
+    .btn.alt{background:transparent;color:var(--text)}
+    .comparison,.package-grid,.venue-block,.deposit{border:2px solid var(--border);background:var(--surface);padding:1.3rem;margin:1rem 0}
+    .comparison-grid{display:grid;grid-template-columns:1.4fr .8fr .7fr 1fr;gap:0;border-top:1px solid var(--border)}
+    .comparison-grid>div{padding:.7rem;border-bottom:1px solid var(--border-light)}
+    .comparison-grid .head{font-family:var(--font-mono);font-weight:900;color:var(--accent)}
+    .package-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+    .package-tile{border:1px solid var(--border);padding:1rem;background:var(--bg)}
+    .package-tile h4{font-family:var(--font-mono);color:var(--accent);margin:.1rem 0}
+    .package-headline{font-size:1.35rem;font-weight:900}
+    .deposit{border-color:var(--accent)}
+    .venue-block{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+    .venue-meta{font-family:var(--font-mono);font-size:.9rem;color:var(--text-dim)}
+    @media(max-width:850px){.hero-grid,.workshops-list,.venue-block{grid-template-columns:1fr}.package-grid{grid-template-columns:1fr 1fr}.comparison-grid{grid-template-columns:1fr}.hero-pills{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-<header><div class="container header-inner"><a class="brand mono" href="#">SERIOUS S.H.I.T. <span style="color:var(--accent)">// WORKSHOPS</span></a><nav class="nav mono"><a href="#courses">קורסים</a><a href="#compare">השוואה</a><a href="#deposits">מקדמות</a><a href="#where">מיקום</a><a href="workshops.html">העמוד הישן</a></nav></div></header>
-<section class="hero"><div class="container hero-grid"><div><div class="eyebrow">MEZO HAIFA // SUMMER 2026</div><h1>קורסים לבניית דברים שעובדים</h1><p>חומרה, סאונד, קוד, גליץ׳, סריקה וכיפוף מעגלים. קבוצות קטנות, ידיים על השולחן מהמפגש הראשון, בלי דרישות קדם. המידע כאן מגיע מה־PDF; הוויז׳ואל לפי האתר החי.</p><div class="actions"><a class="btn" href="#courses">לראות קורסים</a><a class="btn alt" href="https://wa.me/972539263808">שאלות בוואטסאפ</a></div></div><div class="stamp">מקסימום 8 משתתפות/ים<br>מינימום 3 לפתיחת מחזור<br>קורסים ארוכים: מקדמה 500₪<br>אינטנסיבים: מקדמה 200₪</div></div></section>
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="brand mono">SERIOUS S.H.I.T. <span style="color: var(--accent)">//קורסים</span></a>
+    <nav class="nav-links uppercase mono">
+      <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+      <a href="coursesnew.html" class="active"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+      <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+      <a href="support.html" class="not-offered-yet"><span class="lang-en">Support</span><span class="lang-he">תמיכה</span></a>
+      <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+      <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+      <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+      <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+      <a href="#" class="theme-toggle">LIGHT/DARK</a>
+      <a href="#" class="lang-toggle">EN/HE</a>
+    </nav>
+  </div>
+</header>
+<section class="courses-hero"><div class="container hero-grid"><div><div class="eyebrow">MEZO HAIFA // SUMMER 2026</div><h1>קורסים לבניית דברים שעובדים</h1><p>חומרה, סאונד, קוד, גליץ׳, סריקה וכיפוף מעגלים. קבוצות קטנות, ידיים על השולחן מהמפגש הראשון, בלי דרישות קדם. המידע כאן מגיע מה־PDF; הוויז׳ואל לפי האתר החי.</p><div class="actions"><a class="btn" href="#courses">לראות קורסים</a><a class="btn alt" href="https://wa.me/972539263808">שאלות בוואטסאפ</a></div></div><div class="stamp">מקסימום 8 משתתפות/ים<br>מינימום 3 לפתיחת מחזור<br>קורסים ארוכים: מקדמה 500₪<br>אינטנסיבים: מקדמה 200₪</div></div></section>
 <main class="container">
 <section id="courses" class="section"><h2>קורסים ארוכים</h2><p class="tagline">כוללים ערכות לפי הצורך, מפגשי תמיכה פתוחים אחת לשבועיים, וזום מסכם לסקירת הפרויקט האישי.</p><span class="category-stripe">// חומרה וקוד — לבנות כלי, מערכת או יצירה</span><div class="workshops-list">
-<article class="workshop-hero"><div class="hero-badge">דגל</div><h3 class="hero-title">בניית סינתיסייזר דיגיטלי ESP32 + AI</h3><p class="sub">סדנה מעשית ללמידת יסודות האלקטרוניקה ועיבוד אותות דיגיטלי</p><p class="hero-desc">בניית סינתיסייזר פונקציונלי תוך שימוש בבינה מלאכותית ככלי עזר לכתיבת קוד. כולל ESP32, מודול I2S DAC, מסך OLED, פוטנציומטרים, כפתורים, אנקודר, מטריצה וחיווט.</p><div class="hero-pills"><div class="hero-pill"><strong>תאריכים</strong>א׳ 14.06–26.07</div><div class="hero-pill"><strong>שעות</strong>16:00–18:30</div><div class="hero-pill"><strong>מחיר</strong>2,200₪</div></div><div class="actions"><a class="btn" href="workshop-esp32.html">פרטים</a><a class="btn alt" href="workshop-esp32.html">פרטים</a></div></article>
-<article class="workshop-hero"><div class="hero-badge">חדש</div><h3 class="hero-title">ויביקודינג לאמניות ואמנים</h3><p class="sub">לבנות ולפרסם אמנות רשת עם בינה מלאכותית</p><p class="hero-desc">יצירת אמנות אינטראקטיבית בעזרת AI לכתיבת קוד: Web Audio, קנבס, ויזואליות גנרטיבית — מרעיון ועד יצירה חיה שמתפרסמת ב־GitHub Pages. ללא רקע בתכנות.</p><div class="hero-pills"><div class="hero-pill"><strong>תאריכים</strong>א׳ 14.06–19.07</div><div class="hero-pill"><strong>שעות</strong>19:00–21:30</div><div class="hero-pill"><strong>מחיר</strong>2,000₪</div></div><div class="actions"><a class="btn" href="workshop-vibecoding.html">פרטים</a><a class="btn alt" href="workshop-vibecoding.html">פרטים</a></div></article>
-<article class="workshop-hero"><div class="hero-badge">חדש</div><h3 class="hero-title">אנלוגי ולוגיקה: מהיסודות ועד סינת׳ דרון 40106</h3><p class="sub">מאוהם עד קופסת רעש מזמזמת</p><p class="hero-desc">קורס יסודות: רכיבים, מעגלים אנלוגיים ושערים לוגיים. בונים צעד־אחר־צעד סינתיסייזר דרון מבוסס CD40106 שלוקחים הביתה. כולל ערכה מלאה.</p><div class="hero-pills"><div class="hero-pill"><strong>תאריכים</strong>ג׳ החל מ־16.06</div><div class="hero-pill"><strong>שעות</strong>16:00–18:30</div><div class="hero-pill"><strong>מחיר</strong>2,200₪</div></div><div class="actions"><a class="btn" href="workshop-analog.html">פרטים</a><a class="btn alt" href="workshop-analog.html">פרטים</a></div></article>
-<article class="workshop-hero"><div class="hero-badge">פדלים</div><h3 class="hero-title">בניית פדל גיטרה או בס</h3><p class="sub">שמונה מפגשים מעשיים בליווי אישי</p><p class="hero-desc">לומדים לבנות פדל פאז, אוברדרייב, באפר או ביטקראשר. צלילה מעשית לאלקטרוניקה וסאונד; בסיום יוצאים עם פדל מתפקד. כולל ערכה מלאה והרצאת אורח של אנטון נוטה.</p><div class="hero-pills"><div class="hero-pill"><strong>תאריכים</strong>ג׳ החל מ־16.06</div><div class="hero-pill"><strong>שעות</strong>19:00–21:30</div><div class="hero-pill"><strong>מחיר</strong>2,200₪</div></div><div class="actions"><a class="btn" href="workshop-pedal.html">פרטים</a><a class="btn alt" href="workshop-pedal.html">פרטים</a></div></article>
+<article class="workshop-hero"><div class="hero-badge">דגל</div><h3 class="hero-title">בניית סינתיסייזר דיגיטלי ESP32 + AI</h3><p class="sub">סדנה מעשית ללמידת יסודות האלקטרוניקה ועיבוד אותות דיגיטלי</p><p class="hero-desc">בניית סינתיסייזר פונקציונלי תוך שימוש בבינה מלאכותית ככלי עזר לכתיבת קוד. כולל ESP32, מודול I2S DAC, מסך OLED, פוטנציומטרים, כפתורים, אנקודר, מטריצה וחיווט.</p><div class="hero-pills"><div class="hero-pill"><strong>תאריכים</strong>א׳ 14.06–26.07</div><div class="hero-pill"><strong>שעות</strong>16:00–18:30</div><div class="hero-pill"><strong>מחיר</strong>2,200₪</div></div><div class="actions"><a class="btn" href="workshop-esp32.html">פרטים</a></div></article>
+<article class="workshop-hero"><div class="hero-badge">חדש</div><h3 class="hero-title">ויביקודינג לאמניות ואמנים</h3><p class="sub">לבנות ולפרסם אמנות רשת עם בינה מלאכותית</p><p class="hero-desc">יצירת אמנות אינטראקטיבית בעזרת AI לכתיבת קוד: Web Audio, קנבס, ויזואליות גנרטיבית — מרעיון ועד יצירה חיה שמתפרסמת ב־GitHub Pages. ללא רקע בתכנות.</p><div class="hero-pills"><div class="hero-pill"><strong>תאריכים</strong>א׳ 14.06–19.07</div><div class="hero-pill"><strong>שעות</strong>19:00–21:30</div><div class="hero-pill"><strong>מחיר</strong>2,000₪</div></div><div class="actions"><a class="btn" href="workshop-vibecoding.html">פרטים</a></div></article>
+<article class="workshop-hero"><div class="hero-badge">חדש</div><h3 class="hero-title">אנלוגי ולוגיקה: מהיסודות ועד סינת׳ דרון 40106</h3><p class="sub">מאוהם עד קופסת רעש מזמזמת</p><p class="hero-desc">קורס יסודות: רכיבים, מעגלים אנלוגיים ושערים לוגיים. בונים צעד־אחר־צעד סינתיסייזר דרון מבוסס CD40106 שלוקחים הביתה. כולל ערכה מלאה.</p><div class="hero-pills"><div class="hero-pill"><strong>תאריכים</strong>ג׳ החל מ־16.06</div><div class="hero-pill"><strong>שעות</strong>16:00–18:30</div><div class="hero-pill"><strong>מחיר</strong>2,200₪</div></div><div class="actions"><a class="btn" href="workshop-analog.html">פרטים</a></div></article>
+<article class="workshop-hero"><div class="hero-badge">פדלים</div><h3 class="hero-title">בניית פדל גיטרה או בס</h3><p class="sub">שמונה מפגשים מעשיים בליווי אישי</p><p class="hero-desc">לומדים לבנות פדל פאז, אוברדרייב, באפר או ביטקראשר. צלילה מעשית לאלקטרוניקה וסאונד; בסיום יוצאים עם פדל מתפקד. כולל ערכה מלאה והרצאת אורח של אנטון נוטה.</p><div class="hero-pills"><div class="hero-pill"><strong>תאריכים</strong>ג׳ החל מ־16.06</div><div class="hero-pill"><strong>שעות</strong>19:00–21:30</div><div class="hero-pill"><strong>מחיר</strong>2,200₪</div></div><div class="actions"><a class="btn" href="workshop-pedal.html">פרטים</a></div></article>
 </div>
 <span class="category-stripe">// אינטנסיבים בשישי</span><div class="workshops-list">
 <article class="workshop-hero"><div class="hero-badge">5 ביוני</div><h3 class="hero-title">טכניקות גליץ׳: אודיו/וידאו/קוד</h3><p class="sub">לשבור את הקובץ, לשמור את הארטיפקט</p><p class="hero-desc">דאטהמושינג, ביטקראשינג, מיון פיקסלים וטקסט זאלגו — השחתה מבוקרת על פני אודיו, וידאו וקוד. מפגש 4 שעות בשישי.</p><div class="hero-pills"><div class="hero-pill"><strong>שעות</strong>11:00–15:00</div><div class="hero-pill"><strong>משך</strong>4 שעות</div><div class="hero-pill"><strong>מחיר</strong>400₪</div></div></article>
@@ -40,5 +88,27 @@
 <section id="compare" class="section"><h2>השוואה מהירה</h2><div class="comparison"><div class="comparison-grid"><div class="head">קורס</div><div class="head">משך</div><div class="head">מחיר</div><div class="head">תוצר</div><div>ESP32 + AI</div><div>7 × 2.5 שעות</div><div>2,200₪</div><div>סינת׳ דיגיטלי עובד</div><div>ויביקודינג</div><div>6 × 2.5 שעות</div><div>2,000₪</div><div>יצירת Web מפורסמת</div><div>40106 דרון</div><div>6 × 2.5 שעות</div><div>2,200₪</div><div>סינת׳ דרון אנלוגי</div><div>פדל גיטרה/בס</div><div>7–8 × 2.5 שעות</div><div>2,200₪</div><div>פדל עובד</div><div>אינטנסיבים</div><div>4 שעות</div><div>400₪</div><div>תוצר/טכניקה ממוקדת</div></div></div></section>
 <section id="deposits" class="section"><h2>מקדמות והנחות</h2><div class="deposit"><h3>// שריון מקום</h3><p><strong>מינימום 3 משתתפים לפתיחת מחזור.</strong> אם לא מגיעים ל־3, המחזור לא יוצא לדרך והמקדמה מוחזרת במלואה.</p><p class="mono">&gt; קורסים ארוכים: <strong>500₪ מקדמה</strong><br>&gt; אינטנסיבים בשישי: <strong>200₪ מקדמה</strong><br>&gt; היתרה משולמת במפגש הראשון. המקדמה מתקזזת ממחיר הקורס.</p></div><div class="package-grid"><div class="package-tile"><h4>// 2 קורסים</h4><div class="package-headline">20% הנחה</div><p>הרשמה לשני קורסים באותה עונה.</p></div><div class="package-tile"><h4>// 3 קורסים</h4><div class="package-headline">25% הנחה</div><p>הרשמה לשלושה קורסים באותה עונה.</p></div><div class="package-tile"><h4>// חוזרים</h4><div class="package-headline">15% קבוע</div><p>מי שסיים קורס מקבל הנחה על קורסים נוספים.</p></div><div class="package-tile"><h4>// חבר מביא חבר</h4><div class="package-headline">10% לשניים</div><p>הנחה למפנה ולמשתתף החדש.</p></div><div class="package-tile"><h4>// 1:1</h4><div class="package-headline">לפי פרויקט</div><p>סילבוס מותאם אישית ותמחור לפי מטרה.</p></div></div></section>
 <section id="where" class="section"><h2>איפה</h2><div class="venue-block"><div><h3>MEZO חיפה</h3><p>המייקרספייס העיקרי. כל הקורסים מתקיימים כאן אלא אם צוין אחרת.</p><div class="venue-meta">&gt; כתובת: סירקין 3, חיפה<br>&gt; ציוד: מדפסות 3D, CNC, עמדות הלחמה, ספריית רכיבים<br>&gt; קבוצה: מינימום 3 / מקסימום 8</div></div><div><h3>פורמט</h3><p>ידיים על השולחן מהמפגש הראשון. בקורסים הארוכים יש תמיכת open-lab אחת לשבועיים וזום סיכום פרויקט.</p><a class="btn" href="https://wa.me/972539263808">שאלות / הרשמה בוואטסאפ</a></div></div></section>
-</main><footer><div class="container mono">coursesnew draft · visual mission: Serious S.H.I.T. · info source: Yaniv_Workshops.pdf</div></footer>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html"><span class="lang-en">Home</span><span class="lang-he">בית</span></a>
+        <a href="coursesnew.html"><span class="lang-en">Workshops</span><span class="lang-he">קורסים</span></a>
+        <a href="sales.html"><span class="lang-en">Gear</span><span class="lang-he">ציוד</span></a>
+        <a href="support.html" class="not-offered-yet"><span class="lang-en">Support</span><span class="lang-he">תמיכה</span></a>
+        <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-he">גלריה</span></a>
+        <a href="mods.html" class="coming-soon"><span class="lang-en">Mods</span><span class="lang-he">מודס</span></a>
+        <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-he">צור קשר</span></a>
+        <a href="https://www.patreon.com/Seriousshit" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="https://www.instagram.com/shitisizers/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+      <p class="footer-copy lang-en">&copy; 2026 Serious S.H.I.T. // Nothing Is Holy.</p>
+      <p class="footer-copy lang-he">&copy; 2026 סיריוס ש.י.ט. // שום דבר לא קדוש.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body></html>
